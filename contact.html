@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - RMS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="site-header">
+        <div class="center-logo">
+            <img src="images/rms_logo.png" alt="rms_logo" class="secondary-logo">
+        </div>
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="about.html">About Us</a>
+                    <div class="dropdown-menu">
+                        <a href="about.html#blog">Blog</a>
+                        <a href="about.html#portfolio">Portfolio</a>
+                    </div>
+                </li>                
+                <li><a href="services.html">Services</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="#careers">Careers</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>            
+            <div class="header-actions">
+                <button class="quote-btn">Get a Quote</button>
+                <input type="text" class="search-bar" placeholder="Search...">
+            </div>
+        </div>
+    </header>
+    <!-- Contact Section -->
+    <main>
+        <section id="contact-us" class="contact-section">
+            <div class="contact-info">
+                <h2>For immediate Support</h2>
+                <p>Call: (863) 808-2130</p>
+
+                <h2>Get In Touch With Us</h2>
+                <p>Email us at <a href="mailto:mhadid0870@gmail.com">mhadid0870@gmail.com</a> or fill out the form below.</p>
+            </div>
+            <div class="container">
+                
+
+                <!-- Contact Form -->
+                <form id="contact-form" class="contact-form">
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="email" name="email" placeholder="Email Address" required>
+                    <input type="tel" name="phone" placeholder="Phone">
+                    <input type="text" name="company" placeholder="Company">
+                    <textarea name="message" placeholder="Message" rows="5" required></textarea>
+                    <button type="button" id="send-btn" class="contact-btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 RMS. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

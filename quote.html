@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get a Quote</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <!-- Same header as before -->
+    </header>
+
+    <section class="get-quote-section">
+        <h2>Get a Quote</h2>
+        <p>Select the type of quote you need:</p>
+        <form id="quote-form">
+            <label for="quote-type">Type of Quote:</label>
+            <select id="quote-type" name="quote-type" required>
+                <option value="product">Product</option>
+                <option value="service">Service</option>
+            </select>
+
+            <div id="product-fields" class="quote-fields">
+                <label for="product-name">Product Name:</label>
+                <input type="text" id="product-name" name="product-name" placeholder="Enter product name" required>
+
+                <label for="product-quantity">Quantity:</label>
+                <input type="number" id="product-quantity" name="product-quantity" placeholder="Enter quantity" required>
+            </div>
+
+            <div id="service-fields" class="quote-fields" style="display: none;">
+                <label for="service-description">Service Description:</label>
+                <textarea id="service-description" name="service-description" placeholder="Describe the service" required></textarea>
+
+                <label for="service-duration">Estimated Duration (days):</label>
+                <input type="number" id="service-duration" name="service-duration" required>
+            </div>
+
+            <label for="contact-info">Your Contact Information:</label>
+            <input type="text" id="contact-info" name="contact-info" placeholder="Your name, phone, or email" required>
+
+            <button type="submit" class="cta-btn">Submit Quote Request</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 RMS. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Toggle form fields based on quote type
+        document.getElementById('quote-type').addEventListener('change', function() {
+            const productFields = document.getElementById('product-fields');
+            const serviceFields = document.getElementById('service-fields');
+
+            if (this.value === 'product') {
+                productFields.style.display = 'block';
+                serviceFields.style.display = 'none';
+            } else {
+                productFields.style.display = 'none';
+                serviceFields.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>

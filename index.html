@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RMS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="site-header">
+        <div class="center-logo">
+            <img src="images/rms_logo.png" alt="rms_logo" class="secondary-logo">
+        </div>
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="about.html">About Us</a>
+                    <div class="dropdown-menu">
+                        <a href="about.html#blog">Blog</a>
+                        <a href="about.html#portfolio">Portfolio</a>
+                    </div>
+                </li>                
+                <li><a href="services.html">Services</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="#careers">Careers</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>            
+            <div class="header-actions">
+                <button class="quote-btn">Get a Quote</button>
+                <input type="text" class="search-bar" placeholder="Search...">
+            </div>
+            
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <!-- Slideshow -->
+    <div class="slideshow">
+        <img src="images/drone pic 1.jpg" alt="Slide 1">
+        <img src="images/drone pic 2.jpg" alt="Slide 2">
+
+    </div>
+    <div class="overlay"></div>
+    <div class="hero-content">
+            <h1>Transforming Automation, Redefining Possibilities.</h1>
+            <p>At RMS, we innovate to empower industries through advanced robotics, AI integration, and unparalleled control systems.</p>
+            <p><strong>Mission Statement:</strong> Our mission is to lead the robotics and automation industry with transformative technologies. We are committed to delivering cutting-edge solutions that enhance operational efficiency, prioritize safety, and promote sustainable practices across all sectors.</p>
+            <button class="cta-btn">Explore More</button>
+        </div>
+    </section>
+
+    <!-- Sections -->
+    <section id="about" class="section">
+        <h2>Who We Are</h2>
+        <p>At RMS, we are pioneers in developing advanced robotics, PLCs, and AI-powered solutions.</p>
+    </section>
+
+    <section id="services" class="section">
+        <h2>Our Expertise</h2>
+        <div class="services-grid">
+            <div class="service">
+                <h3>Advanced Robotics</h3>
+                <p>Revolutionizing manufacturing with intelligent robots tailored for automation.</p>
+            </div>
+            <div class="service">
+                <h3>AI & Machine Learning</h3>
+                <p>Deploying AI-driven algorithms for predictive analysis and real-time decision-making.</p>
+            </div>
+            <div class="service">
+                <h3>PLC & Microcontrollers</h3>
+                <p>Designing and manufacturing reliable PLCs and microcontroller-based systems.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="section">
+        <h2>Our Portfolio</h2>
+        <p>Explore the projects and solutions we've delivered for clients in various industries.</p>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <p>Contact us to explore innovative solutions for your business needs.</p>
+        <a href="contact.html" class="cta-btn">Contact Us</a>
+
+    </section>
+<!-- Inline JavaScript -->
+<input type="text" class="search-bar" placeholder="Search..." id="search-bar">
+<div id="search-suggestions" class="suggestions-dropdown"></div>
+
+<script>
+    const searchBar = document.querySelector('#search-bar');
+    const suggestionsDropdown = document.querySelector('.suggestions-dropdown');
+
+    // Function to search text within the current page
+    searchBar.addEventListener('input', function() {
+        const query = searchBar.value.toLowerCase();
+        suggestionsDropdown.innerHTML = ''; // Clear previous suggestions
+
+        if (query) {
+            const results = searchInPage(query);
+            if (results.length > 0) {
+                results.forEach(result => {
+                    const suggestionItem = document.createElement('div');
+                    suggestionItem.classList.add('suggestion-item');
+                    suggestionItem.textContent = result;
+                    suggestionsDropdown.appendChild(suggestionItem);
+                });
+                suggestionsDropdown.style.display = 'block'; // Show dropdown
+            } else {
+                suggestionsDropdown.style.display = 'none'; // Hide dropdown if no matches
+            }
+        } else {
+            suggestionsDropdown.style.display = 'none'; // Hide dropdown if input is empty
+        }
+    });
+
+    // Function to search for text within the page
+    function searchInPage(query) {
+        const bodyText = document.body.innerText.toLowerCase(); // Get all text from the body
+        const results = [];
+        
+        // Loop through all text nodes in the body
+        const textNodes = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+        let currentNode;
+        
+        while (currentNode = textNodes.nextNode()) {
+            if (currentNode.nodeValue.toLowerCase().includes(query)) {
+                results.push(currentNode.nodeValue.trim());
+            }
+        }
+        
+        return results;
+    }
+
+    // Hide suggestions when clicking outside the search bar
+    document.addEventListener('click', function(event) {
+        if (!searchBar.contains(event.target) && !suggestionsDropdown.contains(event.target)) {
+            suggestionsDropdown.style.display = 'none';
+        }
+    });
+</script>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 RMS. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
