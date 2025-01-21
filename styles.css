@@ -57,17 +57,18 @@ body, h1, h2, h3, p, ul, li, img, iframe, input, button {
 .nav-links {
     list-style: none;
     display: flex;
-    flex-direction: column; /* Stack vertically */
     gap: 15px;
-    color: #0a0a0a;
-    background-color: transparent;
-    padding-left: 0;
+    color: #0a0a0a; /* Neutral text color */
+    background-color: transparent; /* Default no background */
 }
 
 .nav-links a {
+    text-decoration: none;
+    color: #610000; /* Link text color */
+    font-weight: bold;
     padding: 10px 15px;
-    width: 100%; /* Make links take up full width */
-    text-align: left; /* Align text to the left */
+    transition: background-color 0.3s;
+    border-radius: 3px; /* Smooth edges */
 }
 
 .nav-links a:hover {
@@ -392,17 +393,13 @@ body, h1, h2, h3, p, ul, li, img, iframe, input, button {
 /* Navigation bar container */
 .nav-container {
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    align-items: flex-start; /* Align left */
-    gap: 10px; /* Space between items */
+    justify-content: flex-end; /* Aligning to the right */
+    align-items: center;
+    gap: 15px;
+    width: 100%; /* Ensure it takes the full width */
+    padding-right: 10px; /* Adjust if needed */
 }
-/* Update .header-actions to stack on mobile */
-.header-actions {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 5px; /* Space between actions */
-}
+
 /*-------------------quote.html-------------------*/
 .get-quote-section {
     padding: 50px 20px;
@@ -456,4 +453,3 @@ body, h1, h2, h3, p, ul, li, img, iframe, input, button {
     color: #888;
     font-style: italic;
 }
-
