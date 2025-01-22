@@ -383,6 +383,14 @@ body {
     margin: 0;
 }
 
+.partner-logo {
+ width: 150px; /* Smaller image size */
+    height: auto;
+    margin-bottom: 10px;
+    background-color: #000000;
+
+}
+
 /*-------------------products.html-------------------*/
 
 /* Navigation bar container */
