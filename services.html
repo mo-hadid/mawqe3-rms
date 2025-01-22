@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - TECHNYAH</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+</head>
+<body>
+   <!-- Header Section -->
+   <header class="site-header">
+    <div class="center-logo">
+        <img src="images/rms_logo.png" alt="rms_logo" class="secondary-logo">
+    </div>
+    <div class="nav-container">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="about.html">About Us</a>
+                <div class="dropdown-menu">
+                    <a href="about.html#blog">Blog</a>
+                    <a href="about.html#portfolio">Portfolio</a>
+                </div>
+            </li>                
+            <li><a href="services.html">Services</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="#careers">Careers</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>            
+        <div class="header-actions">
+            <button class="quote-btn">Get a Quote</button>
+            <input type="text" class="search-bar" placeholder="Search...">
+        </div>
+    </div>
+</header>
+
+    <!-- Products Section -->
+    <main>
+        <section id="products" class="section">
+            <div class="container">
+                <h2>Our Products</h2>
+                <div class="products-grid">
+                    <!-- Example Product 1 -->
+                    <div class="product">
+                        <img src="images/product1.jpg" alt="Product 1">
+                        <h3>Product Name 1</h3>
+                        <p>Short description of the product.</p>
+                        <div id="product1-view" class="product-3d"></div>
+                    </div>
+                    <!-- Example Product 2 -->
+                    <div class="product">
+                        <img src="images/product2.jpg" alt="Product 2">
+                        <h3>Product Name 2</h3>
+                        <p>Short description of the product.</p>
+                        <div id="product2-view" class="product-3d"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 RMS. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Example: 3D viewer setup
+        const setup3DViewer = (containerId) => {
+            const container = document.getElementById(containerId);
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(75, container.offsetWidth / container.offsetHeight, 0.1, 1000);
+            const renderer = new THREE.WebGLRenderer();
+            renderer.setSize(container.offsetWidth, container.offsetHeight);
+            container.appendChild(renderer.domElement);
+
+            const geometry = new THREE.BoxGeometry();
+            const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+            const cube = new THREE.Mesh(geometry, material);
+            scene.add(cube);
+
+            camera.position.z = 5;
+
+            const animate = () => {
+                requestAnimationFrame(animate);
+                cube.rotation.x += 0.01;
+                cube.rotation.y += 0.01;
+                renderer.render(scene, camera);
+            };
+            animate();
+        };
+
+        // Initialize 3D viewers
+        setup3DViewer("product1-view");
+        setup3DViewer("product2-view");
+    </script>
+
+        <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 TECHNYAH - Robotic & Manufacturing Solutions LLC. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
