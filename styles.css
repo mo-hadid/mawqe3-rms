@@ -384,11 +384,9 @@ body {
 }
 
 .partner-logo {
- width: 20px; /* Smaller image size */
+    width: 5px; /* Smaller image size */
     height: auto;
     margin-bottom: 10px;
-    background-color: #FFFFFF;
-
 }
 
 /*-------------------products.html-------------------*/
