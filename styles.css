@@ -391,16 +391,47 @@ body {
 
 /*-------------------products.html-------------------*/
 
-/* Navigation bar container */
-.nav-container {
+/* Products Grid */
+.products-grid {
     display: flex;
-    justify-content: flex-end; /* Aligning to the right */
-    align-items: center;
-    gap: 15px;
-    width: 100%; /* Ensure it takes the full width */
-    padding-right: 10px; /* Adjust if needed */
+    gap: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
+/* Product Card */
+.product {
+    text-align: center;
+    width: 300px; /* Adjust as needed for layout */
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Product Image */
+.product img {
+    width: 180px;
+    height: 150px;
+    object-fit: cover; /* Crop to fit dimensions */
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Product Title */
+.product h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #333;
+}
+
+/* Product Description */
+.product p {
+    font-size: 0.9em;
+    color: #555;
+    line-height: 1.4;
+}
 /*-------------------quote.html-------------------*/
 .get-quote-section {
     padding: 50px 20px;
