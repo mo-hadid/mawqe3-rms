@@ -108,4 +108,36 @@
 
     <script src="script.js"></script>
 </body>
+
+
+<!-- ----------------------MODAL------------------ -->
+<!-- Application Form Modal -->
+<div id="applicationModal" class="modal hidden">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h3>Submit Your Application</h3>
+        <form id="applicationForm" enctype="multipart/form-data">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="position">Position Applying For:</label>
+            <select id="position" name="position" required>
+                <option value="AI/ML Intern">AI/ML Intern</option>
+                <option value="HR and Legal Intern">HR and Legal Intern</option>
+                <option value="Software/Web Developer Intern">Software/Web Developer Intern</option>
+                <option value="Civil Engineering Intern">Civil Engineering Intern</option>
+                <option value="Mechanical Engineering Intern">Mechanical Engineering Intern</option>
+            </select>
+
+            <label for="resume">Upload Resume (PDF/DOC):</label>
+            <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+
+            <button type="submit" class="cta-btn">Submit Application</button>
+        </form>
+    </div>
+</div>
+
 </html>
