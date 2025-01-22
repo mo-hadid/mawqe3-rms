@@ -489,11 +489,27 @@ body {
 
 /*-------------------careers.html-------------------*/
 /* Careers Page Styles */
+.hero-section {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.hero-section h1 {
+    font-size: 2rem;
+    color: #870101;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
 .positions-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-direction: column; /* Align items in a vertical column */
     gap: 20px;
-    justify-content: center;
+    padding: 20px;
 }
 
 .position-card {
@@ -503,10 +519,9 @@ body {
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: left;
-}
-
-.hidden {
-    display: none;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .position-card h3 {
@@ -516,10 +531,13 @@ body {
 }
 
 .position-card .description {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #333;
     display: none; /* Hidden by default */
 }
 
-button.toggle-description {
+button.cta-btn {
     margin-top: 10px;
     background-color: #870101;
     color: white;
@@ -527,5 +545,14 @@ button.toggle-description {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 1rem;
+    height: 40px; /* Consistent button height */
 }
 
+button.cta-btn:hover {
+    background-color: #a80e0e;
+}
+
+button.apply-btn {
+    margin-left: 10px;
+}
