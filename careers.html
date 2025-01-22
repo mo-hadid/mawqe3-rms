@@ -3,17 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Careers</title>
+    <title>Careers - TECHNYAH</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header -->
+    <!-- Header Section -->
     <header class="site-header">
+        <div class="center-logo">
+            <img src="images/rms_logo.png" alt="rms_logo" class="secondary-logo">
+        </div>
         <div class="nav-container">
-            <!-- Include navigation from other pages -->
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="about.html">About Us</a>
+                    <div class="dropdown-menu">
+                        <a href="about.html#blog">Blog</a>
+                        <a href="about.html#portfolio">Portfolio</a>
+                    </div>
+                </li>                
+                <li><a href="services.html">Services</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>            
+            <div class="header-actions">
+                <button class="quote-btn">Get a Quote</button>
+                <input type="text" class="search-bar" placeholder="Search...">
+            </div>
+            
         </div>
     </header>
-
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="overlay"></div>
@@ -23,20 +43,59 @@
         </div>
     </section>
 
-    <!-- Internship Positions -->
+    <!-- Careers Section -->
     <section class="section">
         <h2>Current Internship Openings</h2>
         <div class="positions-container">
-            <!-- Repeatable job card -->
+            <!-- AI/ML Intern -->
             <div class="position-card">
                 <h3>AI/ML/Computer Vision Systems Intern</h3>
                 <p class="hidden description">
-                    **Requirements**: Minimum GPA 3.0, relevant majors (Computer Engineering, Electrical Engineering, or Computer Science). Junior or Senior in bachelor's program.
+                    <strong>Requirements:</strong> Minimum GPA 3.0, relevant majors (Computer Engineering, Electrical Engineering, or Computer Science). Junior or Senior in bachelor's program.
                 </p>
-                <button class="toggle-description">Learn More</button>
-                <button class="apply-btn">Apply</button>
+                <button class="toggle-description cta-btn">Show More</button>
+                <button class="apply-btn cta-btn">Apply</button>
             </div>
-            <!-- Add more cards here -->
+
+            <!-- HR and Legal Intern -->
+            <div class="position-card">
+                <h3>Human Resources and Legal Intern</h3>
+                <p class="hidden description">
+                    <strong>Requirements:</strong> Minimum GPA 3.0, relevant majors (Business Administration, Human Resources, or Pre-Law). Junior or Senior in bachelor's program.
+                </p>
+                <button class="toggle-description cta-btn">Show More</button>
+                <button class="apply-btn cta-btn">Apply</button>
+            </div>
+
+            <!-- Software/Web Developer Intern -->
+            <div class="position-card">
+                <h3>Software/Web Developer Intern</h3>
+                <p class="hidden description">
+                    <strong>Requirements:</strong> Minimum GPA 3.0, relevant majors (Computer Engineering, Software Engineering, or IT). Junior or Senior in bachelor's program.
+                </p>
+                <button class="toggle-description cta-btn">Show More</button>
+                <button class="apply-btn cta-btn">Apply</button>
+            </div>
+
+            <!-- Civil Engineering Intern -->
+            <div class="position-card">
+                <h3>Civil Engineering Intern</h3>
+                <p class="hidden description">
+                    <strong>Requirements:</strong> Minimum GPA 3.0, relevant majors (Civil Engineering, Structural Engineering). Junior or Senior in bachelor's program.
+                </p>
+                <button class="toggle-description cta-btn">Show More</button>
+                <button class="apply-btn cta-btn">Apply</button>
+            </div>
+
+            <!-- Mechanical Engineering Intern -->
+            <div class="position-card">
+                <h3>Mechanical Engineering Intern</h3>
+                <p class="hidden description">
+                    <strong>Requirements:</strong> Minimum GPA 3.0, relevant majors (Mechanical Engineering, Mechatronics). Junior or Senior in bachelor's program.
+                </p>
+                <button class="toggle-description cta-btn">Show More</button>
+                <button class="apply-btn cta-btn">Apply</button>
+            </div>
         </div>
     </section>
 
