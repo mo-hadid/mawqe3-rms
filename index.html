@@ -114,25 +114,37 @@
         } else {
             suggestionsDropdown.style.display = 'none'; // Hide dropdown if input is empty
         }
+ 
+    // Highlight the active link in the navbar
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => {
+        if (link.href === window.location.href) {
+            link.classList.add('active');
+        }
     });
+   
+
 
     // Function to search for text within the page
-    function searchInPage(query) {
-        const bodyText = document.body.innerText.toLowerCase(); // Get all text from the body
-        const results = [];
-        
-        // Loop through all text nodes in the body
-        const textNodes = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
-        let currentNode;
-        
-        while (currentNode = textNodes.nextNode()) {
-            if (currentNode.nodeValue.toLowerCase().includes(query)) {
-                results.push(currentNode.nodeValue.trim());
-            }
+   function searchInPage(query) {
+    const results = [];
+    const textNodes = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+    let currentNode;
+
+    while ((currentNode = textNodes.nextNode())) {
+        const nodeValue = currentNode.nodeValue.toLowerCase();
+        if (nodeValue.includes(query)) {
+            const matchIndex = nodeValue.indexOf(query);
+            const context = currentNode.nodeValue.substring(
+                Math.max(0, matchIndex - 20),
+                matchIndex + query.length + 20
+            );
+            results.push(context.trim());
         }
-        
-        return results;
     }
+    return results;
+}
+
 
     // Hide suggestions when clicking outside the search bar
     document.addEventListener('click', function(event) {
