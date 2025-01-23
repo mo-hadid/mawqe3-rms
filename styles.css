@@ -384,8 +384,8 @@ body {
 }
 
 .partner-logo img {
-    width: 50px; /* Smaller image size */
-    height: 50px;
+    width: 80px;
+    height: auto;
     margin-bottom: 10px;
 }
 
