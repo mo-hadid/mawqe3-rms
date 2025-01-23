@@ -70,6 +70,13 @@ body {
     background-color: #720000; /* Hover background color */
     color: #ffffff; /* Hover text color */
 }
+
+/*------------addition---------*/
+.nav-links li a.active {
+    color: #007BFF; /* Change to your desired active link color */
+    font-weight: bold;
+}
+
 /* Dropdown menu styles */
 .dropdown {
     position: relative;
