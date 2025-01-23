@@ -53,10 +53,21 @@ applicationForm.addEventListener('submit', async (e) => {
     const position = document.getElementById('position').value;
     const resume = document.getElementById('resume').files[0];
 
+    // Input validation
+    if (!firstName || !lastName || !position) {
+        alert('Please fill out all required fields (First Name, Last Name, Position).');
+        return;
+    }
+
     if (!resume) {
         alert('Please upload a resume.');
         return;
     }
+
+    const allowedFileTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+    if (!allowedFileTypes.includes(resume.type)) {
+        alert('Invalid file format. Please upload a PDF, DOC, or DOCX file.');
+        return;
 
     // Create GitHub API request to upload files
     const githubToken = 'your_github_personal_access_token'; // Replace with your GitHub PAT
@@ -97,4 +108,21 @@ applicationForm.addEventListener('submit', async (e) => {
         }
     };
     reader.readAsDataURL(resume);
+        // Placeholder for serverless backend call
+    try {
+        // Replace this with a serverless function to securely interact with the GitHub API
+        console.log('Simulating resume upload...', {
+            firstName,
+            lastName,
+            position,
+            resumeName: resume.name
+        });
+
+        alert('Application submitted successfully!');
+        modal.classList.add('hidden');
+        applicationForm.reset();
+    } catch (error) {
+        console.error('Error submitting application:', error);
+        alert('Failed to submit application. Please try again.');
+    }
 });
