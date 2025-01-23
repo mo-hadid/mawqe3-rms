@@ -5,81 +5,174 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Careers - TECHNYAH</title>
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+    /* Careers Page Styles */
+    .hero-section {
+        text-align: center;
+        padding: 40px;
+        background-color: #f4f4f4;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem;
+        color: #870101;
+    }
+
+    .hero-section p {
+        font-size: 1.2rem;
+        color: #555;
+        margin-top: 10px;
+    }
+
+    .positions-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .position-card {
+        background: #ffffff;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: left;
+    }
+
+    .position-card h3 {
+        margin: 0;
+        font-size: 1.5rem;
+        color: #333;
+    }
+
+    .position-card .description {
+        margin-top: 10px;
+        font-size: 1rem;
+        color: #555;
+        display: none; /* Hidden by default */
+    }
+
+    button.cta-btn {
+        margin-top: 10px;
+        background-color: #870101;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+    }
+
+    button.cta-btn:hover {
+        background-color: #a80e0e;
+    }
+    .hidden {
+            display: none;
+        }
+
+        /*------------- Modal section ---------*/
+    .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 400px;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+    </style>
 </head>
 <body>
-   <!-- Header Section -->
-   <header class="site-header">
-    <div class="center-logo">
-        <img src="images/rms_logo.png" alt="rms_logo" class="secondary-logo">
-    </div>
-    <div class="nav-container">
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li class="dropdown">
-                <a href="about.html">About Us</a>
-                <div class="dropdown-menu">
-                    <a href="about.html#blog">Blog</a>
-                    <a href="about.html#portfolio">Portfolio</a>
-                </div>
-            </li>                
-            <li><a href="services.html">Services</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="careers.html">Careers</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-        </ul>            
-        <div class="header-actions">
-            <button class="quote-btn">Get a Quote</button>
-            <input type="text" class="search-bar" placeholder="Search...">
+    <!-- Header Section -->
+    <header class="site-header">
+        <div class="center-logo">
+            <img src="images/rms_logo.png" alt="rms_logo" class="secondary-logo">
         </div>
-    </div>
-</header>
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="about.html">About Us</a>
+                    <div class="dropdown-menu">
+                        <a href="about.html#blog">Blog</a>
+                        <a href="about.html#portfolio">Portfolio</a>
+                    </div>
+                </li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <div class="header-actions">
+                <button class="quote-btn">Get a Quote</button>
+                <input type="text" class="search-bar" placeholder="Search...">
+            </div>
+        </div>
+    </header>
+
     <!-- Hero Section -->
     <section class="hero-section">
-        <section id="careers" class="section">
-            <div class="container">
-                <h2>Careers</h2>
-            <!div>
-        <div class="hero-content">
-            <h1>Join Our Team</h1>
-            <p>Explore exciting Full-time, Part-time, and internship opportunities with us.</p>
-        </div>
+        <h1>Join Our Team</h1>
+        <p>Explore exciting full-time, part-time, and internship opportunities with us.</p>
     </section>
 
-<!-- Careers Section -->
-<section id="careers" class="section">
-    <h2>Current Internship Openings</h2>
-    <div class="positions-container">
-        <!-- AI/ML Intern -->
-        <div class="position-card">
-            <h3>AI/ML/Computer Vision Systems Intern</h3>
-            <p class="hidden description">
-                <strong>Requirements:</strong> Minimum GPA 3.0, relevant majors (Computer Engineering, Electrical Engineering, or Computer Science). Junior or Senior in bachelor's program.
-            </p>
-            <button class="toggle-description cta-btn">Show More</button>
-            <button class="apply-btn cta-btn">Apply</button>
-        </div>
+    <!-- Careers Section -->
+    <section id="careers-list" class="section">
+        <h2 style="text-align: center;">Current Openings</h2>
+        <div class="positions-container">
+            <!-- AI/ML Intern -->
+            <div class="position-card">
+                <h3>AI/ML/Computer Vision Systems Intern</h3>
+                <p class="description">
+                    <strong>Requirements:</strong> Minimum GPA 3.0, relevant majors (Computer Engineering, Electrical Engineering, or Computer Science). Junior or Senior in bachelor's program.
+                </p>
+                <button class="toggle-description cta-btn">Show More</button>
+                <button class="apply-btn cta-btn">Apply</button>
+            </div>
 
-        <!-- HR and Legal Intern -->
-        <div class="position-card">
-            <h3>Human Resources and Legal Intern</h3>
-            <p class="hidden description">
-                <strong>Requirements:</strong> Minimum GPA 3.0, relevant majors (Business Administration, Human Resources, or Pre-Law). Junior or Senior in bachelor's program.
-            </p>
-            <button class="toggle-description cta-btn">Show More</button>
-            <button class="apply-btn cta-btn">Apply</button>
-        </div>
+            <!-- HR and Legal Intern -->
+            <div class="position-card">
+                <h3>Human Resources and Legal Intern</h3>
+                <p class="description">
+                    <strong>Requirements:</strong> Minimum GPA 3.0, relevant majors (Business Administration, Human Resources, or Pre-Law). Junior or Senior in bachelor's program.
+                </p>
+                <button class="toggle-description cta-btn">Show More</button>
+                <button class="apply-btn cta-btn">Apply</button>
+            </div>
 
-        <!-- Software/Web Developer Intern -->
-        <div class="position-card">
-            <h3>Software/Web Developer Intern</h3>
-            <p class="hidden description">
-                <strong>Requirements:</strong> Minimum GPA 3.0, relevant majors (Computer Engineering, Software Engineering, or IT). Junior or Senior in bachelor's program.
-            </p>
-            <button class="toggle-description cta-btn">Show More</button>
-            <button class="apply-btn cta-btn">Apply</button>
-        </div>
-
-        <!-- Civil Engineering Intern -->
+            <!-- Software/Web Developer Intern -->
+            <div class="position-card">
+                <h3>Software/Web Developer Intern</h3>
+                <p class="description">
+                    <strong>Requirements:</strong> Minimum GPA 3.0, relevant majors (Computer Engineering, Software Engineering, or IT). Junior or Senior in bachelor's program.
+                </p>
+                <button class="toggle-description cta-btn">Show More</button>
+                <button class="apply-btn cta-btn">Apply</button>
+            </div>
+             <!-- Civil Engineering Intern -->
         <div class="position-card">
             <h3>Civil Engineering Intern</h3>
             <p class="hidden description">
@@ -98,51 +191,174 @@
             <button class="toggle-description cta-btn">Show More</button>
             <button class="apply-btn cta-btn">Apply</button>
         </div>
-    </div>
+    </section>
 
-            <div class="contact-info">
-                <h2>For inquiries, reach us at:</h2>
-                <p>HR: <a href="mailto:hr@technyah.com">hr@technyah.com</a></p>
-            </div>
-</section>
+
+
+    <!-- Modal -->
+    <div id="applicationModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Submit Your Application</h3>
+            <form id="applicationForm" enctype="multipart/form-data">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required>
+
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required>
+
+                <input type="hidden" id="position" name="position">
+
+                <label for="resume">Upload Resume:</label>
+
+                <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+
+                <button type="submit" class="cta-btn">Submit Application</button>
+            </form>
+        </div>
+    </div>
+<!-- Action transition script-->
+<script>
+// Show More / Show Less functionality
+document.querySelectorAll('.toggle-description').forEach(button => {
+            button.addEventListener('click', () => {
+                const description = button.previousElementSibling;
+                description.style.display = description.style.display === 'block' ? 'none' : 'block';
+                button.textContent = description.style.display === 'block' ? 'Show Less' : 'Show More';
+            });
+        });
+
+// Apply button functionality (placeholder for serverless function)
+document.querySelectorAll('.apply-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        alert('Apply button clicked! Form submission functionality will be implemented here.');
+        // Implement serverless function for GitHub API interaction here
+    });
+});
+
+
+        // ------------------------------ CAREERS MODAL -------------------------------------------
+// Handle modal functionality
+        // Modal Logic
+        const modal = document.getElementById('applicationModal');
+        const closeModal = document.querySelector('.close-btn');
+        const positionField = document.getElementById('position');
+
+        document.querySelectorAll('.apply-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const position = button.getAttribute('data-position');
+                positionField.value = position; // Set position in hidden input
+                modal.style.display = 'flex'; // Show modal
+            });
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none'; // Hide modal
+        });
+
+// Form submission logic
+const applicationForm = document.getElementById('applicationForm');
+applicationForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const firstName = document.getElementById('firstName').value;
+    const lastName = document.getElementById('lastName').value;
+    const resume = document.getElementById('resume').files[0];
+
+    // Input validation
+    if (!firstName || !lastName) {
+        alert('Please fill out all required fields (First Name, Last Name).');
+        return;
+    }
+
+    if (!resume) {
+        alert('Please upload a resume.');
+        return;
+    }
+
+    const allowedFileTypes = [
+        'application/pdf',
+        'application/msword',
+        'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+    ];
+    if (!allowedFileTypes.includes(resume.type)) {
+        alert('Invalid file format. Please upload a PDF, DOC, or DOCX file.');
+        return;
+    }
+
+    // GitHub API configuration
+    const githubToken = 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; // Replace with your GitHub PAT
+    const repoOwner = mo-hadid; // Replace with your GitHub username
+    const repoName = mawqe3-rms; // Replace with your repository name
+    const folderPath = `applicants/${firstName}_${lastName}`; // Path for the applicant's folder
+
+    // Upload file to GitHub
+    const uploadToGitHub = async (fileName, fileContent) => {
+        const url = `https://api.github.com/repos/${mo-hadid}/${mawqe3-rms}/contents/${folderPath}/${fileName}`;
+
+        const encodedContent = btoa(fileContent); // Base64 encode file content
+        const response = await fetch(url, {
+            method: 'PUT',
+            headers: {
+                'Authorization': `token ${githubToken}`,
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                message: `Add application for ${firstName} ${lastName}`,
+                content: encodedContent,
+            }),
+        });
+
+        if (!response.ok) {
+            throw new Error('Failed to upload file to database.');
+        }
+        return response.json();
+    };
+
+    // Read resume file content and upload it
+    const reader = new FileReader();
+    reader.onload = async () => {
+        const resumeContent = reader.result.split(',')[1]; // Extract Base64 content
+        try {
+            await uploadToGitHub(resume.name, resumeContent);
+            sendEmailNotification(firstName, lastName, resume.name); // Send email notification
+            alert('Application submitted successfully!');
+            applicationForm.reset();
+        } catch (error) {
+            console.error('Error uploading application:', error);
+            alert('Failed to submit application. Please try again.');
+        }
+    };
+    reader.readAsDataURL(resume);
+
+    // Send an email notification using EmailJS
+    const sendEmailNotification = async (firstName, lastName, resumeName) => {
+        const serviceID = 'your_emailjs_service_id'; // Replace with your EmailJS service ID
+        const templateID = 'your_emailjs_template_id'; // Replace with your EmailJS template ID
+        const userID = 'your_emailjs_user_id'; // Replace with your EmailJS user ID
+
+        const emailParams = {
+            to_email: 'hr@technyah.com', // Destination email
+            from_name: `${firstName} ${lastName}`,
+            subject: 'New Job Application',
+            message: `A new application has been submitted by ${firstName} ${lastName}. Resume file: ${resumeName}`,
+        };
+
+        try {
+            const emailResponse = await emailjs.send(serviceID, templateID, emailParams, userID);
+            console.log('Email sent:', emailResponse);
+        } catch (error) {
+            console.error('Error sending email:', error);
+            alert('Failed to send notification email.');
+        }
+    };
+});
+
+    </script>
 
     <!-- Footer -->
     <footer class="footer">
         <p>&copy; 2025 TECHNYAH - Robotic & Manufacturing Solutions LLC. All Rights Reserved.</p>
     </footer>
-
-    <script src="script_b_sm_sl.js"></script>
 </body>
-
-
-<!-- ----------------------MODAL------------------ -->
-<!-- Application Form Modal -->
-<div id="applicationModal" class="modal hidden">
-    <div class="modal-content">
-        <span class="close-btn">&times;</span>
-        <h3>Submit Your Application</h3>
-        <form id="applicationForm" enctype="multipart/form-data">
-            <label for="firstName">First Name:</label>
-            <input type="text" id="firstName" name="firstName" required>
-
-            <label for="lastName">Last Name:</label>
-            <input type="text" id="lastName" name="lastName" required>
-
-            <label for="position">Position Applying For:</label>
-            <select id="position" name="position" required>
-                <option value="AI/ML Intern">AI/ML Intern</option>
-                <option value="HR and Legal Intern">HR and Legal Intern</option>
-                <option value="Software/Web Developer Intern">Software/Web Developer Intern</option>
-                <option value="Civil Engineering Intern">Civil Engineering Intern</option>
-                <option value="Mechanical Engineering Intern">Mechanical Engineering Intern</option>
-            </select>
-
-            <label for="resume">Upload Resume (PDF/DOC):</label>
-            <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
-
-            <button type="submit" class="cta-btn">Submit Application</button>
-        </form>
-    </div>
-</div>
-
 </html>
