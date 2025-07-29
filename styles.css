@@ -450,5 +450,23 @@ body {
   }
 }
 
+/* addition */
+@media (max-width: 768px) {
+  .services-grid {
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 1rem;
+    align-items: stretch;
+  }
+
+  .service {
+    width: 100% !important;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin: 0 auto;
+  }
+}
 
 /* ─────────────────────────────────────────────────────────────── */
