@@ -329,3 +329,157 @@ body {
     color: #888;
     font-style: italic;
 }
+
+
+/* ─── Mobile-Responsive Enhancements ───────────────────────────── */
+
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .header-actions {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .search-bar,
+  .quote-btn {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #fff;
+    padding: 10px;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 999;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    width: 100%;
+    padding: 12px 10px;
+    display: block;
+    color: #0077B6;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .section, .careers-container, .quote-form-container, .contact-container {
+    padding: 1rem;
+    margin: 0 auto;
+    width: 95%;
+  }
+
+  .products-grid, .services-grid {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .product, .service, .service-card {
+    width: 100% !important;
+    max-width: 100%;
+  }
+
+  .team-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-member {
+    width: 100%;
+  }
+
+  .hero-section {
+    height: auto;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .hero-content {
+    position: relative;
+    top: auto;
+    transform: none;
+  }
+
+  .slideshow img {
+    height: 240px;
+    object-fit: cover;
+  }
+
+  .contact-form input,
+  .contact-form textarea,
+  .apply-form input,
+  .apply-form textarea,
+  .apply-form button {
+    width: 100%;
+  }
+
+  .file-preview {
+    word-wrap: break-word;
+  }
+
+  .footer {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .suggestions-dropdown {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-header .center-logo img {
+    height: 50px;
+  }
+
+  h1, h2, h3 {
+    font-size: 1.25rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  .hero-content h1 {
+    font-size: 1.3rem;
+  }
+
+  .apply-form input,
+  .apply-form textarea,
+  .apply-form button,
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.95rem;
+    padding: 0.6rem;
+  }
+
+  .quote-btn,
+  .cta-btn {
+    font-size: 1rem;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────── */
