@@ -1,67 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get a Quote - TECHNYAH</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get a Quote - TECHNYAH</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .quote-form-container {
+      max-width: 700px;
+      margin: 0 auto;
+      background: #f9f9f9;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    .quote-form-container h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .form-section {
+      margin-bottom: 1.5rem;
+    }
+    .form-section label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+    .form-section input,
+    .form-section select,
+    .form-section textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .form-section textarea {
+      resize: vertical;
+    }
+    .cta-btn {
+      display: block;
+      width: 100%;
+      padding: 1rem;
+      background: #00B4D8;
+      color: white;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .cta-btn:hover {
+      background: #48CAE4;
+    }
+  </style>
 </head>
 <body>
-    <header class="site-header">
-        <!-- Same header as before -->
-    </header>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="center-logo">
+      <img src="images/rms_logo.png" alt="TECHNYAH Logo" class="secondary-logo" />
+    </div>
+    <div class="nav-container">
+      <div class="hamburger-menu">☰</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="about.html">About Us</a>
+          <div class="dropdown-menu">
+            <a href="about.html#blog">Blog</a>
+            <a href="about.html#portfolio">Portfolio</a>
+          </div>
+        </li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <div class="header-actions">
+        <button class="quote-btn" onclick="location.href='quote.html'">Get a Quote</button>
+        <input type="text" class="search-bar" placeholder="Search..." id="search-bar" />
+        <div id="search-suggestions" class="suggestions-dropdown"></div>
+      </div>
+    </div>
+  </header>
 
+  <!-- Quote Form -->
+  <main>
     <section class="get-quote-section">
-        <h2>Get a Quote</h2>
-        <p>Select the type of quote you need:</p>
+      <div class="quote-form-container">
+        <h2>Request a Quote</h2>
         <form id="quote-form">
-            <label for="quote-type">Type of Quote:</label>
+          <div class="form-section">
+            <label for="quote-type">Type of Quote</label>
             <select id="quote-type" name="quote-type" required>
-                <option value="product">Product</option>
-                <option value="service">Service</option>
+              <option value="product">Product</option>
+              <option value="service">Service</option>
             </select>
+          </div>
 
-            <div id="product-fields" class="quote-fields">
-                <label for="product-name">Product Name:</label>
-                <input type="text" id="product-name" name="product-name" placeholder="Enter product name" required>
+          <div id="product-fields" class="form-section">
+            <label for="product-name">Product Name</label>
+            <input type="text" id="product-name" name="product-name" placeholder="Enter product name" required />
 
-                <label for="product-quantity">Quantity:</label>
-                <input type="number" id="product-quantity" name="product-quantity" placeholder="Enter quantity" required>
-            </div>
+            <label for="product-quantity">Quantity</label>
+            <input type="number" id="product-quantity" name="product-quantity" placeholder="Enter quantity" required />
+          </div>
 
-            <div id="service-fields" class="quote-fields" style="display: none;">
-                <label for="service-description">Service Description:</label>
-                <textarea id="service-description" name="service-description" placeholder="Describe the service" required></textarea>
+          <div id="service-fields" class="form-section" style="display: none;">
+            <label for="service-description">Service Description</label>
+            <textarea id="service-description" name="service-description" placeholder="Describe the service" required></textarea>
 
-                <label for="service-duration">Estimated Duration (days):</label>
-                <input type="number" id="service-duration" name="service-duration" required>
-            </div>
+            <label for="service-duration">Estimated Duration (days)</label>
+            <input type="number" id="service-duration" name="service-duration" required />
+          </div>
 
-            <label for="contact-info">Your Contact Information:</label>
-            <input type="text" id="contact-info" name="contact-info" placeholder="Your name, phone, or email" required>
+          <div class="form-section">
+            <label for="contact-info">Your Contact Information</label>
+            <input type="text" id="contact-info" name="contact-info" placeholder="Your name, phone, or email" required />
+          </div>
 
-            <button type="submit" class="cta-btn">Submit Quote Request</button>
+          <button type="submit" class="cta-btn">Submit Quote Request</button>
         </form>
+      </div>
     </section>
+  </main>
 
-    <script>
-        // Toggle form fields based on quote type
-        document.getElementById('quote-type').addEventListener('change', function() {
-            const productFields = document.getElementById('product-fields');
-            const serviceFields = document.getElementById('service-fields');
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 TECHNYAH - Robotic & Manufacturing Solutions LLC. All Rights Reserved.</p>
+  </footer>
 
-            if (this.value === 'product') {
-                productFields.style.display = 'block';
-                serviceFields.style.display = 'none';
-            } else {
-                productFields.style.display = 'none';
-                serviceFields.style.display = 'block';
-            }
-        });
-    </script>
-        <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2025 TECHNYAH - Robotic & Manufacturing Solutions LLC. All Rights Reserved.</p>
-    </footer>
+  <!-- search Script -->
+ <script>
+  const searchBar = document.querySelector('#search-bar');
+  const suggestionsDropdown = document.querySelector('#search-suggestions');
+  let searchIndex = [];
+  fetch('searchIndex.json')
+    .then(res => res.json())
+    .then(data => searchIndex = data);
+
+  searchBar.addEventListener('input', function () {
+    const query = this.value.toLowerCase();
+    suggestionsDropdown.innerHTML = '';
+    if (query) {
+      const results = searchIndex.filter(entry =>
+        entry.content.toLowerCase().includes(query)
+      );
+      results.slice(0, 10).forEach(entry => {
+        const item = document.createElement('div');
+        item.classList.add('suggestion-item');
+        item.innerHTML = `<a href="${entry.page}" style="color: inherit; text-decoration: none;">${entry.title}</a>`;
+        suggestionsDropdown.appendChild(item);
+      });
+      suggestionsDropdown.style.display = results.length ? 'block' : 'none';
+    } else {
+      suggestionsDropdown.style.display = 'none';
+    }
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!searchBar.contains(e.target) && !suggestionsDropdown.contains(e.target)) {
+      suggestionsDropdown.style.display = 'none';
+    }
+  });
+</script>
+
+
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/YOUR_PROPERTY_ID/1abcxyz';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script>
 </body>
 </html>
