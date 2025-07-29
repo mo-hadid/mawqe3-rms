@@ -473,3 +473,32 @@ body {
 }
 
 /* ─────────────────────────────────────────────────────────────── */
+
+/* ─── Desktop vs Mobile Visibility ───────────── */
+@media (min-width: 769px) {
+  .hamburger-menu {
+    display: none !important;
+  }
+  .mobile-only {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none !important;
+  }
+}
+
+/* ─── Fix Hamburger Toggle Persistence ───────── */
+.nav-links.active {
+  display: flex !important;
+}
+
+/* Optional visual improvement: center dropdown on mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    text-align: center;
+  }
+}
+
