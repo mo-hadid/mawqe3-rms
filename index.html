@@ -19,7 +19,7 @@
     <div class="center-logo">
       <img src="images/main_logo.png" alt="TECHNYAH Logo" class="secondary-logo">
     </div>
-    <div class="nav-container">
+<!--     <div class="nav-container">
       <div class="hamburger-menu">☰</div>
       <ul class="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
@@ -40,7 +40,25 @@
         <input type="text" class="search-bar" placeholder="Search..." id="search-bar" />
         <div id="search-suggestions" class="suggestions-dropdown"></div>
       </div>
-    </div>
+    </div> -->
+
+    <div class="nav-container">
+  <div class="hamburger-menu" onclick="toggleMenu()">☰</div>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="careers.html">Careers</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+    <li class="mobile-only"><a href="quote.html">Get a Quote</a></li>
+  </ul>
+  <div class="header-actions desktop-only">
+    <input type="text" class="search-bar" placeholder="Search..." id="search-bar" />
+    <div id="search-suggestions" class="suggestions-dropdown"></div>
+  </div>
+</div>
+
   </header>
 
   <!-- Hero Section -->
