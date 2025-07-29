@@ -1,99 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products - TECHNYAH</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Products - TECHNYAH</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
 </head>
 <body>
-   <!-- Header Section -->
-   <header class="site-header">
+  <!-- Header -->
+  <header class="site-header">
     <div class="center-logo">
-        <img src="images/main_logo.png" alt="main_logo" class="secondary-logo">
+      <img src="images/rms_logo.png" alt="TECHNYAH Logo" class="secondary-logo" />
     </div>
     <div class="nav-container">
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li class="dropdown">
-                <a href="about.html">About Us</a>
-                <div class="dropdown-menu">
-                    <a href="about.html#blog">Blog</a>
-                    <a href="about.html#portfolio">Portfolio</a>
-                </div>
-            </li>                
-            <li><a href="services.html">Services</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="careers.html">Careers</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-        </ul>            
-        <div class="header-actions">
-            <button class="quote-btn">Get a Quote</button>
-            <input type="text" class="search-bar" placeholder="Search...">
-        </div>
+      <div class="hamburger-menu">☰</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="about.html">About Us</a>
+          <div class="dropdown-menu">
+            <a href="about.html#blog">Blog</a>
+            <a href="about.html#portfolio">Portfolio</a>
+          </div>
+        </li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="products.html" class="active">Products</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <div class="header-actions">
+        <button class="quote-btn" onclick="location.href='quote.html'">Get a Quote</button>
+        <input type="text" class="search-bar" placeholder="Search..." id="search-bar" />
+        <div id="search-suggestions" class="suggestions-dropdown"></div>
+      </div>
     </div>
-</header>
+  </header>
 
-    <!-- Products Section -->
-    <main>
-  <section id="products" class="section">
-    <div class="container">
+  <!-- Products Section -->
+  <main>
+    <section id="products" class="section">
+      <div class="container">
         <h2>Our Products</h2>
         <div class="products-grid">
-            <!-- Product 1 -->
-            <div class="product">
-                <img src="images/drone pic 1.jpg" alt="DSS-2 Drone Surveillance System">
-                <h3>DSS-2 Drone Surveillance System</h3>
-                <p>The DSS-2 Drone Surveillance System is a cutting-edge solution for wide-scale aerial monitoring, designed to integrate seamlessly with multiple drones to cover vast areas of land. Ideal for industries and security applications, the DSS-2 ensures precise and efficient surveillance with real-time data collection and analysis.</p>
-                <div id="product1-view" class="product-3d"></div>
-            </div>
-            <!-- Product 2 -->
-            <div class="product">
-              <!--  <img src="images/product2.jpg" alt="ST-2500 Multi-purpose Flight Controller">  -->
-                <h3>ST-2500 Multi-purpose Flight Controller</h3>
-                <p>The ST-2500 is an advanced multipurpose flight controller designed for unmatched versatility in aerial and unmanned vehicle systems. Engineered with cutting-edge technology, it supports a wide range of drones, fixed-wing aircraft, and autonomous robotics.</p>
-                <div id="product2-view" class="product-3d"></div>
-            </div>
+          <!-- Product 1 -->
+          <div class="product">
+            <img src="images/drone pic 1.jpg" alt="DSS-2 Drone Surveillance System" />
+            <h3>DSS-2 Drone Surveillance System</h3>
+            <p>
+              A cutting-edge aerial monitoring solution for industrial and security applications. Covers wide areas with real-time data.
+            </p>
+            <div id="product1-view" class="product-3d"></div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="product">
+            <h3>ST-2500 Multi-purpose Flight Controller</h3>
+            <p>
+              Advanced controller for drones, UAVs, and robotics. Compatible with multi-rotor, fixed-wing, and autonomous systems.
+            </p>
+            <div id="product2-view" class="product-3d"></div>
+          </div>
         </div>
-    </div>
-</section>
-    </main>
+      </div>
+    </section>
+  </main>
 
-    <script>
-        // Example: 3D viewer setup
-        const setup3DViewer = (containerId) => {
-            const container = document.getElementById(containerId);
-            const scene = new THREE.Scene();
-            const camera = new THREE.PerspectiveCamera(75, container.offsetWidth / container.offsetHeight, 0.1, 1000);
-            const renderer = new THREE.WebGLRenderer();
-            renderer.setSize(container.offsetWidth, container.offsetHeight);
-            container.appendChild(renderer.domElement);
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 TECHNYAH - Robotic & Manufacturing Solutions LLC. All Rights Reserved.</p>
+  </footer>
 
-            const geometry = new THREE.BoxGeometry();
-            const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-            const cube = new THREE.Mesh(geometry, material);
-            scene.add(cube);
+  <!-- 3D Demo Script -->
+  <script>
+    const setup3DViewer = (containerId) => {
+      const container = document.getElementById(containerId);
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(75, container.offsetWidth / container.offsetHeight, 0.1, 1000);
+      const renderer = new THREE.WebGLRenderer();
+      renderer.setSize(container.offsetWidth, container.offsetHeight);
+      container.appendChild(renderer.domElement);
 
-            camera.position.z = 5;
+      const geometry = new THREE.BoxGeometry();
+      const material = new THREE.MeshBasicMaterial({ color: 0x00B4D8 });
+      const cube = new THREE.Mesh(geometry, material);
+      scene.add(cube);
+      camera.position.z = 3;
 
-            const animate = () => {
-                requestAnimationFrame(animate);
-                cube.rotation.x += 0.01;
-                cube.rotation.y += 0.01;
-                renderer.render(scene, camera);
-            };
-            animate();
-        };
+      const animate = () => {
+        requestAnimationFrame(animate);
+        cube.rotation.x += 0.01;
+        cube.rotation.y += 0.01;
+        renderer.render(scene, camera);
+      };
+      animate();
+    };
 
-        // Initialize 3D viewers
-        setup3DViewer("product1-view");
-        setup3DViewer("product2-view");
-    </script>
+    setup3DViewer("product1-view");
+    setup3DViewer("product2-view");
+  </script>
 
-        <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2025 TECHNYAH - Robotic & Manufacturing Solutions LLC. All Rights Reserved.</p>
-    </footer>
+   <!-- Search Script -->
+ <script>
+  const searchBar = document.querySelector('#search-bar');
+  const suggestionsDropdown = document.querySelector('#search-suggestions');
+  let searchIndex = [];
+  fetch('searchIndex.json')
+    .then(res => res.json())
+    .then(data => searchIndex = data);
+
+  searchBar.addEventListener('input', function () {
+    const query = this.value.toLowerCase();
+    suggestionsDropdown.innerHTML = '';
+    if (query) {
+      const results = searchIndex.filter(entry =>
+        entry.content.toLowerCase().includes(query)
+      );
+      results.slice(0, 10).forEach(entry => {
+        const item = document.createElement('div');
+        item.classList.add('suggestion-item');
+        item.innerHTML = `<a href="${entry.page}" style="color: inherit; text-decoration: none;">${entry.title}</a>`;
+        suggestionsDropdown.appendChild(item);
+      });
+      suggestionsDropdown.style.display = results.length ? 'block' : 'none';
+    } else {
+      suggestionsDropdown.style.display = 'none';
+    }
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!searchBar.contains(e.target) && !suggestionsDropdown.contains(e.target)) {
+      suggestionsDropdown.style.display = 'none';
+    }
+  });
+</script>
+
+  <!-- Live Chat Widget -->
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/YOUR_PROPERTY_ID/1abcxyz';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script>
 </body>
 </html>
