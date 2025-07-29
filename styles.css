@@ -39,6 +39,7 @@ body {
     display: none;
     font-size: 24px;
     cursor: pointer;
+    color: #222; /* dark gray */
 }
 @media (max-width: 768px) {
     .nav-links {
@@ -56,6 +57,7 @@ body {
     }
     .hamburger-menu {
         display: block;
+        
     }
 }
 
