@@ -231,7 +231,10 @@ body {
     padding: 20px;
     border-radius: 5px;
     color: #fff;
-    flex: 1 1 300px;
+  flex: 1 1 300px;
+  min-width: 280px;
+  max-width: 400px;
+
 }
 .service:hover {
     background-color: #48CAE4;
