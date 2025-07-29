@@ -46,7 +46,9 @@ body {
 .hamburger-menu:active {
   opacity: 0.6;
 }
-
+.nav-links a {
+    cursor: pointer;
+}
 @media (max-width: 768px) {
     .nav-links {
         display: none;
@@ -61,11 +63,7 @@ body {
     .nav-links.active {
         display: flex;
     }
-    .hamburger-menu {
-        display: block;
-        color: #222; /* dark gray */
-        
-    }
+
 }
 
 .nav-links {
