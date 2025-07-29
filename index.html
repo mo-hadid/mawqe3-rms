@@ -1,168 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TECHNYAH</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TECHNYAH</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header Section -->
-    <header class="site-header">
-        <div class="center-logo">
-            <img src="images/main_logo.png" alt="main_logo" class="secondary-logo">
-        </div>
-        <div class="nav-container">
-            <div class="hamburger-menu">☰</div>
-            
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li class="dropdown">
-                    <a href="about.html">About Us</a>
-                    <div class="dropdown-menu">
-                        <a href="about.html#blog">Blog</a>
-                        <a href="about.html#portfolio">Portfolio</a>
-                    </div>
-                </li>                
-                <li><a href="services.html">Services</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="careers.html">Careers</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>            
-            <div class="header-actions">
-                <button class="quote-btn">Get a Quote</button>
-                <input type="text" class="search-bar" placeholder="Search...">
-            </div>
-            
-        </div>
-    </header>
-<script>
-    const hamburgerMenu = document.querySelector('.hamburger-menu');
-    const navLinks = document.querySelector('.nav-links');
+  <!-- Header Section -->
+  <header class="site-header">
+    <div class="center-logo">
+      <img src="images/rms_logo.png" alt="TECHNYAH Logo" class="secondary-logo">
+    </div>
+    <div class="nav-container">
+      <div class="hamburger-menu">☰</div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li class="dropdown">
+          <a href="about.html">About Us</a>
+          <div class="dropdown-menu">
+            <a href="about.html#blog">Blog</a>
+            <a href="about.html#portfolio">Portfolio</a>
+          </div>
+        </li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <div class="header-actions">
+        <button class="quote-btn" onclick="location.href='quote.html'">Get a Quote</button>
+        <input type="text" class="search-bar" placeholder="Search..." id="search-bar" />
+        <div id="search-suggestions" class="suggestions-dropdown"></div>
+      </div>
+    </div>
+  </header>
 
-    hamburgerMenu.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
-</script>
-
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <!-- Slideshow -->
-    <div class="slideshow">
-        <img src="images/drone pic 1.jpg" alt="Slide 1">
-        <img src="images/drone pic 2.jpg" alt="Slide 2">
-
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="slideshow" style="display: flex; justify-content: center; align-items: center;">
+      <img src="images/drone pic 1.jpg" alt="Slide 1">
+      <img src="images/drone pic 2.jpg" alt="Slide 2">
     </div>
     <div class="overlay"></div>
     <div class="hero-content">
-            <h1>Transforming Automation, Redefining Possibilities.</h1>
-           
-        </div>
-    </section>
+      <h1>Transforming Automation, Redefining Possibilities.</h1>
+    </div>
+  </section>
 
-    <!-- Sections -->
-    <section id="about" class="section">
-        <h2>Who We Are</h2>
-        <p>At TECHNYAH, we are pioneers in developing advanced robotics, PLCs, and AI-powered solutions.</p>
-    </section>
+  <!-- Sections -->
+  <section id="about" class="section">
+    <h2>Who We Are</h2>
+    <p>At TECHNYAH, we are pioneers in developing advanced robotics, PLCs, and AI-powered solutions.</p>
+  </section>
 
-    <section id="services" class="section">
-        <h2>Our Expertise</h2>
-        <div class="services-grid">
-            <div class="service">
-                <h3>Advanced Robotics</h3>
-                <p>Revolutionizing manufacturing with intelligent robots tailored for automation.</p>
-            </div>
-            <div class="service">
-                <h3>AI & Machine Learning</h3>
-                <p>Deploying AI-driven algorithms for predictive analysis and real-time decision-making.</p>
-            </div>
-            <div class="service">
-                <h3>PLC & Microcontrollers</h3>
-                <p>Designing and manufacturing reliable PLCs and microcontroller-based systems.</p>
-            </div>
-        </div>
-    </section>
+  <section id="services" class="section">
+    <h2>Our Expertise</h2>
+    <div class="services-grid">
+      <div class="service">
+        <h3>Advanced Robotics</h3>
+        <p>Revolutionizing manufacturing with intelligent robots tailored for automation.</p>
+      </div>
+      <div class="service">
+        <h3>AI & Machine Learning</h3>
+        <p>Deploying AI-driven algorithms for predictive analysis and real-time decision-making.</p>
+      </div>
+      <div class="service">
+        <h3>PLC & Microcontrollers</h3>
+        <p>Designing and manufacturing reliable PLCs and microcontroller-based systems.</p>
+      </div>
+    </div>
+  </section>
 
-    <section id="portfolio" class="section">
-        <h2>Our Portfolio</h2>
-        <p>Explore the projects and solutions we've delivered for clients in various industries.</p>
-    </section>
+  <section id="portfolio" class="section">
+    <h2>Our Portfolio</h2>
+    <p>Explore the projects and solutions we've delivered for clients in various industries.</p>
+  </section>
 
-    <section id="contact" class="section">
-        <h2>Contact Us</h2>
-        <p>Contact us to explore innovative solutions for your business needs.</p>
-        <a href="contact.html" class="cta-btn">Contact Us</a>
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p>Contact us to explore innovative solutions for your business needs.</p>
+    <a href="contact.html" class="cta-btn">Contact Us</a>
+  </section>
 
-    </section>
-<!-- Inline JavaScript -->
-<input type="text" class="search-bar" placeholder="Search..." id="search-bar">
-<div id="search-suggestions" class="suggestions-dropdown"></div>
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 TECHNYAH - Robotic & Manufacturing Solutions LLC. All Rights Reserved.</p>
+  </footer>
 
-<script>
+  <!-- JavaScript -->
+  <script>
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const navLinks = document.querySelector('.nav-links');
+    hamburgerMenu.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    // Search
     const searchBar = document.querySelector('#search-bar');
-    const suggestionsDropdown = document.querySelector('.suggestions-dropdown');
+    const suggestionsDropdown = document.querySelector('#search-suggestions');
+    let searchIndex = [];
+    fetch('searchIndex.json')
+        .then(res => res.json())
+        .then(data => searchIndex = data);
 
-    // Function to search text within the current page
-    searchBar.addEventListener('input', function() {
-        const query = searchBar.value.toLowerCase();
-        suggestionsDropdown.innerHTML = ''; // Clear previous suggestions
-
+    searchBar.addEventListener('input', function () {
+        const query = this.value.toLowerCase();
+        suggestionsDropdown.innerHTML = '';
         if (query) {
-            const results = searchInPage(query);
-            if (results.length > 0) {
-                results.forEach(result => {
-                    const suggestionItem = document.createElement('div');
-                    suggestionItem.classList.add('suggestion-item');
-                    suggestionItem.textContent = result;
-                    suggestionsDropdown.appendChild(suggestionItem);
-                });
-                suggestionsDropdown.style.display = 'block'; // Show dropdown
-            } else {
-                suggestionsDropdown.style.display = 'none'; // Hide dropdown if no matches
-            }
+        const results = searchIndex.filter(entry =>
+            entry.content.toLowerCase().includes(query)
+        );
+        results.slice(0, 10).forEach(entry => {
+            const item = document.createElement('div');
+            item.classList.add('suggestion-item');
+            item.innerHTML = `<a href="${entry.page}" style="color: inherit; text-decoration: none;">${entry.title}</a>`;
+            suggestionsDropdown.appendChild(item);
+        });
+        suggestionsDropdown.style.display = results.length ? 'block' : 'none';
         } else {
-            suggestionsDropdown.style.display = 'none'; // Hide dropdown if input is empty
-        }
-     });
-    
-    // Highlight the active link in the navbar
-    const navLinks = document.querySelectorAll('.nav-links a');
-    navLinks.forEach(link => {
-        if (link.href === window.location.href) {
-            link.classList.add('active');
+        suggestionsDropdown.style.display = 'none';
         }
     });
 
-    // Function to search for text within the page
-    function searchInPage(query) {
-        const bodyText = document.body.innerText.toLowerCase(); // Get all text from the body
-        const results = [];
-        
-        // Loop through all text nodes in the body
-        const textNodes = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
-        let currentNode;
-        
-        while (currentNode = textNodes.nextNode()) {
-            if (currentNode.nodeValue.toLowerCase().includes(query)) {
-                results.push(currentNode.nodeValue.trim());
-            }
-        }
-        
-        return results;
-    }
-
-    // Hide suggestions when clicking outside the search bar
-    document.addEventListener('click', function(event) {
-        if (!searchBar.contains(event.target) && !suggestionsDropdown.contains(event.target)) {
-            suggestionsDropdown.style.display = 'none';
+    document.addEventListener('click', (e) => {
+        if (!searchBar.contains(e.target) && !suggestionsDropdown.contains(e.target)) {
+        suggestionsDropdown.style.display = 'none';
         }
     });
-</script>
+    </script>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2025 TECHNYAH - Robotic & Manufacturing Solutions LLC. All Rights Reserved.</p>
-    </footer>
+
+  <!-- Live Chat Widget (Example only: Tawk.to integration) -->
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/YOUR_PROPERTY_ID/1abcxyz';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script>
 </body>
 </html>
