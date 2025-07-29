@@ -1,21 +1,18 @@
 /* General Styles */
-/* Mobile */
 @media screen and (max-width: 768px) {
-    .services-grid {
+    .services-grid, .products-grid {
         flex-direction: column;
         gap: 20px;
+        align-items: center;
     }
 }
-/* These styles apply to the entire body of the webpage */
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    /*color: #1f1f1ffd;  Default text color */
-   /* background-color: #E6E6E6; /* Default background color */
 }
 
-/* Header Styles */
 /* Header */
 .site-header {
     color: white;
@@ -23,22 +20,21 @@ body {
     border-bottom: 0.2px solid #ddd;
     text-align: center;
 }
-/* Centered logo in the header */
+
 .center-logo img {
     height: 70px;
     max-width: 210px;
     width: auto;
     margin-bottom: 1px;
-
 }
 
-/* Navigation bar container */
 .nav-container {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     gap: 15px;
 }
+
 .hamburger-menu {
     display: none;
     font-size: 24px;
@@ -62,412 +58,265 @@ body {
         display: block;
     }
 }
-.header-actions-left {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    justify-content: flex-start; /* Align to the left */
-}
-.quote-btn, .search-bar {
-    margin-left: 0; /* Ensure the margin is consistent */
-}
-/* Navigation links: Background and text colors can be customized */
+
 .nav-links {
     list-style: none;
     display: flex;
     gap: 15px;
-    color: #0a0a0a; /* Neutral text color */
-    background-color: transparent; /* Default no background */
+    color: #0a0a0a;
+    background-color: transparent;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #610000; /* Link text color */
+    color: #0077B6;
     font-weight: bold;
     padding: 10px 15px;
     transition: background-color 0.3s;
-    border-radius: 3px; /* Smooth edges */
+    border-radius: 3px;
 }
 
 .nav-links a:hover {
-    background-color: #720000; /* Hover background color */
-    color: #ffffff; /* Hover text color */
+    background-color: #48CAE4;
+    color: #ffffff;
 }
 
-/*------------addition---------*/
 .nav-links li a.active {
-    color: #007BFF; /* Change to your desired active link color */
+    color: #00B4D8;
     font-weight: bold;
 }
 
-/* Dropdown menu styles */
 .dropdown {
     position: relative;
 }
-
 .dropdown-menu {
     display: none;
     position: absolute;
     background-color: #fff;
-    color: #610000;
+    color: #0077B6;
     box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     margin-top: 8px;
     padding: 8px 0;
     z-index: 1000;
-    min-width: 120px; /* Decrease the width */
-    left: 0; /* Align to the left */
+    min-width: 120px;
+    left: 0;
 }
-
 .dropdown-menu a {
     display: block;
     padding: 6px 10px;
     text-decoration: none;
-    color: #610000;
+    color: #0077B6;
     transition: background-color 0.3s;
 }
-
 .dropdown-menu a:hover {
-    background-color: #870101;
+    background-color: #00B4D8;
     color: white;
 }
-
 .dropdown:hover .dropdown-menu {
     display: block;
 }
 
-/* Action buttons in the header */
 .header-actions {
     display: flex;
     align-items: center;
     gap: 10px;
 }
+.quote-btn, .search-bar {
+    margin-left: 0;
+}
 
-.quote-btn {
-    background-color: #870101; /* Button background color */
-    color: #FFFFFF; /* Button text color */
+/* Buttons and Call to Action */
+.quote-btn, .cta-btn, .contact-btn {
+    background-color: #00B4D8;
+    color: #FFFFFF;
     padding: 10px 15px;
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+.quote-btn:hover, .cta-btn:hover, .contact-btn:hover {
+    background-color: #48CAE4;
+    color: #FFFFFF;
 }
 
-/* Search bar in the header */
-.search-bar {
-    padding: 10px;
-    border-radius: 5px;
-    width: 200px;
-}
-/* Sugestions */
+/* Search Bar */
 .suggestions-dropdown {
-    display: none; /* Initially hidden */
-    position: absolute;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    width: 200px; /* Adjust width */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    max-height: 150px;
-    overflow-y: auto;
-    z-index: 999;
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  max-height: 200px;
+  overflow-y: auto;
+  width: 240px;
+  z-index: 1000;
+  border-radius: 6px;
+  display: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .suggestion-item {
-    padding: 8px;
-    cursor: pointer;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
 }
 
 .suggestion-item:hover {
-    background-color: #f1f1f1;
+  background-color: #f1f1f1;
 }
 
-/* Hero Section Styles */
 
-/*Slide show*/
-/* Add this for the hero-section background slideshow */
+/* Hero */
 .hero-section {
     position: relative;
     height: 80vh;
-    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    /*background: url('images/background.jpg') no-repeat center center/cover;*/
-    height: 80vh;
-    position: relative;
-    color: #FFFFFF; /* Text color */
     text-align: center;
+    color: #FFFFFF;
 }
-
 .hero-section .slideshow {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     z-index: -1;
     animation: slideshow 6s infinite;
 }
-
 .hero-section .slideshow img {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
-
 .hero-section .slideshow img:nth-child(1) {
     animation: fade 6s infinite 0s;
 }
-
 .hero-section .slideshow img:nth-child(2) {
     animation: fade 6s infinite 3s;
 }
-
-
 @keyframes fade {
-    0%, 100% {
-        opacity: 0;
-    }
-    33% {
-        opacity: 1;
-    }
+    0%, 100% { opacity: 0; }
+    33% { opacity: 1; }
 }
-
-
-
-/* Dark overlay for better readability of text on images */
 .overlay {
-    background: rgba(0, 0, 0, 0.7); /* Adjust transparency */
+    background: rgba(0, 0, 0, 0.7);
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
 }
-
-/* Center hero content vertically */
 .hero-content {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
 }
 
-/* Call-to-action button */
-.cta-btn {
-    background-color: #870101; /* Button background color */
-    color: #ffffff; /* Button text color */
-}
-
-.cta-btn:hover {
-    background-color: #720000; /* Hover background */
-    color: #FFFFFF; /* Hover text color */
-}
-
-/* Section Styles */
-/* Generic sections for content */
+/* Sections */
 .section {
     padding: 50px 20px;
-    background-color: #2D2D2D; /* Section background */
-    color: #E6E6E6; /* Section text color */
+    background-color: #2D2D2D;
+    color: #E6E6E6;
     text-align: center;
 }
-
-/* Grid for service items */
-.services-grid {
+.services-grid, .products-grid {
     display: flex;
     gap: 20px;
     justify-content: center;
-    color: #E6E6E6; /* Default text color */
-}
-
-/* Individual service items */
-.service {
-    background: #870101; /* Card background */
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    flex: 1 1 300px;
-}
-
-.service:hover {
-    background-color: #720000; /* Hover effect */
-    color: #E6E6E6; /* Text color */
-}
-
-/* Footer Styles */
-/* Footer section */
-.footer {
-    background: #1E1E1E; /* Footer background color */
-    color: #E6E6E6; /* Footer text color */
-    text-align: center;
-    padding: 15px 0;
-}
-
-/* Button Styles */
-/* Shared button styles */
-.cta-btn, .contact-btn {
-    background-color: #870101; /* Button background color */
-    color: #FFFFFF; /* Text color */
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.cta-btn:hover, .contact-btn:hover {
-    background-color: #720000; /* Hover background */
-    color: #ffffff; /* Hover text */
-}
-/*-------------------contact.html-------------------*/
-/* Contact Information Alignment */
-.contact-page {
-    background-color: #ffffff; /* White background */
-    color: #000000; /* Ensure text is visible on white */
-    padding: 20px; /* Add padding for spacing */
-}
-.contact-info {
-    text-align: center; /* Center text horizontally */
-    margin: 0 auto; /* Center the block itself */
-    max-width: 600px; /* Limit the width for better readability */
-    padding: 20px; /* Add padding for spacing */
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 2rem;
-    background: #2D2D2D; /* Form background */
-    color: #000000; /* Text color */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-}
-
-/* Input and textarea styling */
-.contact-form input, .contact-form textarea {
-    width: 100%;
-    padding: 0.8rem;
-    font-size: 1rem;
-    border: 1px solid #a20000;
-    border-radius: 5px;
-    background-color: #4A4A4A; /* Input background */
-    color: #E6E6E6; /* Input text color */
-}
-
-.contact-form input:focus, .contact-form textarea:focus {
-    outline: none;
-    border-color: #0066cc; /* Focus border color */
-    background-color: #b0b0b0; /* Focus background */
-}
-
-/* Submit button styling */
-.contact-btn {
-    width: 100%;
-    padding: 0.8rem;
-    font-size: 1rem;
-    font-weight: bold;
-    color: white;
-    background-color: #870101;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.contact-btn:hover {
-    background-color: #720000;
-}
-/*-------------------about.html-------------------*/
-/* Team Section Styles */
-.team-member {
-    text-align: center;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
-.team-img {
-    width: 150px; /* Smaller image size */
-    height: auto;
-    border-radius: 50%; /*Makes the image circular */
-    margin-bottom: 10px;
-}
-
-.team-member h3 {
-    font-size: 1.2rem;
-    color: #2466a3;
-    margin: 0;
-}
-
-.team-member p {
-    font-size: 1rem;
-    color: #616a74;
-    margin: 0;
-}
-
-.partner-logo img {
-    width: auto;
-    height: 80px;
-    margin-bottom: 5px;
-}
-
-/*-------------------products.html-------------------*/
-
-/* Products Grid */
-.products-grid {
-    display: flex;
-    gap: 20px;
-    justify-content: space-around;
     flex-wrap: wrap;
 }
+.service {
+    background: #00B4D8;
+    padding: 20px;
+    border-radius: 5px;
+    color: #fff;
+    flex: 1 1 300px;
+}
+.service:hover {
+    background-color: #48CAE4;
+}
 
-/* Product Card */
+/* Products */
 .product {
     text-align: center;
-    width: 300px; /* Adjust as needed for layout */
+    width: 300px;
     padding: 15px;
     border: 1px solid #ddd;
     border-radius: 8px;
     background-color: #D3D3D3;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
-/* Product Image */
 .product img {
     width: 180px;
     height: 150px;
-    object-fit: cover; /* Crop to fit dimensions */
+    object-fit: cover;
     border-radius: 5px;
     margin-bottom: 10px;
 }
-
-/* Product Title */
 .product h3 {
     font-size: 1.2em;
     margin: 10px 0;
     color: #333;
 }
-
-/* Product Description */
 .product p {
     font-size: 0.9em;
     color: #555;
     line-height: 1.4;
 }
-/*-------------------quote.html-------------------*/
-.get-quote-section {
-    padding: 50px 20px;
-    background-color: #f4f4f4;
-    color: #333;
+
+
+/* Careers */
+
+  .careers-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  }
+
+  .careers-container h2 {
+    color: #111;
+    font-weight: 700;
+  }
+
+  .job-description {
+  margin: 0.5rem 0;
+  color: #111; /* darker than #333 */
+  font-weight: 500;
+}
+
+
+/* Footer */
+.footer {
+    background: #1E1E1E;
+    color: #E6E6E6;
     text-align: center;
+    padding: 15px 0;
+}
+
+/* Forms */
+.contact-form input, .contact-form textarea,
+.quote-fields input, .quote-fields textarea {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #0077B6;
+    border-radius: 5px;
+    background-color: #4A4A4A;
+    color: #FFFFFF;
+}
+.contact-form input:focus, .contact-form textarea:focus {
+    outline: none;
+    border-color: #00B4D8;
+    background-color: #b0b0b0;
+}
+
+.contact-btn {
+    width: 100%;
+    background-color: #00B4D8;
 }
 
 .quote-fields {
@@ -476,41 +325,6 @@ body {
     max-width: 600px;
     margin: 0 auto;
 }
-
-.quote-fields label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-}
-
-.quote-fields input, .quote-fields textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.quote-fields input[type="number"] {
-    width: auto;
-    display: inline-block;
-}
-
-.cta-btn {
-    background-color: #870101;
-    color: white;
-    padding: 15px 25px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-.cta-btn:hover {
-    background-color: #720000;
-}
-
-
 .quote-fields input::placeholder {
     color: #888;
     font-style: italic;
