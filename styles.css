@@ -57,6 +57,7 @@ body {
     }
     .hamburger-menu {
         display: block;
+        color: #222; /* dark gray */
         
     }
 }
