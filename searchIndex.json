@@ -1,0 +1,9 @@
+[
+  { "title": "Home", "page": "index.html", "content": "robotics automation TECHNYAH custom machinery" },
+  { "title": "About Us", "page": "about.html", "content": "company mission founders experience automation" },
+  { "title": "Services", "page": "services.html", "content": "robotic arms manipulators custom machinery systems integration conveyors training" },
+  { "title": "Products", "page": "products.html", "content": "smart robots controllers sensors actuators PLCs VFDs" },
+  { "title": "Careers", "page": "careers.html", "content": "open positions internship automation AI software mechanical civil" },
+  { "title": "Contact Us", "page": "contact.html", "content": "inquiries address support email phone location" },
+  { "title": "Get a Quote", "page": "quote.html", "content": "project estimate inquiry form automation machinery" }
+]
