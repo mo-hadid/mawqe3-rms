@@ -1,113 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - TECHNYAH</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services - TECHNYAH</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 2rem 1rem;
+    }
+    .service-card {
+      background: #ffffff;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      color: #222;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+    .service-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #00B4D8;
+    }
+    .service-details {
+      display: none;
+      text-align: left;
+      margin-top: 1rem;
+      color: #222;
+    }
+    .learn-more-btn {
+      margin-top: 1rem;
+      background-color: #00B4D8;
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .learn-more-btn:hover {
+      background-color: #48CAE4;
+    }
+  </style>
 </head>
 <body>
-   <!-- Header Section -->
-   <header class="site-header">
+  <header class="site-header">
     <div class="center-logo">
-        <img src="images/main_logo.png" alt="main_logo" class="secondary-logo">
+      <img src="images/rms_logo.png" alt="TECHNYAH Logo" class="secondary-logo">
     </div>
     <div class="nav-container">
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li class="dropdown">
-                <a href="about.html">About Us</a>
-                <div class="dropdown-menu">
-                    <a href="about.html#blog">Blog</a>
-                    <a href="about.html#portfolio">Portfolio</a>
-                </div>
-            </li>                
-            <li><a href="services.html">Services</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="careers.html">Careers</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-        </ul>            
-        <div class="header-actions">
-            <button class="quote-btn">Get a Quote</button>
-            <input type="text" class="search-bar" placeholder="Search...">
-        </div>
+      <div class="hamburger-menu">☰</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <div class="header-actions">
+        <button class="quote-btn" onclick="location.href='quote.html'">Get a Quote</button>
+        <input type="text" class="search-bar" placeholder="Search..." id="search-bar" />
+        <div id="search-suggestions" class="suggestions-dropdown"></div>
+      </div>
     </div>
-</header>
+  </header>
 
-    <!-- Services Section -->
-    <main>
-        <section id="services" class="section">
-            <div class="container">
-                <h2>Our Services</h2>
-                <div class="services-grid">
-                    <!-- Service 1 -->
-                    <div class="service">
-                      <!--  <img src="images/service1.jpg" alt="service 1"> -->
-                        <h3>Custom Designed Machinery</h3>
-                        <p>We specialize in creating custom-designed machinery tailored to meet the specific needs of your industry. From concept to production, our expert engineers deliver innovative, efficient, and reliable solutions that optimize performance, reduce downtime, and maximize productivity. Let us turn your unique challenges into streamlined automation systems that elevate your operations.</p>
-                        <div id="service1-view" class="service-3d"></div>
-                    </div>
-                    <!-- Service 2 -->
-                    <div class="service">
-                       <!-- <img src="images/service2.jpg" alt="service 2"> -->
-                        <h3>Industrial Manipulators and Systems Integration</h3>
-                        <p>Enhance your workflow with our advanced industrial manipulators and seamless system integration services. We provide solutions that improve precision, reduce labor-intensive tasks, and boost efficiency. Whether it’s material handling or robotic system integration, we deliver cutting-edge technology to simplify complex processes and enhance operational performance.</p>
-                        <div id="service2-view" class="service-3d"></div>
-                    </div>
-                    <!-- Service 3 -->
-                    <div class="service">
-                     <!--   <img src="images/service2.jpg" alt="service 2"> -->
-                        <h3>Computer Vision Analysis</h3>
-                        <p>Harness the power of artificial intelligence with our computer vision analysis services. We provide advanced solutions for quality control, defect detection, and real-time data monitoring. From manufacturing to security, our systems offer unparalleled accuracy and automation, empowering your business with insightful, actionable analytics.</p>
-                        <div id="service2-view" class="service-3d"></div>
-                    </div>
-                    <!-- Service 4 -->
-                    <div class="service">
-                       <!-- <img src="images/service2.jpg" alt="service 2">  -->
-                        <h3>Drone Surveillance Services</h3>
-                        <p>Experience the future of aerial monitoring with our comprehensive drone surveillance services. Ideal for industries ranging from agriculture to security, our solutions provide real-time data collection, precise mapping, and wide-area monitoring. With our drones, you gain a bird’s-eye view to streamline operations, ensure safety, and deliver critical insights faster and more efficiently.</p>
-                        <div id="service2-view" class="service-3d"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+  <main class="section">
+    <div class="container">
+      <h2>Our Core Services</h2>
+      <p>We engineer custom solutions for automation, robotics, and advanced control systems across various industries.</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🤖</div>
+          <h3>Robotic Arms & Manipulators</h3>
+          <p>Design, integration, and programming of robotic arms for precision automation tasks.</p>
+          <button class="learn-more-btn" onclick="toggleDetails(this)">Learn More</button>
+          <div class="service-details">
+            <p>We integrate ABB, FANUC, UR, and custom robotic arms with PLCs and machine vision systems, tailored for packaging, welding, inspection, and more.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">⚙️</div>
+          <h3>Custom Machinery</h3>
+          <p>We design and build machines that fit your exact operational and space requirements.</p>
+          <button class="learn-more-btn" onclick="toggleDetails(this)">Learn More</button>
+          <div class="service-details">
+            <p>From concept to commissioning, we create CNC-based jigs, pick-and-place systems, assembly lines, and mobile robotic platforms customized to your specs.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🖧</div>
+          <h3>Systems Integration</h3>
+          <p>Bridging hardware and software—PLC, SCADA, HMIs, sensors, drives, and cloud platforms.</p>
+          <button class="learn-more-btn" onclick="toggleDetails(this)">Learn More</button>
+          <div class="service-details">
+            <p>We synchronize machines, databases, ERP/SCADA, and secure IIoT platforms to deliver full process visibility and efficiency.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">📦</div>
+          <h3>Conveyor Belt Systems</h3>
+          <p>Material handling systems for packaging, sorting, and logistics optimization.</p>
+          <button class="learn-more-btn" onclick="toggleDetails(this)">Learn More</button>
+          <div class="service-details">
+            <p>From powered rollers to modular belts and servo-tracked smart conveyors, we build scalable and safe solutions for manufacturing and warehousing.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🎓</div>
+          <h3>Robotic Training</h3>
+          <p>On-site or virtual hands-on training for robotics operation, maintenance, and programming.</p>
+          <button class="learn-more-btn" onclick="toggleDetails(this)">Learn More</button>
+          <div class="service-details">
+            <p>Our training covers safety standards, PLC ladder logic, arm kinematics, ROS basics, and HMI interaction—tailored to your team’s experience.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 
-    <script>
-        // Example: 3D viewer setup
-        const setup3DViewer = (containerId) => {
-            const container = document.getElementById(containerId);
-            const scene = new THREE.Scene();
-            const camera = new THREE.PerspectiveCamera(75, container.offsetWidth / container.offsetHeight, 0.1, 1000);
-            const renderer = new THREE.WebGLRenderer();
-            renderer.setSize(container.offsetWidth, container.offsetHeight);
-            container.appendChild(renderer.domElement);
+  <footer class="footer">
+    <p>&copy; 2025 TECHNYAH - Robotic & Manufacturing Solutions LLC. All Rights Reserved.</p>
+  </footer>
 
-            const geometry = new THREE.BoxGeometry();
-            const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-            const cube = new THREE.Mesh(geometry, material);
-            scene.add(cube);
+  <script>
+    function toggleDetails(button) {
+      const details = button.nextElementSibling;
+      const isOpen = details.style.display === 'block';
+      details.style.display = isOpen ? 'none' : 'block';
+      button.textContent = isOpen ? 'Learn More' : 'Hide Details';
+    }
+  </script>
 
-            camera.position.z = 5;
+  <!-- Search -->
+ <script>
+  const searchBar = document.querySelector('#search-bar');
+  const suggestionsDropdown = document.querySelector('#search-suggestions');
+  let searchIndex = [];
+  fetch('searchIndex.json')
+    .then(res => res.json())
+    .then(data => searchIndex = data);
 
-            const animate = () => {
-                requestAnimationFrame(animate);
-                cube.rotation.x += 0.01;
-                cube.rotation.y += 0.01;
-                renderer.render(scene, camera);
-            };
-            animate();
-        };
+  searchBar.addEventListener('input', function () {
+    const query = this.value.toLowerCase();
+    suggestionsDropdown.innerHTML = '';
+    if (query) {
+      const results = searchIndex.filter(entry =>
+        entry.content.toLowerCase().includes(query)
+      );
+      results.slice(0, 10).forEach(entry => {
+        const item = document.createElement('div');
+        item.classList.add('suggestion-item');
+        item.innerHTML = `<a href="${entry.page}" style="color: inherit; text-decoration: none;">${entry.title}</a>`;
+        suggestionsDropdown.appendChild(item);
+      });
+      suggestionsDropdown.style.display = results.length ? 'block' : 'none';
+    } else {
+      suggestionsDropdown.style.display = 'none';
+    }
+  });
 
-        // Initialize 3D viewers
-        setup3DViewer("service1-view");
-        setup3DViewer("service2-view");
-    </script>
+  document.addEventListener('click', (e) => {
+    if (!searchBar.contains(e.target) && !suggestionsDropdown.contains(e.target)) {
+      suggestionsDropdown.style.display = 'none';
+    }
+  });
+</script>
 
-        <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2025 TECHNYAH - Robotic & Manufacturing Solutions LLC. All Rights Reserved.</p>
-    </footer>
+
+  <!-- Live Chat Widget -->
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/YOUR_PROPERTY_ID/1abcxyz';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script>
 </body>
 </html>
