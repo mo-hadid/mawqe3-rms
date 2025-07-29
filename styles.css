@@ -36,11 +36,17 @@ body {
 }
 
 .hamburger-menu {
-    display: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: #222; /* dark gray */
+  display: block;
+  font-size: 26px;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: #222; /* dark gray */
 }
+
+.hamburger-menu:active {
+  opacity: 0.6;
+}
+
 @media (max-width: 768px) {
     .nav-links {
         display: none;
@@ -383,17 +389,6 @@ body {
     box-sizing: border-box;
   }
 
-  .hamburger-menu {
-    display: block;
-    font-size: 26px;
-    padding: 0.5rem;
-    cursor: pointer;
-      color: #222; /* dark gray */
-      
-  }
-.hamburger-menu:active {
-  opacity: 0.6;
-}
   .header-actions {
     flex-direction: column;
     width: 100%;
