@@ -1,177 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us - TECHNYAH</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <style>
-    .contact-container {
-      max-width: 640px;
-      margin: auto;
-      padding: 2rem;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
-    }
-    .contact-container h2 {
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-    .contact-form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    .contact-form input, .contact-form textarea {
-      padding: 0.75rem 1rem;
-      font-size: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      width: 100%;
-    }
-    .contact-form textarea {
-      resize: vertical;
-      min-height: 120px;
-    }
-    .contact-form button {
-      align-self: flex-start;
-      background: #00B4D8;
-      color: #fff;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      border-radius: 6px;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-    .contact-form button:hover {
-      background: #48CAE4;
-    }
-  </style>
+  <title>Contact Us | TECHNYAH — Robotics & Automation</title>
+  <meta name="description" content="Contact TECHNYAH for robotics, automation, and control systems projects. We respond within one business day.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="images/main_logo.png" type="image/png">
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-<!-- Header -->
-<header class="site-header">
-  <div class="center-logo">
-    <img src="images/main_logo.png" alt="TECHNYAH Logo" class="secondary-logo">
-  </div>
-  <div class="nav-container">
-    <div class="hamburger-menu">☰</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="products.html">Products</a></li>
-      <li><a href="careers.html">Careers</a></li>
-      <li><a href="contact.html" class="active">Contact Us</a></li>
-    </ul>
-    <div class="header-actions">
-      <button class="quote-btn" onclick="location.href='quote.html'">Get a Quote</button>
-      <input type="text" class="search-bar" placeholder="Search..." id="search-bar" />
-      <div id="search-suggestions" class="suggestions-dropdown"></div>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">
+        <img src="images/main_logo.png" alt="TECHNYAH — Robotic & Manufacturing Solutions">
+      </a>
+      <button class="hamburger-menu" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html" class="active">Contact Us</a></li>
+        <li class="mobile-search">
+          <input type="text" class="search-bar" placeholder="Search the site…" aria-label="Search">
+          <div class="suggestions-dropdown"></div>
+        </li>
+      </ul>
+      <div class="header-search">
+        <input type="text" class="search-bar" placeholder="Search…" aria-label="Search">
+        <div class="suggestions-dropdown"></div>
+      </div>
+      <button class="nav-cta" onclick="location.href='quote.html'">Get a Quote</button>
     </div>
-  </div>
-</header>
+  </header>
 
-<!-- Contact Form -->
-<main class="section">
-  <div class="container contact-container" style="text-align: center;">
-    <h2 style="color: #222; font-weight: 700;">Contact Us</h2>
-    <form id="contact-form" class="contact-form" style="max-width: 600px; margin: 0 auto;">
-      <input type="text" id="name" name="name" placeholder="Your Name" required />
-      <input type="email" id="email" name="email" placeholder="Your Email" required />
-      <input type="text" id="subject" name="subject" placeholder="Subject" required />
-      <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </div>
-</main>
+  <main id="main">
+    <section class="section">
+      <div class="container">
+        <div class="section-head center">
+          <p class="eyebrow">Contact Us</p>
+          <h2>Talk to Our Team</h2>
+          <p>Questions about a project, a product, or working together — send us a message and we will respond within one business day.</p>
+        </div>
 
+        <!-- Direct contact options -->
+        <div class="contact-direct">
+          <div class="card">
+            <p class="spec-label">General Inquiries</p>
+            <a href="mailto:info@technyah.com">info@technyah.com</a>
+          </div>
+          <div class="card">
+            <p class="spec-label">Project Quotes</p>
+            <a href="quote.html">Request a quote &rarr;</a>
+          </div>
+          <div class="card">
+            <p class="spec-label">Careers</p>
+            <a href="careers.html">Open positions &rarr;</a>
+          </div>
+        </div>
 
+        <!-- Contact form (FormSubmit → info@technyah.com, CC mhadid@technyah.com) -->
+        <form id="contact-form" class="form-shell" data-formsubmit
+              action="https://formsubmit.co/info@technyah.com" method="POST">
+          <!-- FormSubmit configuration -->
+          <input type="hidden" name="_cc" value="mhadid@technyah.com">
+          <input type="hidden" name="_subject" value="Website Contact — TECHNYAH">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://technyah.com/thanks.html">
+          <!-- Honeypot spam trap — must stay empty -->
+          <div class="hp-field" aria-hidden="true">
+            <label>Leave this field empty<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label>
+          </div>
 
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" autocomplete="name" required>
+            </div>
+            <div class="form-field">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" autocomplete="email" required>
+            </div>
+            <div class="form-field full">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required>
+            </div>
+            <div class="form-field full">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+          </div>
+          <button type="submit" class="form-submit">Send Message</button>
+          <p class="form-note" style="margin-top:12px; text-align:center;">Your message goes directly to our team at info@technyah.com.</p>
+        </form>
+      </div>
+    </section>
+  </main>
 
-<!-- Footer -->
-<footer class="footer">
-  <p>&copy; 2025 TECHNYAH - Robotic & Manufacturing Solutions LLC. All Rights Reserved.</p>
-</footer>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/main_logo.png" alt="TECHNYAH logo">
+        <p>Robotic &amp; Manufacturing Solutions LLC<br>Lakeland, Florida, USA</p>
+      </div>
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="careers.html">Careers</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Work With Us</h3>
+        <ul>
+          <li><a href="quote.html">Request a Quote</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="mailto:info@technyah.com">info@technyah.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 TECHNYAH — Robotic &amp; Manufacturing Solutions LLC. All Rights Reserved.</p>
+    </div>
+  </footer>
 
-<!-- Form EmailJS Logic -->
-<script>
-  (function() {
-    emailjs.init("YOUR_EMAILJS_USER_ID"); // Replace with your actual user ID
-  })();
-
-  document.getElementById("contact-form").addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const params = {
-      from_name: document.getElementById("name").value,
-      from_email: document.getElementById("email").value,
-      subject: document.getElementById("subject").value,
-      message: document.getElementById("message").value,
-    };
-
-    emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", params)
-      .then(() => {
-        alert("Message sent successfully!");
-        this.reset();
-      }, (error) => {
-        alert("Failed to send message. Please try again.");
-        console.error(error);
-      });
-  });
-</script>
-
-<!-- Search -->
-<script>
-  const searchBar = document.querySelector('#search-bar');
-  const suggestionsDropdown = document.querySelector('#search-suggestions');
-  let searchIndex = [];
-  fetch('searchIndex.json')
-    .then(res => res.json())
-    .then(data => searchIndex = data);
-
-  searchBar.addEventListener('input', function () {
-    const query = this.value.toLowerCase();
-    suggestionsDropdown.innerHTML = '';
-    if (query) {
-      const results = searchIndex.filter(entry =>
-        entry.content.toLowerCase().includes(query)
-      );
-      results.slice(0, 10).forEach(entry => {
-        const item = document.createElement('div');
-        item.classList.add('suggestion-item');
-        item.innerHTML = `<a href="${entry.page}" style="color: inherit; text-decoration: none;">${entry.title}</a>`;
-        suggestionsDropdown.appendChild(item);
-      });
-      suggestionsDropdown.style.display = results.length ? 'block' : 'none';
-    } else {
-      suggestionsDropdown.style.display = 'none';
-    }
-  });
-
-  document.addEventListener('click', (e) => {
-    if (!searchBar.contains(e.target) && !suggestionsDropdown.contains(e.target)) {
-      suggestionsDropdown.style.display = 'none';
-    }
-  });
-</script>
-
-
-<!-- Live Chat -->
-<script type="text/javascript">
-  var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-  (function () {
-    var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-    s1.async = true;
-    s1.src = 'https://embed.tawk.to/YOUR_PROPERTY_ID/1abcxyz';
-    s1.charset = 'UTF-8';
-    s1.setAttribute('crossorigin', '*');
-    s0.parentNode.insertBefore(s1, s0);
-  })();
-</script>
-
+  <script src="main.js"></script>
 </body>
 </html>

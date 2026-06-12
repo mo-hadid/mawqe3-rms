@@ -1,209 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us - TECHNYAH</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>About Us | TECHNYAH — Robotics & Automation Engineering</title>
+  <meta name="description" content="TECHNYAH is an engineering-led robotics and automation company delivering control systems, custom machinery, and AI-powered solutions for industry.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="images/main_logo.png" type="image/png">
   <style>
-    .team-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      justify-content: center;
-      padding: 2rem 0;
-    }
-    .team-member {
-      text-align: center;
-      max-width: 250px;
-    }
+    .team-grid { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; padding: 1rem 0; }
+    .team-member { text-align: center; max-width: 250px; }
     .team-img {
-      width: 180px;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 3px solid #00B4D8;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-      margin-bottom: 1rem;
+      width: 170px; height: 170px; object-fit: cover; border-radius: 50%;
+      border: 3px solid var(--accent); box-shadow: var(--shadow); margin-bottom: 1rem;
     }
-    .video-container {
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-      overflow: hidden;
-      max-width: 100%;
-      margin-bottom: 2rem;
-    }
-    .video-container iframe {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-    }
-    .partners-row {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 2rem;
-      padding: 2rem 0;
-    }
-    .partners-row img {
-      max-height: 80px;
-      object-fit: contain;
-    }
+    .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: var(--radius); box-shadow: var(--shadow); }
+    .video-container iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    .values-grid dt { color: var(--accent-dark); }
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-<!-- Header -->
-<header class="site-header">
-  <div class="center-logo">
-    <img src="images/main_logo.png" alt="TECHNYAH Logo" class="secondary-logo">
-  </div>
-  <div class="nav-container">
-    <div class="hamburger-menu">☰</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li class="dropdown">
-        <a href="about.html">About Us</a>
-        <div class="dropdown-menu">
-          <a href="about.html#blog">Blog</a>
-          <a href="about.html#portfolio">Portfolio</a>
-        </div>
-      </li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="products.html">Products</a></li>
-      <li><a href="quote.html">Get a Quote</a></li>
-      <li><a href="careers.html">Careers</a></li>
-      <li><a href="contact.html">Contact Us</a></li>
-    </ul>
-     <div class="header-actions">
-    <input type="text" class="search-bar" placeholder="Search..." id="search-bar" />
-    <div id="search-suggestions" class="suggestions-dropdown"></div>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">
+        <img src="images/main_logo.png" alt="TECHNYAH — Robotic & Manufacturing Solutions">
+      </a>
+      <button class="hamburger-menu" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li class="mobile-search">
+          <input type="text" class="search-bar" placeholder="Search the site…" aria-label="Search">
+          <div class="suggestions-dropdown"></div>
+        </li>
+      </ul>
+      <div class="header-search">
+        <input type="text" class="search-bar" placeholder="Search…" aria-label="Search">
+        <div class="suggestions-dropdown"></div>
+      </div>
+      <button class="nav-cta" onclick="location.href='quote.html'">Get a Quote</button>
     </div>
+  </header>
 
-  </div>
-</header>
+  <main id="main">
+    <!-- About -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">About TECHNYAH</p>
+          <h2>Engineering Automation You Can Rely On</h2>
+          <p>TECHNYAH is a leader in advanced robotics, integration of machine learning and artificial intelligence, and control systems engineering. Our mission is to modernize manufacturing and industrial operations with technology that is dependable first and impressive second.</p>
+        </div>
+        <dl class="values-grid">
+          <div class="spec-row">
+            <dt>Mission</dt>
+            <dd>To lead the robotics and automation industry with transformative technologies — delivering solutions that enhance operational efficiency, prioritize safety, and promote sustainable practices across all sectors.</dd>
+          </div>
+          <div class="spec-row">
+            <dt>How We Work</dt>
+            <dd>Every engagement starts with engineering: requirements, drawings, and a clear scope. We build, program, test, and commission against that scope, and we document what we hand over so your team can own it.</dd>
+          </div>
+          <div class="spec-row">
+            <dt>What We Stand Behind</dt>
+            <dd>Safety-first design, recognized industry standards, transparent quoting, and support after handover. We earn repeat work by delivering the first project right.</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
 
-<!-- Main -->
-<main>
-  <!-- Video -->
-  <section class="section" id="video-section">
-    <div class="container">
-      <h2>Watch Our Story</h2>
-      <p>Watch this video to learn about us!</p>
-      <div class="video-container">
-        <iframe width="100" height="80" src="https://www.youtube.com/embed/example_video_id" title="TECHNYAH Introduction" frameborder="0" allowfullscreen></iframe>
+    <!-- Video -->
+    <section class="section alt" id="video-section">
+      <div class="container">
+        <div class="section-head center">
+          <p class="eyebrow">Our Story</p>
+          <h2>See What We Do</h2>
+        </div>
+        <!-- Company video — replace the src below with the real YouTube embed URL
+             when the introduction video is published. Hidden until then.
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/REAL_VIDEO_ID" title="TECHNYAH Introduction" allowfullscreen loading="lazy"></iframe>
+        </div>
+        -->
+        <p style="text-align:center; max-width:620px; margin:0 auto;">From robotic cells and custom machinery to full control system integration, we bring automation projects from concept to commissioning. Our company introduction video is coming soon — in the meantime, <a href="services.html" style="color:var(--accent-dark); font-weight:600;">explore our services</a> or <a href="contact.html" style="color:var(--accent-dark); font-weight:600;">talk to our team</a>.</p>
+      </div>
+    </section>
+
+    <!-- Team
+         Per company direction, individual team profiles are not displayed publicly
+         at this time. Mohamed's profile is retained below for future use — to
+         republish, remove the comment markers around his card and the section.
+
+    <section class="section" id="meet-the-team">
+      <div class="container">
+        <div class="section-head center">
+          <p class="eyebrow">Our Team</p>
+          <h2>The People Behind the Projects</h2>
+        </div>
+        <div class="team-grid">
+          <div class="team-member">
+            <img src="images/mo_hadid.png" alt="Mohamed Essam" class="team-img">
+            <h3>Mohamed Essam</h3>
+            <p>Director of Automation &amp;<br>Controls Engineering</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    -->
+
+    <!-- Partners -->
+    <section class="section" id="industry-partners">
+      <div class="container">
+        <div class="section-head center">
+          <p class="eyebrow">Partnerships</p>
+          <h2>Our Industry Partners</h2>
+          <p>We collaborate with established industry partners to deliver complete, dependable solutions.</p>
+        </div>
+        <div class="partners-row">
+          <img src="images/AMP_LOGO.png" alt="AMP — industry partner">
+          <img src="images/IRON_CORE_GROUP_DRAFT.png" alt="Iron Core Group — industry partner">
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section alt">
+      <div class="container section-head center" style="margin-bottom:0;">
+        <p class="eyebrow">Next Step</p>
+        <h2>Have a Project in Mind?</h2>
+        <p>Tell us what you need to automate and we will respond within one business day.</p>
+        <a href="quote.html" class="cta-btn">Request a Quote</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/main_logo.png" alt="TECHNYAH logo">
+        <p>Robotic &amp; Manufacturing Solutions LLC<br>Lakeland, Florida, USA</p>
+      </div>
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="careers.html">Careers</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Work With Us</h3>
+        <ul>
+          <li><a href="quote.html">Request a Quote</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="mailto:info@technyah.com">info@technyah.com</a></li>
+        </ul>
       </div>
     </div>
-  </section>
-
-  <!-- About -->
-  <section class="section">
-    <div class="container">
-      <h2>About Us</h2>
-      <p>At TECHNYAH, we are passionate about robotics, machine learning, and control systems engineering. As a growing startup, our focus is on building practical and reliable solutions that support manufacturers in improving efficiency and adapting to modern challenges.</p>
-      <p><strong>Mission Statement:</strong> Our mission is to make advanced robotics and automation accessible to businesses of all sizes. We are dedicated to developing safe, efficient, and sustainable technologies while learning and evolving alongside our partners and clients.</p>
-
-      <button class="cta-btn">Explore More</button>
+    <div class="footer-bottom">
+      <p>&copy; 2026 TECHNYAH — Robotic &amp; Manufacturing Solutions LLC. All Rights Reserved.</p>
     </div>
-  </section>
+  </footer>
 
-  <!-- Team -->
-  <section class="section" id="meet-the-team">
-    <div class="container">
-      <h2>Meet our latest team additions!</h2>
-      <p>Our team consists of talented and growing research professionals dedicated to delivering innovative solutions.</p>
-      <div class="team-grid">
-        <div class="team-member">
-          <img src="images/mo_hadid.png" alt="Mohamed Essam" class="team-img">
-          <h3>Mohamed E. Hadid</h3>
-          <p>President<br>& Co-founder</p>
-        </div>
-
-        
-        <!-- 
-        <div class="team-member">
-          <img src="images/erynn_hs_pic4.png" alt="Erynn Prado" class="team-img">
-          <h3>Erynn Prado</h3>
-          <p>Human Resources & Legal Intern</p>
-        </div>
-        
-        <div class="team-member">
-          <img src="images/noah.png" alt="Noah McFarland" class="team-img">
-          <h3>Noah McFarland</h3>
-          <p>Mechanical Engineering Intern</p>
-        
-        </div> -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Partners -->
-  <section class="section" id="industry-partners">
-    <div class="container">
-      <h2>Our Industry Partners</h2>
-      <div class="partners-row">
-        <img src="images/AMP_LOGO.png" alt="AMP Logo" class="secondary-logo">
-        <img src="images/IRON_CORE_GROUP_DRAFT.png" alt="Iron Core Group Logo" class="secondary-logo">
-      </div>
-    </div>
-  </section>
-</main>
-
-<!-- Footer -->
-<footer class="footer">
-  <p>&copy; 2025 TECHNYAH - Robotic & Manufacturing Solutions LLC. All Rights Reserved.</p>
-</footer>
-
-<!-- Search Script -->
-<script>
-  const searchBar = document.querySelector('#search-bar');
-  const suggestionsDropdown = document.querySelector('#search-suggestions');
-  let searchIndex = [];
-  fetch('searchIndex.json')
-    .then(res => res.json())
-    .then(data => searchIndex = data);
-
-  searchBar.addEventListener('input', function () {
-    const query = this.value.toLowerCase();
-    suggestionsDropdown.innerHTML = '';
-    if (query) {
-      const results = searchIndex.filter(entry =>
-        entry.content.toLowerCase().includes(query)
-      );
-      results.slice(0, 10).forEach(entry => {
-        const item = document.createElement('div');
-        item.classList.add('suggestion-item');
-        item.innerHTML = `<a href="${entry.page}" style="color: inherit; text-decoration: none;">${entry.title}</a>`;
-        suggestionsDropdown.appendChild(item);
-      });
-      suggestionsDropdown.style.display = results.length ? 'block' : 'none';
-    } else {
-      suggestionsDropdown.style.display = 'none';
-    }
-  });
-
-  document.addEventListener('click', (e) => {
-    if (!searchBar.contains(e.target) && !suggestionsDropdown.contains(e.target)) {
-      suggestionsDropdown.style.display = 'none';
-    }
-  });
-</script>
-
-
-<!-- Live Chat Widget -->
-<script type="text/javascript">
-  var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-  (function () {
-    var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-    s1.async = true;
-    s1.src = 'https://embed.tawk.to/YOUR_PROPERTY_ID/1abcxyz';
-    s1.charset = 'UTF-8';
-    s1.setAttribute('crossorigin', '*');
-    s0.parentNode.insertBefore(s1, s0);
-  })();
-</script>
-
+  <script src="main.js"></script>
 </body>
 </html>

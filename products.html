@@ -1,151 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Products - TECHNYAH</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products | TECHNYAH — Drone Systems & Flight Controllers</title>
+  <meta name="description" content="TECHNYAH products: DSS-2 drone surveillance system and ST-2500 multi-purpose flight controller for UAVs and robotics.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="images/main_logo.png" type="image/png">
+  <style>
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 420px));
+      justify-content: center;
+      gap: 28px;
+    }
+  </style>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
   <!-- Header -->
   <header class="site-header">
-    <div class="center-logo">
-      <img src="images/main_logo.png" alt="TECHNYAH Logo" class="secondary-logo" />
-    </div>
-    <div class="nav-container">
-      <div class="hamburger-menu">☰</div>
+    <div class="header-inner">
+      <a href="index.html" class="brand">
+        <img src="images/main_logo.png" alt="TECHNYAH — Robotic & Manufacturing Solutions">
+      </a>
+      <button class="hamburger-menu" aria-label="Open menu" aria-expanded="false">&#9776;</button>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li class="dropdown">
-          <a href="about.html">About Us</a>
-          <div class="dropdown-menu">
-            <a href="about.html#blog">Blog</a>
-            <a href="about.html#portfolio">Portfolio</a>
-          </div>
-        </li>
+        <li><a href="about.html">About Us</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="products.html" class="active">Products</a></li>
         <li><a href="careers.html">Careers</a></li>
         <li><a href="contact.html">Contact Us</a></li>
+        <li class="mobile-search">
+          <input type="text" class="search-bar" placeholder="Search the site…" aria-label="Search">
+          <div class="suggestions-dropdown"></div>
+        </li>
       </ul>
-      <div class="header-actions">
-        <button class="quote-btn" onclick="location.href='quote.html'">Get a Quote</button>
-        <input type="text" class="search-bar" placeholder="Search..." id="search-bar" />
-        <div id="search-suggestions" class="suggestions-dropdown"></div>
+      <div class="header-search">
+        <input type="text" class="search-bar" placeholder="Search…" aria-label="Search">
+        <div class="suggestions-dropdown"></div>
       </div>
+      <button class="nav-cta" onclick="location.href='quote.html'">Get a Quote</button>
     </div>
   </header>
 
-  <!-- Products Section -->
-  <main>
+  <main id="main">
     <section id="products" class="section">
       <div class="container">
-        <h2>Our Products</h2>
+        <div class="section-head center">
+          <p class="eyebrow">Our Products</p>
+          <h2>Built for Industrial Reliability</h2>
+          <p>Hardware engineered in-house and supported by the same team that designed it. Contact us for specifications, lead times, and volume pricing.</p>
+        </div>
+
         <div class="products-grid">
           <!-- Product 1 -->
-          <div class="product">
-            <img src="images/drone pic 1.jpg" alt="DSS-2 Drone Surveillance System" />
-            <h3>DSS-2 Drone Surveillance System</h3>
-            <p>
-              A cutting-edge aerial monitoring solution for industrial and security applications. Covers wide areas with real-time data.
-            </p>
-            <div id="product1-view" class="product-3d"></div>
-          </div>
+          <article class="product-card">
+            <div class="product-media">
+              <img src="images/drone pic 1.jpg" alt="DSS-2 Drone Surveillance System in flight">
+            </div>
+            <div class="product-body">
+              <span class="product-status">Available — Quote Required</span>
+              <h3>DSS-2 Drone Surveillance System</h3>
+              <p>A cutting-edge aerial monitoring solution for industrial and security applications. Covers wide areas with real-time data, designed for site security, inspection, and operational awareness.</p>
+              <a href="quote.html" class="cta-btn" style="align-self:flex-start;">Request Pricing</a>
+            </div>
+          </article>
 
           <!-- Product 2 -->
-          <div class="product">
-            <h3>ST-2500 Multi-purpose Flight Controller</h3>
-            <p>
-              Advanced controller for drones, UAVs, and robotics. Compatible with multi-rotor, fixed-wing, and autonomous systems.
-            </p>
-            <div id="product2-view" class="product-3d"></div>
-          </div>
+          <article class="product-card">
+            <div class="product-media">
+              <img src="images/drone pic 2.jpg" alt="ST-2500 multi-purpose flight controller platform">
+            </div>
+            <div class="product-body">
+              <span class="product-status">Available — Quote Required</span>
+              <h3>ST-2500 Multi-Purpose Flight Controller</h3>
+              <p>Advanced controller for drones, UAVs, and robotics. Compatible with multi-rotor, fixed-wing, and autonomous systems, with flexible I/O for custom integrations.</p>
+              <a href="quote.html" class="cta-btn" style="align-self:flex-start;">Request Pricing</a>
+            </div>
+          </article>
         </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section alt">
+      <div class="container section-head center" style="margin-bottom:0;">
+        <p class="eyebrow">Custom Hardware</p>
+        <h2>Need Something Purpose-Built?</h2>
+        <p>We design custom controllers, panels, and machinery to your specifications. Tell us your requirements.</p>
+        <a href="contact.html" class="cta-btn">Talk to Engineering</a>
       </div>
     </section>
   </main>
 
   <!-- Footer -->
   <footer class="footer">
-    <p>&copy; 2025 TECHNYAH - Robotic & Manufacturing Solutions LLC. All Rights Reserved.</p>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/main_logo.png" alt="TECHNYAH logo">
+        <p>Robotic &amp; Manufacturing Solutions LLC<br>Lakeland, Florida, USA</p>
+      </div>
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="careers.html">Careers</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Work With Us</h3>
+        <ul>
+          <li><a href="quote.html">Request a Quote</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="mailto:info@technyah.com">info@technyah.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 TECHNYAH — Robotic &amp; Manufacturing Solutions LLC. All Rights Reserved.</p>
+    </div>
   </footer>
 
-  <!-- 3D Demo Script -->
-  <script>
-    const setup3DViewer = (containerId) => {
-      const container = document.getElementById(containerId);
-      const scene = new THREE.Scene();
-      const camera = new THREE.PerspectiveCamera(75, container.offsetWidth / container.offsetHeight, 0.1, 1000);
-      const renderer = new THREE.WebGLRenderer();
-      renderer.setSize(container.offsetWidth, container.offsetHeight);
-      container.appendChild(renderer.domElement);
-
-      const geometry = new THREE.BoxGeometry();
-      const material = new THREE.MeshBasicMaterial({ color: 0x00B4D8 });
-      const cube = new THREE.Mesh(geometry, material);
-      scene.add(cube);
-      camera.position.z = 3;
-
-      const animate = () => {
-        requestAnimationFrame(animate);
-        cube.rotation.x += 0.01;
-        cube.rotation.y += 0.01;
-        renderer.render(scene, camera);
-      };
-      animate();
-    };
-
-    setup3DViewer("product1-view");
-    setup3DViewer("product2-view");
-  </script>
-
-   <!-- Search Script -->
- <script>
-  const searchBar = document.querySelector('#search-bar');
-  const suggestionsDropdown = document.querySelector('#search-suggestions');
-  let searchIndex = [];
-  fetch('searchIndex.json')
-    .then(res => res.json())
-    .then(data => searchIndex = data);
-
-  searchBar.addEventListener('input', function () {
-    const query = this.value.toLowerCase();
-    suggestionsDropdown.innerHTML = '';
-    if (query) {
-      const results = searchIndex.filter(entry =>
-        entry.content.toLowerCase().includes(query)
-      );
-      results.slice(0, 10).forEach(entry => {
-        const item = document.createElement('div');
-        item.classList.add('suggestion-item');
-        item.innerHTML = `<a href="${entry.page}" style="color: inherit; text-decoration: none;">${entry.title}</a>`;
-        suggestionsDropdown.appendChild(item);
-      });
-      suggestionsDropdown.style.display = results.length ? 'block' : 'none';
-    } else {
-      suggestionsDropdown.style.display = 'none';
-    }
-  });
-
-  document.addEventListener('click', (e) => {
-    if (!searchBar.contains(e.target) && !suggestionsDropdown.contains(e.target)) {
-      suggestionsDropdown.style.display = 'none';
-    }
-  });
-</script>
-
-  <!-- Live Chat Widget -->
-  <script type="text/javascript">
-    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-    (function () {
-      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-      s1.async = true;
-      s1.src = 'https://embed.tawk.to/YOUR_PROPERTY_ID/1abcxyz';
-      s1.charset = 'UTF-8';
-      s1.setAttribute('crossorigin', '*');
-      s0.parentNode.insertBefore(s1, s0);
-    })();
-  </script>
+  <script src="main.js"></script>
 </body>
 </html>

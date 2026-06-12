@@ -3,160 +3,179 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TECHNYAH</title>
+  <title>TECHNYAH | Robotics, Automation & Control Systems — Lakeland, FL</title>
+  <meta name="description" content="TECHNYAH engineers advanced robotics, PLC control systems, and AI-powered automation for manufacturing and industry. Request a quote for your next project.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="images/main_logo.png" type="image/png">
 </head>
-
-  <script>
-  document.querySelector('.hamburger-menu').addEventListener('click', function () {
-    document.querySelector('.nav-links').classList.toggle('active');
-  });
-</script>
-
 <body>
-  <!-- Header Section -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Header -->
   <header class="site-header">
-    <div class="center-logo">
-      <img src="images/main_logo.png" alt="TECHNYAH Logo" class="secondary-logo">
-    </div>
-<!--     <div class="nav-container">
-      <div class="hamburger-menu">☰</div>
+    <div class="header-inner">
+      <a href="index.html" class="brand">
+        <img src="images/main_logo.png" alt="TECHNYAH — Robotic & Manufacturing Solutions">
+      </a>
+      <button class="hamburger-menu" aria-label="Open menu" aria-expanded="false">&#9776;</button>
       <ul class="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
-        <li class="dropdown">
-          <a href="about.html">About Us</a>
-          <div class="dropdown-menu">
-            <a href="about.html#blog">Blog</a>
-            <a href="about.html#portfolio">Portfolio</a>
-          </div>
-        </li>
+        <li><a href="about.html">About Us</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="products.html">Products</a></li>
         <li><a href="careers.html">Careers</a></li>
         <li><a href="contact.html">Contact Us</a></li>
+        <li class="mobile-search">
+          <input type="text" class="search-bar" placeholder="Search the site…" aria-label="Search">
+          <div class="suggestions-dropdown"></div>
+        </li>
       </ul>
-      <div class="header-actions">
-        <button class="quote-btn" onclick="location.href='quote.html'">Get a Quote</button>
-        <input type="text" class="search-bar" placeholder="Search..." id="search-bar" />
-        <div id="search-suggestions" class="suggestions-dropdown"></div>
+      <div class="header-search">
+        <input type="text" class="search-bar" placeholder="Search…" aria-label="Search">
+        <div class="suggestions-dropdown"></div>
       </div>
-    </div> -->
-
-    <div class="nav-container">
-  <div class="hamburger-menu" onclick="toggleMenu()">☰</div>
-  <ul class="nav-links" id="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About Us</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="products.html">Products</a></li>
-    <li><a href="careers.html">Careers</a></li>
-    <li><a href="contact.html">Contact Us</a></li>
-    <li class="mobile-only"><a href="quote.html">Get a Quote</a></li>
-  </ul>
-  <div class="header-actions desktop-only">
-    <input type="text" class="search-bar" placeholder="Search..." id="search-bar" />
-    <div id="search-suggestions" class="suggestions-dropdown"></div>
-  </div>
-</div>
-
+      <button class="nav-cta" onclick="location.href='quote.html'">Get a Quote</button>
+    </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero-section">
-    <div class="slideshow" style="display: flex; justify-content: center; align-items: center;">
-      <img src="images/drone pic 1.jpg" alt="Slide 1">
-      <img src="images/drone pic 2.jpg" alt="Slide 2">
-    </div>
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <h1>Transforming Automation, Redefining Possibilities.</h1>
-    </div>
-  </section>
-
-  <!-- Sections -->
-  <section id="about" class="section">
-    <h2>Who We Are</h2>
-    <p>At TECHNYAH, we are pioneers in developing advanced robotics, PLCs, and AI-powered solutions.</p>
-  </section>
-
-  <section id="services" class="section">
-    <h2>Our Expertise</h2>
-    <div class="services-grid">
-      <div class="service">
-        <h3>Advanced Robotics</h3>
-        <p>Revolutionizing manufacturing with intelligent robots tailored for automation.</p>
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero-section">
+      <div class="slideshow" aria-hidden="true">
+        <img src="images/drone pic 1.jpg" alt="">
+        <img src="images/drone pic 2.jpg" alt="">
       </div>
-      <div class="service">
-        <h3>AI & Machine Learning</h3>
-        <p>Deploying AI-driven algorithms for predictive analysis and real-time decision-making.</p>
+      <div class="hero-overlay"></div>
+      <div class="hero-grid"></div>
+      <div class="hero-content">
+        <p class="eyebrow" style="color:#48CAE4;">Robotic &amp; Manufacturing Solutions</p>
+        <h1>Transforming Automation, Redefining Possibilities.</h1>
+        <p class="hero-sub">We design, build, and commission robotics, PLC control systems, and AI-powered automation that keep production lines running — safely, reliably, and on schedule.</p>
+        <div class="hero-actions">
+          <a href="quote.html" class="cta-btn">Request a Quote</a>
+          <a href="services.html" class="btn-outline">View Our Services</a>
+        </div>
       </div>
-      <div class="service">
-        <h3>PLC & Microcontrollers</h3>
-        <p>Designing and manufacturing reliable PLCs and microcontroller-based systems.</p>
+    </section>
+
+    <!-- Trust strip -->
+    <section class="trust-strip">
+      <div class="container grid-3">
+        <div class="trust-item">
+          <h3><span class="tick">&#10003;</span>Engineering-Led</h3>
+          <p>Every project is scoped, designed, and documented by engineers — from concept drawings to commissioning reports.</p>
+        </div>
+        <div class="trust-item">
+          <h3><span class="tick">&#10003;</span>Standards-Driven</h3>
+          <p>We design to recognized industry standards for industrial control panels, machine safety, and electrical installation.</p>
+        </div>
+        <div class="trust-item">
+          <h3><span class="tick">&#10003;</span>Single Point of Contact</h3>
+          <p>One accountable team from quote to handover. Reach us at <a href="mailto:info@technyah.com" style="color:#48CAE4;">info@technyah.com</a> — we respond within one business day.</p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="portfolio" class="section">
-    <h2>Our Portfolio</h2>
-    <p>Explore the projects and solutions we've delivered for clients in various industries.</p>
-  </section>
+    <!-- Who we are -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Who We Are</p>
+          <h2>Automation Engineers, Builders, and Integrators</h2>
+          <p>At TECHNYAH, we develop advanced robotics, PLC-based control systems, and AI-powered solutions for manufacturers and industrial operations. We take ownership of the full project lifecycle — design, fabrication, programming, integration, and training — so you deal with one team and one standard of quality.</p>
+        </div>
+        <a href="about.html" class="cta-btn">Learn More About Us</a>
+      </div>
+    </section>
 
-  <section id="contact" class="section">
-    <h2>Contact Us</h2>
-    <p>Contact us to explore innovative solutions for your business needs.</p>
-    <a href="contact.html" class="cta-btn">Contact Us</a>
-  </section>
+    <!-- Expertise -->
+    <section id="services" class="section alt">
+      <div class="container">
+        <div class="section-head center">
+          <p class="eyebrow">Our Expertise</p>
+          <h2>What We Engineer</h2>
+        </div>
+        <div class="grid-3">
+          <div class="card">
+            <p class="spec-label">Capability 1</p>
+            <h3>Advanced Robotics</h3>
+            <p>Robotic arms, manipulators, and mobile platforms — integrated, programmed, and tuned for precision manufacturing tasks.</p>
+          </div>
+          <div class="card">
+            <p class="spec-label">Capability 2</p>
+            <h3>AI &amp; Machine Learning</h3>
+            <p>Machine vision, predictive analytics, and real-time decision-making deployed where they create measurable production value.</p>
+          </div>
+          <div class="card">
+            <p class="spec-label">Capability 3</p>
+            <h3>PLC &amp; Control Systems</h3>
+            <p>Reliable PLC, HMI, and microcontroller-based control systems designed, panel-built, and commissioned for industrial environments.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio teaser -->
+    <section id="portfolio" class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Our Work</p>
+          <h2>Projects Delivered Across Industries</h2>
+          <p>From custom machinery to full systems integration, we deliver solutions for clients in manufacturing, logistics, and industrial operations. Ask us for project references relevant to your application when you request a quote.</p>
+        </div>
+        <a href="quote.html" class="cta-btn">Start Your Project</a>
+      </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section id="contact" class="section alt">
+      <div class="container section-head center" style="margin-bottom:0;">
+        <p class="eyebrow">Get In Touch</p>
+        <h2>Ready to Automate?</h2>
+        <p>Tell us about your application and we will respond with next steps within one business day.</p>
+        <a href="contact.html" class="cta-btn">Contact Us</a>
+      </div>
+    </section>
+  </main>
 
   <!-- Footer -->
   <footer class="footer">
-    <p>&copy; 2025 TECHNYAH - Robotic & Manufacturing Solutions LLC. All Rights Reserved.</p>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/main_logo.png" alt="TECHNYAH logo">
+        <p>Robotic &amp; Manufacturing Solutions LLC<br>Lakeland, Florida, USA</p>
+      </div>
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="careers.html">Careers</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Work With Us</h3>
+        <ul>
+          <li><a href="quote.html">Request a Quote</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="mailto:info@technyah.com">info@technyah.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 TECHNYAH — Robotic &amp; Manufacturing Solutions LLC. All Rights Reserved.</p>
+    </div>
   </footer>
 
-  <!-- JavaScript -->
-  <script>
-    const hamburgerMenu = document.querySelector('.hamburger-menu');
-    const navLinks = document.querySelector('.nav-links');
-    hamburgerMenu.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
+  <script src="main.js"></script>
 
-    // Search
-    const searchBar = document.querySelector('#search-bar');
-    const suggestionsDropdown = document.querySelector('#search-suggestions');
-    let searchIndex = [];
-    fetch('searchIndex.json')
-        .then(res => res.json())
-        .then(data => searchIndex = data);
-
-    searchBar.addEventListener('input', function () {
-        const query = this.value.toLowerCase();
-        suggestionsDropdown.innerHTML = '';
-        if (query) {
-        const results = searchIndex.filter(entry =>
-            entry.content.toLowerCase().includes(query)
-        );
-        results.slice(0, 10).forEach(entry => {
-            const item = document.createElement('div');
-            item.classList.add('suggestion-item');
-            item.innerHTML = `<a href="${entry.page}" style="color: inherit; text-decoration: none;">${entry.title}</a>`;
-            suggestionsDropdown.appendChild(item);
-        });
-        suggestionsDropdown.style.display = results.length ? 'block' : 'none';
-        } else {
-        suggestionsDropdown.style.display = 'none';
-        }
-    });
-
-    document.addEventListener('click', (e) => {
-        if (!searchBar.contains(e.target) && !suggestionsDropdown.contains(e.target)) {
-        suggestionsDropdown.style.display = 'none';
-        }
-    });
-    </script>
-
-
-  <!-- Live Chat Widget (Example only: Tawk.to integration) -->
+  <!-- Live Chat Widget (Tawk.to) — disabled until a real property ID is configured.
+       To enable: create a free account at tawk.to, copy your widget code, and
+       replace this block with the snippet they provide.
   <script type="text/javascript">
     var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
     (function () {
@@ -168,30 +187,6 @@
       s0.parentNode.insertBefore(s1, s0);
     })();
   </script>
-
-<!-- Hamburger-->
-
-<script>
-  function toggleMenu() {
-    const navLinks = document.getElementById('nav-links');
-    navLinks.classList.toggle('active');
-  }
-</script>
-
-<!-- Hamburger ctd -->
-  <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const menuToggle = document.querySelector('.hamburger-menu');
-    const navLinks = document.querySelector('.nav-links');
-
-    if (menuToggle && navLinks) {
-      menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-      });
-    }
-  });
-</script>
-
-
+  -->
 </body>
 </html>

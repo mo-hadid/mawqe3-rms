@@ -1,280 +1,331 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Careers - TECHNYAH</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <style>
-    .careers-container {
-      max-width: 960px;
-      margin: 2rem auto;
-      padding: 2rem;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
-    }
-
-    h2 {
-      text-align: center;
-      color: #222;
-      font-weight: 700;
-      margin-bottom: 2rem;
-    }
-
-    .job-listing {
-      border-bottom: 1px solid #ddd;
-      margin-bottom: 1.5rem;
-      padding-bottom: 1.5rem;
-    }
-
-    .job-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      cursor: pointer;
-    }
-
-    .job-header h3 {
-      margin: 0;
-      font-size: 1.2rem;
-      color: #222;
-    }
-
-    .toggle-btn {
-      background: #00B4D8;
-      color: white;
-      padding: 0.4rem 0.8rem;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-
-    .job-description,
-    .apply-form {
-      display: none;
-      margin-top: 1rem;
-      animation: fadeIn 0.3s ease-in-out;
-    }
-
-    .apply-form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .apply-form input,
-    .apply-form textarea {
-      padding: 0.75rem;
-      font-size: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-    }
-
-    .apply-form button {
-      background-color: #00B4D8;
-      color: white;
-      border: none;
-      padding: 0.75rem 1.25rem;
-      border-radius: 6px;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-
-    .apply-form button:hover {
-      background-color: #48CAE4;
-    }
-
-    .file-preview {
-      font-size: 0.9rem;
-      color: #444;
-    }
-
-    @keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Careers | TECHNYAH — Join Our Engineering Team</title>
+  <meta name="description" content="Open positions at TECHNYAH in automation, controls, mechanical design, AI/ML, software, and more. View details and apply with your resume online.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="images/main_logo.png" type="image/png">
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-<!-- Header -->
-<header class="site-header">
-  <div class="center-logo">
-    <img src="images/main_logo.png" alt="TECHNYAH Logo" class="secondary-logo" />
-  </div>
-  <div class="nav-container">
-    <div class="hamburger-menu">☰</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="products.html">Products</a></li>
-      <li><a href="careers.html" class="active">Careers</a></li>
-      <li><a href="contact.html">Contact Us</a></li>
-    </ul>
-    <div class="header-actions">
-      <button class="quote-btn" onclick="location.href='quote.html'">Get a Quote</button>
-      <input type="text" class="search-bar" placeholder="Search..." id="search-bar" />
-      <div id="search-suggestions" class="suggestions-dropdown"></div>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">
+        <img src="images/main_logo.png" alt="TECHNYAH — Robotic & Manufacturing Solutions">
+      </a>
+      <button class="hamburger-menu" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="careers.html" class="active">Careers</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li class="mobile-search">
+          <input type="text" class="search-bar" placeholder="Search the site…" aria-label="Search">
+          <div class="suggestions-dropdown"></div>
+        </li>
+      </ul>
+      <div class="header-search">
+        <input type="text" class="search-bar" placeholder="Search…" aria-label="Search">
+        <div class="suggestions-dropdown"></div>
+      </div>
+      <button class="nav-cta" onclick="location.href='quote.html'">Get a Quote</button>
     </div>
-  </div>
-</header>
+  </header>
 
-<!-- Main -->
-<main class="section">
-  <div class="careers-container">
-    <h2>Join Our Team</h2>
+  <main id="main">
+    <section class="section">
+      <div class="container" style="max-width:880px;">
+        <div class="careers-intro">
+          <p class="eyebrow">Careers</p>
+          <h2>Build the Future of Automation With Us</h2>
+          <p>We hire engineers and professionals who care about doing things right. Browse the open positions below, review the details, and apply with your resume — applications go directly to our HR team and we reply to every candidate.</p>
+        </div>
 
-    <!-- Job Listings -->
-    <div id="job-listings"></div>
-  </div>
-</main>
+        <div id="job-listings"></div>
 
-<!-- Footer -->
-<footer class="footer">
-  <p>&copy; 2025 TECHNYAH - Robotic & Manufacturing Solutions LLC. All Rights Reserved.</p>
-</footer>
-
-<!-- Job Data & Script -->
-<script>
-  const jobData = [
-    {
-      title: "Automation & Controls Engineer",
-      description: "Responsible for designing and programming PLC/HMI systems and integrating robotic arms."
-    },
-    {
-      title: "Mechanical Design Intern",
-      description: "Support prototyping and CAD development for custom automation systems."
-    },
-    {
-      title: "Project Coordinator",
-      description: "Coordinate timelines, procurement, and vendor management across automation projects."
-    },
-    {
-      title: "AI/ML/Computer Vision Systems Intern",
-      description: "Work on robotics systems involving object detection, pose estimation, and real-time AI."
-    },
-    {
-      title: "Human Resources and Legal Intern",
-      description: "Assist with onboarding, compliance documentation, and legal research."
-    },
-    {
-      title: "Software/Web Developer Intern",
-      description: "Support backend/frontend dev for dashboards, visualizers, and customer portals."
-    },
-    {
-      title: "Civil Engineering Intern",
-      description: "Assist in layout and integration of civil infrastructure in automation projects."
-    },
-    {
-      title: "Mechanical Engineering Intern",
-      description: "Design robotic arms, conveyor systems, and mechanical enclosures in CAD."
-    },
-    {
-      title: "Accounting Intern",
-      description: "Support financial reporting, invoice reconciliation, QuickBooks entries, and cost tracking."
-    }
-  ];
-
-  const listingsContainer = document.getElementById('job-listings');
-
-  jobData.forEach(job => {
-    const wrapper = document.createElement('div');
-    wrapper.className = 'job-listing';
-
-    wrapper.innerHTML = `
-      <div class="job-header">
-        <h3>${job.title}</h3>
-        <button class="toggle-btn" onclick="toggleJob(this)">Learn More</button>
+        <div class="card" style="margin-top:32px; text-align:center;">
+          <h3>Don't see your role?</h3>
+          <p>We're always interested in talented people. Send a general application with your resume to <a href="mailto:hr@technyah.com" style="color:var(--accent-dark); font-weight:600;">hr@technyah.com</a>.</p>
+        </div>
       </div>
-      <div class="job-description">
-        <p>${job.description}</p>
-        <form class="apply-form" onsubmit="sendApplication(event, '${job.title}')">
-          <input type="text" name="name" placeholder="Your Full Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
-          <textarea name="message" placeholder="Cover Letter or Message" required></textarea>
-          <input type="file" name="resume" required onchange="previewFile(event)" />
-          <div class="file-preview"></div>
-          <button type="submit">Apply Now</button>
-        </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/main_logo.png" alt="TECHNYAH logo">
+        <p>Robotic &amp; Manufacturing Solutions LLC<br>Lakeland, Florida, USA</p>
       </div>
-    `;
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="careers.html">Careers</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Work With Us</h3>
+        <ul>
+          <li><a href="quote.html">Request a Quote</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="mailto:info@technyah.com">info@technyah.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 TECHNYAH — Robotic &amp; Manufacturing Solutions LLC. All Rights Reserved.</p>
+    </div>
+  </footer>
 
-    listingsContainer.appendChild(wrapper);
-  });
+  <script src="main.js"></script>
 
-  function toggleJob(btn) {
-    const desc = btn.parentElement.nextElementSibling;
-    desc.style.display = desc.style.display === 'block' ? 'none' : 'block';
-    btn.textContent = desc.style.display === 'block' ? 'Hide' : 'Learn More';
-  }
+  <!-- Job data & rendering -->
+  <script>
+    const jobData = [
+      {
+        title: "Automation & Controls Engineer",
+        type: "Full-Time",
+        location: "Lakeland, FL (On-site / Field)",
+        summary: "Design and program PLC/HMI systems and integrate robotic arms for industrial automation projects.",
+        responsibilities: [
+          "Design and program PLC and HMI systems for automation projects",
+          "Integrate and commission robotic arms and motion systems",
+          "Develop electrical schematics and control panel layouts",
+          "Support field startup, troubleshooting, and customer training"
+        ],
+        qualifications: [
+          "Degree in Electrical, Computer, or related engineering field",
+          "Experience with PLC platforms (ladder logic, function block)",
+          "Working knowledge of industrial control panel standards",
+          "Strong documentation and communication skills"
+        ]
+      },
+      {
+        title: "Mechanical Design Intern",
+        type: "Internship",
+        location: "Lakeland, FL",
+        summary: "Support prototyping and CAD development for custom automation systems.",
+        responsibilities: [
+          "Develop 3D CAD models and 2D drawings for custom machinery",
+          "Assist with prototyping, fit checks, and design revisions",
+          "Support BOM creation and component selection"
+        ],
+        qualifications: [
+          "Pursuing a degree in Mechanical Engineering or similar",
+          "Proficiency in SolidWorks, Fusion 360, or equivalent CAD",
+          "Interest in automation and machine design"
+        ]
+      },
+      {
+        title: "Project Coordinator",
+        type: "Full-Time",
+        location: "Lakeland, FL (Hybrid)",
+        summary: "Coordinate timelines, procurement, and vendor management across automation projects.",
+        responsibilities: [
+          "Track project schedules, milestones, and deliverables",
+          "Coordinate procurement and vendor communications",
+          "Maintain project documentation and status reporting"
+        ],
+        qualifications: [
+          "Experience coordinating technical or construction projects",
+          "Strong organizational and communication skills",
+          "Familiarity with project management tools"
+        ]
+      },
+      {
+        title: "AI/ML/Computer Vision Systems Intern",
+        type: "Internship",
+        location: "Lakeland, FL / Remote-friendly",
+        summary: "Work on robotics systems involving object detection, pose estimation, and real-time AI.",
+        responsibilities: [
+          "Develop and test computer vision pipelines for robotics",
+          "Work on object detection, pose estimation, and tracking",
+          "Help deploy models for real-time industrial use"
+        ],
+        qualifications: [
+          "Pursuing a degree in CS, EE, or a related field",
+          "Experience with Python and ML frameworks (PyTorch/TensorFlow/OpenCV)",
+          "Interest in applied robotics and edge deployment"
+        ]
+      },
+      {
+        title: "Human Resources and Legal Intern",
+        type: "Internship",
+        location: "Lakeland, FL (Hybrid)",
+        summary: "Assist with onboarding, compliance documentation, and legal research.",
+        responsibilities: [
+          "Support onboarding and HR documentation",
+          "Assist with compliance and policy research",
+          "Help maintain organized records and templates"
+        ],
+        qualifications: [
+          "Pursuing a degree in HR, Business, Pre-Law, or similar",
+          "Strong writing and attention to detail",
+          "Discretion with confidential information"
+        ]
+      },
+      {
+        title: "Software/Web Developer Intern",
+        type: "Internship",
+        location: "Lakeland, FL / Remote-friendly",
+        summary: "Support backend/frontend development for dashboards, visualizers, and customer portals.",
+        responsibilities: [
+          "Build and maintain web dashboards and internal tools",
+          "Work across frontend (HTML/CSS/JS) and backend services",
+          "Help integrate data from machines and sensors into visualizations"
+        ],
+        qualifications: [
+          "Pursuing a degree in CS, Software Engineering, or similar",
+          "Comfort with JavaScript and at least one backend language",
+          "Interest in industrial data and UI for operators"
+        ]
+      },
+      {
+        title: "Civil Engineering Intern",
+        type: "Internship",
+        location: "Lakeland, FL",
+        summary: "Assist in layout and integration of civil infrastructure in automation projects.",
+        responsibilities: [
+          "Support site layout and infrastructure planning for installations",
+          "Assist with drawings, measurements, and site documentation"
+        ],
+        qualifications: [
+          "Pursuing a degree in Civil Engineering or similar",
+          "Familiarity with CAD and site drawings"
+        ]
+      },
+      {
+        title: "Mechanical Engineering Intern",
+        type: "Internship",
+        location: "Lakeland, FL",
+        summary: "Design robotic arms, conveyor systems, and mechanical enclosures in CAD.",
+        responsibilities: [
+          "Design mechanical assemblies for robotic and conveyor systems",
+          "Produce manufacturing drawings and support fabrication"
+        ],
+        qualifications: [
+          "Pursuing a degree in Mechanical Engineering",
+          "CAD proficiency and basic knowledge of materials and fabrication"
+        ]
+      },
+      {
+        title: "Accounting Intern",
+        type: "Internship",
+        location: "Lakeland, FL (Hybrid)",
+        summary: "Support financial reporting, invoice reconciliation, QuickBooks entries, and cost tracking.",
+        responsibilities: [
+          "Assist with invoice reconciliation and QuickBooks entries",
+          "Support project cost tracking and reporting"
+        ],
+        qualifications: [
+          "Pursuing a degree in Accounting or Finance",
+          "Attention to detail and comfort with spreadsheets"
+        ]
+      }
+    ];
 
-  function previewFile(e) {
-    const input = e.target;
-    const preview = input.nextElementSibling;
-    const file = input.files[0];
-    if (file) {
-      preview.textContent = `Selected: ${file.name} (${(file.size / 1024).toFixed(1)} KB)`;
-    } else {
-      preview.textContent = '';
-    }
-  }
+    const listings = document.getElementById('job-listings');
 
-  // EmailJS Integration
-// EmailJS Init
-(function () {
-  emailjs.init("YOUR_EMAILJS_USER_ID"); // Replace with actual ID
-})();
+    jobData.forEach((job, i) => {
+      const wrapper = document.createElement('div');
+      wrapper.className = 'job-listing';
+      wrapper.innerHTML = `
+        <button class="job-header" aria-expanded="false" aria-controls="job-body-${i}">
+          <div>
+            <h3>${job.title}</h3>
+            <div class="job-meta">
+              <span>&#128205; ${job.location}</span>
+              <span>&#128338; ${job.type}</span>
+            </div>
+          </div>
+          <span class="job-toggle-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="job-body" id="job-body-${i}">
+          <p style="margin-top:18px;">${job.summary}</p>
+          <h4>Responsibilities</h4>
+          <ul>${job.responsibilities.map(r => `<li>${r}</li>`).join('')}</ul>
+          <h4>Qualifications</h4>
+          <ul>${job.qualifications.map(q => `<li>${q}</li>`).join('')}</ul>
 
-// Send form
-function sendApplication(e, position) {
-  e.preventDefault();
-  const form = e.target;
-  const formData = new FormData(form);
-  const params = {
-    name: formData.get("name"),
-    email: formData.get("email"),
-    message: `Position Applied: ${position}\n\n${formData.get("message")}`
-  };
-
-  emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", params)
-    .then(() => {
-      alert("Application sent successfully!");
-      localStorage.removeItem(position);  // clear saved data
-      form.reset();
-    }, (err) => {
-      alert("Failed to send. Try again.");
-      console.error(err);
+          <!-- Application form → hr@technyah.com (resume attached) -->
+          <form class="apply-form" action="https://formsubmit.co/hr@technyah.com"
+                method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="_subject" value="Job Application — ${job.title}">
+            <input type="hidden" name="Position" value="${job.title}">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://technyah.com/thanks.html">
+            <div class="hp-field" aria-hidden="true">
+              <label>Leave this field empty<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label>
+            </div>
+            <h4 style="margin-top:0;">Apply for this position</h4>
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="name-${i}">Full Name</label>
+                <input type="text" id="name-${i}" name="name" autocomplete="name" required>
+              </div>
+              <div class="form-field">
+                <label for="email-${i}">Email</label>
+                <input type="email" id="email-${i}" name="email" autocomplete="email" required>
+              </div>
+              <div class="form-field full">
+                <label for="message-${i}">Cover Letter / Message</label>
+                <textarea id="message-${i}" name="message" required></textarea>
+              </div>
+              <div class="form-field full">
+                <label for="resume-${i}">Resume (PDF or Word, max 10&nbsp;MB)</label>
+                <input type="file" id="resume-${i}" name="attachment"
+                       accept=".pdf,.doc,.docx" required>
+                <div class="file-preview" role="status"></div>
+              </div>
+            </div>
+            <button type="submit" class="form-submit">Submit Application</button>
+            <p class="form-note" style="margin-top:10px;">Your application and resume are emailed directly to hr@technyah.com.</p>
+          </form>
+        </div>
+      `;
+      listings.appendChild(wrapper);
     });
-}
 
-// Track and save applicant data
-document.querySelectorAll(".apply-form").forEach(form => {
-  const position = form.getAttribute("onsubmit").match(/'(.*?)'/)[1];
-
-  // Auto-load saved data
-  const saved = localStorage.getItem(position);
-  if (saved) {
-    const obj = JSON.parse(saved);
-    form.name.value = obj.name;
-    form.email.value = obj.email;
-    form.message.value = obj.message;
-  }
-
-  // Auto-save on input
-  form.querySelectorAll("input, textarea").forEach(input => {
-    input.addEventListener("input", () => {
-      const name = form.name.value;
-      const email = form.email.value;
-      const message = form.message.value;
-      localStorage.setItem(position, JSON.stringify({ name, email, message }));
+    // Expand/collapse job details
+    document.querySelectorAll('.job-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const body = document.getElementById(header.getAttribute('aria-controls'));
+        const open = body.classList.toggle('open');
+        header.setAttribute('aria-expanded', open ? 'true' : 'false');
+        header.querySelector('.job-toggle-icon').textContent = open ? '\u2212' : '+';
+      });
     });
-  });
-});
-</script>
 
-
+    // Resume file preview + size guard (FormSubmit limit: 10 MB)
+    document.querySelectorAll('input[type="file"]').forEach(input => {
+      input.addEventListener('change', e => {
+        const preview = input.parentElement.querySelector('.file-preview');
+        const file = e.target.files[0];
+        if (!file) { preview.textContent = ''; return; }
+        if (file.size > 10 * 1024 * 1024) {
+          preview.style.color = 'var(--err)';
+          preview.textContent = 'File is larger than 10 MB — please attach a smaller file.';
+          input.value = '';
+          return;
+        }
+        preview.style.color = 'var(--ok)';
+        preview.textContent = `Attached: ${file.name} (${(file.size / 1024).toFixed(0)} KB)`;
+      });
+    });
+  </script>
 </body>
 </html>

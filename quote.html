@@ -2,124 +2,113 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Get a Quote - TECHNYAH</title>
-  <link rel="stylesheet" href="styles.css" />
-  <style>
-    .quote-form-container {
-      max-width: 700px;
-      margin: 0 auto;
-      background: #f9f9f9;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-    .quote-form-container h2 {
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-    .form-section {
-      margin-bottom: 1.5rem;
-    }
-    .form-section label {
-      display: block;
-      margin-bottom: 0.5rem;
-      font-weight: bold;
-    }
-    .form-section input,
-    .form-section select,
-    .form-section textarea {
-      width: 100%;
-      padding: 0.75rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    .form-section textarea {
-      resize: vertical;
-    }
-    .cta-btn {
-      display: block;
-      width: 100%;
-      padding: 1rem;
-      background: #00B4D8;
-      color: white;
-      font-size: 1rem;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-    .cta-btn:hover {
-      background: #48CAE4;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get a Quote | TECHNYAH — Robotics & Automation Projects</title>
+  <meta name="description" content="Request a quote from TECHNYAH for robotics, automation, control systems, custom machinery, or products. Response within one business day.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="images/main_logo.png" type="image/png">
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
   <!-- Header -->
   <header class="site-header">
-    <div class="center-logo">
-      <img src="images/main_logo.png" alt="TECHNYAH Logo" class="secondary-logo" />
-    </div>
-    <div class="nav-container">
-      <div class="hamburger-menu">☰</div>
+    <div class="header-inner">
+      <a href="index.html" class="brand">
+        <img src="images/main_logo.png" alt="TECHNYAH — Robotic & Manufacturing Solutions">
+      </a>
+      <button class="hamburger-menu" aria-label="Open menu" aria-expanded="false">&#9776;</button>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li class="dropdown">
-          <a href="about.html">About Us</a>
-          <div class="dropdown-menu">
-            <a href="about.html#blog">Blog</a>
-            <a href="about.html#portfolio">Portfolio</a>
-          </div>
-        </li>
+        <li><a href="about.html">About Us</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="products.html">Products</a></li>
         <li><a href="careers.html">Careers</a></li>
         <li><a href="contact.html">Contact Us</a></li>
+        <li class="mobile-search">
+          <input type="text" class="search-bar" placeholder="Search the site…" aria-label="Search">
+          <div class="suggestions-dropdown"></div>
+        </li>
       </ul>
-      <div class="header-actions">
-        <button class="quote-btn" onclick="location.href='quote.html'">Get a Quote</button>
-        <input type="text" class="search-bar" placeholder="Search..." id="search-bar" />
-        <div id="search-suggestions" class="suggestions-dropdown"></div>
+      <div class="header-search">
+        <input type="text" class="search-bar" placeholder="Search…" aria-label="Search">
+        <div class="suggestions-dropdown"></div>
       </div>
+      <button class="nav-cta" onclick="location.href='quote.html'">Get a Quote</button>
     </div>
   </header>
 
-  <!-- Quote Form -->
-  <main>
-    <section class="get-quote-section">
-      <div class="quote-form-container">
-        <h2>Request a Quote</h2>
-        <form id="quote-form">
-          <div class="form-section">
-            <label for="quote-type">Type of Quote</label>
-            <select id="quote-type" name="quote-type" required>
-              <option value="product">Product</option>
-              <option value="service">Service</option>
-            </select>
+  <main id="main">
+    <section class="section">
+      <div class="container">
+        <div class="section-head center">
+          <p class="eyebrow">Get a Quote</p>
+          <h2>Tell Us About Your Project</h2>
+          <p>The more detail you can share — application, environment, timeline, budget range — the faster and more accurate our response. We reply within one business day.</p>
+        </div>
+
+        <!-- Quote form (FormSubmit → info@technyah.com, CC mhadid@technyah.com) -->
+        <form id="quote-form" class="form-shell" data-formsubmit
+              action="https://formsubmit.co/info@technyah.com" method="POST">
+          <!-- FormSubmit configuration -->
+          <input type="hidden" name="_cc" value="mhadid@technyah.com">
+          <input type="hidden" name="_subject" value="Quote Request — TECHNYAH">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://technyah.com/thanks.html">
+          <!-- Honeypot spam trap — must stay empty -->
+          <div class="hp-field" aria-hidden="true">
+            <label>Leave this field empty<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label>
           </div>
 
-          <div id="product-fields" class="form-section">
-            <label for="product-name">Product Name</label>
-            <input type="text" id="product-name" name="product-name" placeholder="Enter product name" required />
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="contact-name">Your Name</label>
+              <input type="text" id="contact-name" name="name" autocomplete="name" required>
+            </div>
+            <div class="form-field">
+              <label for="company">Company</label>
+              <input type="text" id="company" name="company" autocomplete="organization">
+            </div>
+            <div class="form-field">
+              <label for="contact-email">Email</label>
+              <input type="email" id="contact-email" name="email" autocomplete="email" required>
+            </div>
+            <div class="form-field">
+              <label for="contact-phone">Phone (optional)</label>
+              <input type="tel" id="contact-phone" name="phone" autocomplete="tel">
+            </div>
 
-            <label for="product-quantity">Quantity</label>
-            <input type="number" id="product-quantity" name="product-quantity" placeholder="Enter quantity" required />
+            <div class="form-field full">
+              <label for="quote-type">Type of Quote</label>
+              <select id="quote-type" name="quote_type" required>
+                <option value="service">Service / Project</option>
+                <option value="product">Product</option>
+              </select>
+            </div>
+
+            <!-- Product fields -->
+            <div id="product-fields" class="form-field full" hidden>
+              <label for="product-name">Product Name</label>
+              <input type="text" id="product-name" name="product_name" placeholder="e.g., DSS-2 Drone Surveillance System">
+              <label for="product-quantity" style="margin-top:12px;">Quantity</label>
+              <input type="number" id="product-quantity" name="product_quantity" min="1">
+            </div>
+
+            <!-- Service fields -->
+            <div id="service-fields" class="form-field full">
+              <label for="service-description">Project / Service Description</label>
+              <textarea id="service-description" name="service_description" placeholder="Describe the application, equipment involved, and what you want to achieve" required></textarea>
+              <label for="service-timeline" style="margin-top:12px;">Target Timeline</label>
+              <input type="text" id="service-timeline" name="target_timeline" placeholder="e.g., needed by Q4 2026">
+            </div>
           </div>
 
-          <div id="service-fields" class="form-section" style="display: none;">
-            <label for="service-description">Service Description</label>
-            <textarea id="service-description" name="service-description" placeholder="Describe the service" required></textarea>
-
-            <label for="service-duration">Estimated Duration (days)</label>
-            <input type="number" id="service-duration" name="service-duration" required />
-          </div>
-
-          <div class="form-section">
-            <label for="contact-info">Your Contact Information</label>
-            <input type="text" id="contact-info" name="contact-info" placeholder="Your name, phone, or email" required />
-          </div>
-
-          <button type="submit" class="cta-btn">Submit Quote Request</button>
+          <button type="submit" class="form-submit">Submit Quote Request</button>
+          <p class="form-note" style="margin-top:12px; text-align:center;">Your request goes directly to our engineering team at info@technyah.com.</p>
         </form>
       </div>
     </section>
@@ -127,55 +116,55 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <p>&copy; 2025 TECHNYAH - Robotic & Manufacturing Solutions LLC. All Rights Reserved.</p>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/main_logo.png" alt="TECHNYAH logo">
+        <p>Robotic &amp; Manufacturing Solutions LLC<br>Lakeland, Florida, USA</p>
+      </div>
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="careers.html">Careers</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Work With Us</h3>
+        <ul>
+          <li><a href="quote.html">Request a Quote</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="mailto:info@technyah.com">info@technyah.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 TECHNYAH — Robotic &amp; Manufacturing Solutions LLC. All Rights Reserved.</p>
+    </div>
   </footer>
 
-  <!-- search Script -->
- <script>
-  const searchBar = document.querySelector('#search-bar');
-  const suggestionsDropdown = document.querySelector('#search-suggestions');
-  let searchIndex = [];
-  fetch('searchIndex.json')
-    .then(res => res.json())
-    .then(data => searchIndex = data);
+  <script src="main.js"></script>
+  <script>
+    // Toggle product vs. service fields, including the required attributes,
+    // so hidden inputs never block form submission.
+    const quoteType = document.getElementById('quote-type');
+    const productFields = document.getElementById('product-fields');
+    const serviceFields = document.getElementById('service-fields');
+    const productName = document.getElementById('product-name');
+    const productQty = document.getElementById('product-quantity');
+    const serviceDesc = document.getElementById('service-description');
 
-  searchBar.addEventListener('input', function () {
-    const query = this.value.toLowerCase();
-    suggestionsDropdown.innerHTML = '';
-    if (query) {
-      const results = searchIndex.filter(entry =>
-        entry.content.toLowerCase().includes(query)
-      );
-      results.slice(0, 10).forEach(entry => {
-        const item = document.createElement('div');
-        item.classList.add('suggestion-item');
-        item.innerHTML = `<a href="${entry.page}" style="color: inherit; text-decoration: none;">${entry.title}</a>`;
-        suggestionsDropdown.appendChild(item);
-      });
-      suggestionsDropdown.style.display = results.length ? 'block' : 'none';
-    } else {
-      suggestionsDropdown.style.display = 'none';
+    function updateQuoteFields() {
+      const isProduct = quoteType.value === 'product';
+      productFields.hidden = !isProduct;
+      serviceFields.hidden = isProduct;
+      productName.required = isProduct;
+      productQty.required = isProduct;
+      serviceDesc.required = !isProduct;
     }
-  });
-
-  document.addEventListener('click', (e) => {
-    if (!searchBar.contains(e.target) && !suggestionsDropdown.contains(e.target)) {
-      suggestionsDropdown.style.display = 'none';
-    }
-  });
-</script>
-
-
-  <script type="text/javascript">
-    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-    (function () {
-      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-      s1.async = true;
-      s1.src = 'https://embed.tawk.to/YOUR_PROPERTY_ID/1abcxyz';
-      s1.charset = 'UTF-8';
-      s1.setAttribute('crossorigin', '*');
-      s0.parentNode.insertBefore(s1, s0);
-    })();
+    quoteType.addEventListener('change', updateQuoteFields);
+    updateQuoteFields();
   </script>
 </body>
 </html>
