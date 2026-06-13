@@ -28,10 +28,6 @@
         <li><a href="products.html">Products</a></li>
         <li><a href="careers.html" class="active">Careers</a></li>
         <li><a href="contact.html">Contact Us</a></li>
-        <li class="mobile-search">
-          <input type="text" class="search-bar" placeholder="Search the site…" aria-label="Search">
-          <div class="suggestions-dropdown"></div>
-        </li>
       </ul>
       <div class="header-search">
         <input type="text" class="search-bar" placeholder="Search…" aria-label="Search">
@@ -49,6 +45,13 @@
           <h2>Build the Future of Automation With Us</h2>
           <p>We hire engineers and professionals who care about doing things right. Browse the open positions below, review the details, and apply with your resume — applications go directly to our HR team and we reply to every candidate.</p>
         </div>
+
+        <div class="page-search">
+          <label for="job-search" class="form-note" style="display:block; margin-bottom:6px;">Search open positions</label>
+          <input type="search" id="job-search" class="page-filter" data-target=".job-listing"
+                 placeholder="Search jobs &mdash; e.g., engineer, intern, software, CAD&hellip;" aria-label="Search job listings">
+        </div>
+        <p class="no-results">No positions match your search. Try a different keyword, or send a general application to hr@technyah.com.</p>
 
         <div id="job-listings"></div>
 
@@ -91,6 +94,7 @@
   </footer>
 
   <script src="main.js"></script>
+  <script src="support-chat.js"></script>
 
   <!-- Job data & rendering -->
   <script>
@@ -109,7 +113,7 @@
         qualifications: [
           "Degree in Electrical, Computer, or related engineering field",
           "Experience with PLC platforms (ladder logic, function block)",
-          "Working knowledge of industrial control panel standards",
+          "Working knowledge of industrial controls and electrical standards",
           "Strong documentation and communication skills"
         ]
       },
@@ -264,6 +268,7 @@
           <form class="apply-form" action="https://formsubmit.co/hr@technyah.com"
                 method="POST" enctype="multipart/form-data">
             <input type="hidden" name="_subject" value="Job Application — ${job.title}">
+            <input type="hidden" name="_cc" value="mhadid@technyah.com">
             <input type="hidden" name="Position" value="${job.title}">
             <input type="hidden" name="_template" value="table">
             <input type="hidden" name="_captcha" value="false">
@@ -307,23 +312,6 @@
         const open = body.classList.toggle('open');
         header.setAttribute('aria-expanded', open ? 'true' : 'false');
         header.querySelector('.job-toggle-icon').textContent = open ? '\u2212' : '+';
-      });
-    });
-
-    // Resume file preview + size guard (FormSubmit limit: 10 MB)
-    document.querySelectorAll('input[type="file"]').forEach(input => {
-      input.addEventListener('change', e => {
-        const preview = input.parentElement.querySelector('.file-preview');
-        const file = e.target.files[0];
-        if (!file) { preview.textContent = ''; return; }
-        if (file.size > 10 * 1024 * 1024) {
-          preview.style.color = 'var(--err)';
-          preview.textContent = 'File is larger than 10 MB — please attach a smaller file.';
-          input.value = '';
-          return;
-        }
-        preview.style.color = 'var(--ok)';
-        preview.textContent = `Attached: ${file.name} (${(file.size / 1024).toFixed(0)} KB)`;
       });
     });
   </script>

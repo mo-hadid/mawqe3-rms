@@ -1,0 +1,3 @@
+ID,Name,Category,Status,Short Description,Image File,Sort Order,Published
+P001,DSS-2 Drone Surveillance System,Aerial Systems,Available,A cutting-edge aerial monitoring solution for industrial and security applications. Covers wide areas with real-time data.,drone pic 1.jpg,10,Yes
+P002,ST-2500 Multi-Purpose Flight Controller,Controllers,Available,"Advanced controller for drones, UAVs, and robotics. Compatible with multi-rotor, fixed-wing, and autonomous systems.",drone pic 2.jpg,20,Yes

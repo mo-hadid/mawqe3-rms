@@ -28,10 +28,6 @@
         <li><a href="products.html">Products</a></li>
         <li><a href="careers.html">Careers</a></li>
         <li><a href="contact.html">Contact Us</a></li>
-        <li class="mobile-search">
-          <input type="text" class="search-bar" placeholder="Search the site…" aria-label="Search">
-          <div class="suggestions-dropdown"></div>
-        </li>
       </ul>
       <div class="header-search">
         <input type="text" class="search-bar" placeholder="Search…" aria-label="Search">
@@ -50,9 +46,13 @@
           <p>The more detail you can share — application, environment, timeline, budget range — the faster and more accurate our response. We reply within one business day.</p>
         </div>
 
-        <!-- Quote form (FormSubmit → info@technyah.com, CC mhadid@technyah.com) -->
-        <form id="quote-form" class="form-shell" data-formsubmit
-              action="https://formsubmit.co/info@technyah.com" method="POST">
+        <!-- Quote form (FormSubmit → info@technyah.com, CC mhadid@technyah.com)
+             NOTE: posts as standard multipart/form-data — required for file
+             attachments to be delivered. Do not add data-formsubmit (AJAX)
+             back to this form; the AJAX endpoint drops attachments. -->
+        <form id="quote-form" class="form-shell"
+              action="https://formsubmit.co/info@technyah.com" method="POST"
+              enctype="multipart/form-data">
           <!-- FormSubmit configuration -->
           <input type="hidden" name="_cc" value="mhadid@technyah.com">
           <input type="hidden" name="_subject" value="Quote Request — TECHNYAH">
@@ -105,6 +105,13 @@
               <label for="service-timeline" style="margin-top:12px;">Target Timeline</label>
               <input type="text" id="service-timeline" name="target_timeline" placeholder="e.g., needed by Q4 2026">
             </div>
+
+            <div class="form-field full">
+              <label for="quote-attachment">Attach Drawings / Specs / Photos (optional, max 10&nbsp;MB)</label>
+              <input type="file" id="quote-attachment" name="attachment"
+                     accept=".pdf,.doc,.docx,.xls,.xlsx,.png,.jpg,.jpeg,.zip">
+              <div class="file-preview" role="status"></div>
+            </div>
           </div>
 
           <button type="submit" class="form-submit">Submit Quote Request</button>
@@ -145,6 +152,7 @@
   </footer>
 
   <script src="main.js"></script>
+  <script src="support-chat.js"></script>
   <script>
     // Toggle product vs. service fields, including the required attributes,
     // so hidden inputs never block form submission.

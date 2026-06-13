@@ -28,10 +28,6 @@
         <li><a href="products.html">Products</a></li>
         <li><a href="careers.html">Careers</a></li>
         <li><a href="contact.html" class="active">Contact Us</a></li>
-        <li class="mobile-search">
-          <input type="text" class="search-bar" placeholder="Search the site…" aria-label="Search">
-          <div class="suggestions-dropdown"></div>
-        </li>
       </ul>
       <div class="header-search">
         <input type="text" class="search-bar" placeholder="Search…" aria-label="Search">
@@ -66,9 +62,11 @@
           </div>
         </div>
 
-        <!-- Contact form (FormSubmit → info@technyah.com, CC mhadid@technyah.com) -->
-        <form id="contact-form" class="form-shell" data-formsubmit
-              action="https://formsubmit.co/info@technyah.com" method="POST">
+        <!-- Contact form (FormSubmit → info@technyah.com, CC mhadid@technyah.com)
+             Standard multipart POST so optional attachments are delivered. -->
+        <form id="contact-form" class="form-shell"
+              action="https://formsubmit.co/info@technyah.com" method="POST"
+              enctype="multipart/form-data">
           <!-- FormSubmit configuration -->
           <input type="hidden" name="_cc" value="mhadid@technyah.com">
           <input type="hidden" name="_subject" value="Website Contact — TECHNYAH">
@@ -96,6 +94,12 @@
             <div class="form-field full">
               <label for="message">Your Message</label>
               <textarea id="message" name="message" required></textarea>
+            </div>
+            <div class="form-field full">
+              <label for="contact-attachment">Attachment (optional, max 10&nbsp;MB)</label>
+              <input type="file" id="contact-attachment" name="attachment"
+                     accept=".pdf,.doc,.docx,.xls,.xlsx,.png,.jpg,.jpeg,.zip">
+              <div class="file-preview" role="status"></div>
             </div>
           </div>
           <button type="submit" class="form-submit">Send Message</button>
@@ -136,5 +140,6 @@
   </footer>
 
   <script src="main.js"></script>
+  <script src="support-chat.js"></script>
 </body>
 </html>

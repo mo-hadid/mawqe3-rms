@@ -36,10 +36,6 @@
         <li><a href="products.html" class="active">Products</a></li>
         <li><a href="careers.html">Careers</a></li>
         <li><a href="contact.html">Contact Us</a></li>
-        <li class="mobile-search">
-          <input type="text" class="search-bar" placeholder="Search the site…" aria-label="Search">
-          <div class="suggestions-dropdown"></div>
-        </li>
       </ul>
       <div class="header-search">
         <input type="text" class="search-bar" placeholder="Search…" aria-label="Search">
@@ -58,7 +54,14 @@
           <p>Hardware engineered in-house and supported by the same team that designed it. Contact us for specifications, lead times, and volume pricing.</p>
         </div>
 
-        <div class="products-grid">
+        <div class="page-search">
+          <label for="product-search" class="form-note" style="display:block; margin-bottom:6px;">Search products</label>
+          <input type="search" id="product-search" class="page-filter" data-target=".product-card"
+                 placeholder="Search products &mdash; e.g., drone, controller, surveillance&hellip;" aria-label="Search products">
+        </div>
+        <p class="no-results" style="margin-bottom:28px;">No products match your search. Need something custom? <a href="contact.html" style="color:var(--accent-dark); font-weight:600;">Talk to engineering</a>.</p>
+
+        <div class="products-grid" data-catalog="products">
           <!-- Product 1 -->
           <article class="product-card">
             <div class="product-media">
@@ -130,5 +133,6 @@
   </footer>
 
   <script src="main.js"></script>
+  <script src="support-chat.js"></script>
 </body>
 </html>
