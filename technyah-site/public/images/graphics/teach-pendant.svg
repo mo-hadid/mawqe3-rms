@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" fill="none" stroke-linecap="round" stroke-linejoin="round">
+
+<!-- Robotics training: teach pendant / HMI handheld -->
+<rect x="74" y="22" width="92" height="136" rx="14" fill="#E8EEF2" stroke="#16293A" stroke-width="7"/>
+<rect x="88" y="38" width="64" height="44" rx="4" fill="#16293A"/>
+<polyline points="96,72 108,58 120,66 134,50" stroke="#00B4D8" stroke-width="4" fill="none"/>
+<circle cx="100" cy="102" r="7" fill="#00B4D8"/>
+<circle cx="120" cy="102" r="7" fill="#9FB2C0"/>
+<circle cx="140" cy="102" r="7" fill="#9FB2C0"/>
+<rect x="92" y="120" width="56" height="10" rx="3" fill="#9FB2C0"/>
+<circle cx="120" cy="143" r="8" fill="#E8EEF2" stroke="#00B4D8" stroke-width="5"/>
+<path d="M44 60 q-14 30 0 60 M196 60 q14 30 0 60" stroke="#9FB2C0" stroke-width="5"/>
+<path d="M56 70 q-9 20 0 40 M184 70 q9 20 0 40" stroke="#D9E0E6" stroke-width="5"/>
+</svg>

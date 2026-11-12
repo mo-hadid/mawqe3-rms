@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" fill="none" stroke-linecap="round" stroke-linejoin="round">
+
+<!-- Industrial 6-axis robotic arm -->
+<rect x="20" y="150" width="200" height="8" rx="4" fill="#D9E0E6"/>
+<rect x="70" y="128" width="64" height="24" rx="4" fill="#16293A"/>
+<rect x="78" y="136" width="10" height="8" rx="2" fill="#00B4D8"/>
+<circle cx="102" cy="122" r="14" fill="#E8EEF2" stroke="#16293A" stroke-width="6"/>
+<line x1="102" y1="122" x2="78" y2="70" stroke="#16293A" stroke-width="12"/>
+<circle cx="78" cy="70" r="11" fill="#E8EEF2" stroke="#16293A" stroke-width="6"/>
+<line x1="78" y1="70" x2="142" y2="44" stroke="#16293A" stroke-width="10"/>
+<circle cx="142" cy="44" r="9" fill="#E8EEF2" stroke="#16293A" stroke-width="6"/>
+<line x1="142" y1="44" x2="178" y2="62" stroke="#16293A" stroke-width="8"/>
+<circle cx="178" cy="62" r="7" fill="#00B4D8"/>
+<path d="M184 68 L196 80 M196 64 L186 74" stroke="#16293A" stroke-width="6"/>
+<path d="M196 80 l10 -4 M196 64 l8 8" stroke="#00B4D8" stroke-width="6"/>
+<circle cx="40" cy="36" r="3" fill="#00B4D8"/>
+<circle cx="206" cy="28" r="3" fill="#9FB2C0"/>
+<circle cx="30" cy="96" r="3" fill="#9FB2C0"/>
+</svg>

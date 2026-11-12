@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" fill="none" stroke-linecap="round" stroke-linejoin="round">
+
+<!-- Industrial control panel: PLC rack, breakers, duct, pilot lights -->
+<rect x="52" y="16" width="136" height="148" rx="6" fill="#E8EEF2" stroke="#16293A" stroke-width="7"/>
+<rect x="66" y="30" width="108" height="12" rx="2" fill="#9FB2C0"/>
+<rect x="66" y="52" width="60" height="26" rx="3" fill="#16293A"/>
+<rect x="72" y="58" width="9" height="14" fill="#00B4D8"/>
+<rect x="85" y="58" width="9" height="14" fill="#E8EEF2"/>
+<rect x="98" y="58" width="9" height="14" fill="#E8EEF2"/>
+<rect x="111" y="58" width="9" height="14" fill="#00B4D8"/>
+<rect x="136" y="52" width="38" height="26" rx="3" fill="#E8EEF2" stroke="#16293A" stroke-width="5"/>
+<line x1="145" y1="58" x2="145" y2="72" stroke="#16293A" stroke-width="4"/>
+<line x1="155" y1="58" x2="155" y2="72" stroke="#16293A" stroke-width="4"/>
+<line x1="165" y1="58" x2="165" y2="72" stroke="#16293A" stroke-width="4"/>
+<rect x="66" y="90" width="108" height="12" rx="2" fill="#9FB2C0"/>
+<rect x="66" y="114" width="44" height="22" rx="3" fill="#E8EEF2" stroke="#16293A" stroke-width="5"/>
+<circle cx="78" cy="125" r="4" fill="#00B4D8"/>
+<circle cx="92" cy="125" r="4" fill="#9FB2C0"/>
+<circle cx="146" cy="125" r="9" fill="#00B4D8" stroke="#16293A" stroke-width="5"/>
+<circle cx="168" cy="125" r="9" fill="#E8EEF2" stroke="#16293A" stroke-width="5"/>
+<rect x="66" y="146" width="108" height="8" rx="2" fill="#9FB2C0"/>
+<line x1="36" y1="40" x2="52" y2="40" stroke="#16293A" stroke-width="6"/>
+<line x1="36" y1="140" x2="52" y2="140" stroke="#16293A" stroke-width="6"/>
+</svg>

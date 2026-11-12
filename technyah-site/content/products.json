@@ -1,0 +1,20 @@
+[
+  {
+    "id": "P001",
+    "name": "DSS-2 Aerial Monitoring System",
+    "category": "Aerial systems",
+    "status": "In development",
+    "graphic": "aerial-monitoring",
+    "short": "An aerial monitoring platform for industrial sites: wide-area coverage with a live data feed for inspection and operational awareness.",
+    "keywords": ["DSS-2", "drone", "aerial", "monitoring", "inspection", "UAV", "site security", "surveillance"]
+  },
+  {
+    "id": "P002",
+    "name": "ST-2500 Flight & Motion Controller",
+    "category": "Controllers",
+    "status": "In development",
+    "graphic": "flight-controller",
+    "short": "A multi-purpose controller for unmanned aircraft and mobile robots, with flexible I/O for custom integrations.",
+    "keywords": ["ST-2500", "flight controller", "controller", "UAV", "robotics", "multi-rotor", "fixed-wing", "autonomous"]
+  }
+]

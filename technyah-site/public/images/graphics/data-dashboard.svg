@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" fill="none" stroke-linecap="round" stroke-linejoin="round">
+
+<!-- SCADA / data dashboard monitor -->
+<rect x="32" y="24" width="176" height="112" rx="8" fill="#E8EEF2" stroke="#16293A" stroke-width="7"/>
+<rect x="104" y="136" width="32" height="14" fill="#16293A"/>
+<rect x="84" y="150" width="72" height="8" rx="4" fill="#16293A"/>
+<polyline points="46,108 74,84 96,96 122,62 142,74" stroke="#00B4D8" stroke-width="6" fill="none"/>
+<circle cx="122" cy="62" r="5" fill="#00B4D8"/>
+<rect x="158" y="92" width="12" height="28" fill="#16293A"/>
+<rect x="174" y="76" width="12" height="44" fill="#9FB2C0"/>
+<rect x="190" y="60" width="12" height="60" fill="#00B4D8"/>
+<rect x="46" y="38" width="52" height="10" rx="2" fill="#9FB2C0"/>
+<circle cx="186" cy="42" r="6" fill="#00B4D8"/>
+<rect x="158" y="38" width="20" height="8" rx="2" fill="#D9E0E6"/>
+</svg>

@@ -1,0 +1,242 @@
+[
+  {
+    "slug": "robot-integration",
+    "title": "Robot Integration & Programming",
+    "label": "Robotics",
+    "icon": "robotic-arm",
+    "photo": "robot-arm",
+    "short": "Robot cells, cobots and end-of-arm tooling, programmed and commissioned around your part and your cycle time.",
+    "seoTitle": "Robot Integration & Programming in Lakeland, Florida",
+    "seoDescription": "Robot cell integration, cobot applications, palletizing, machine tending and robot programming for Florida manufacturers. Based in Lakeland, serving Polk County, Tampa and Orlando.",
+    "keywords": ["robot", "robotic arm", "cobot", "collaborative robot", "palletizing", "machine tending", "pick and place", "end of arm tooling", "gripper", "FANUC", "ABB", "Universal Robots", "robot cell", "robot programming"],
+    "intro": [
+      "A robot pays back only when the whole cell works: how the part arrives, how it is gripped, how the cell is guarded and how it hands off to the next machine. We scope the task first and choose the arm second.",
+      "We integrate and program industrial and collaborative robots on common platforms including FANUC, ABB and Universal Robots, and tie them to the PLCs, vision systems and conveyors around them."
+    ],
+    "scope": [
+      "Cell concept, reach and cycle-time studies before any hardware is ordered",
+      "Programming for pick-and-place, machine tending, palletizing, dispensing and inspection",
+      "End-of-arm tooling, fixtures and part presentation",
+      "Robot-to-PLC handshakes over EtherNet/IP, PROFINET or discrete I/O",
+      "Collaborative applications with a documented risk assessment",
+      "Operator training, recovery procedures and handover documents"
+    ],
+    "outcomes": ["A cell that recovers cleanly from a fault without a specialist on site", "Programs and backups your team owns", "A clear list of what was tested and how"],
+    "faqs": [
+      { "q": "Can you work with a robot we already own?", "a": "Yes. Reprogramming, re-tooling or relocating an existing robot is often the fastest improvement, and it avoids robot lead time." },
+      { "q": "Is a collaborative robot safe without fencing?", "a": "That depends on the application, not the robot. Payload, tooling, speed and the part itself decide it, so every collaborative application needs its own risk assessment." },
+      { "q": "How long does a robot cell take?", "a": "Delivery of the robot and tooling usually sets the schedule. We give a dated plan with the quote and keep long-lead items visible from day one." }
+    ],
+    "related": ["machine-vision", "conveyors-material-handling", "custom-machines"]
+  },
+  {
+    "slug": "plc-hmi-programming",
+    "title": "PLC, HMI & Drive Programming",
+    "label": "Controls",
+    "icon": "control-panel",
+    "photo": "hmi-panel",
+    "short": "New control logic, operator screens and drive setup, or a clean fix for the program you inherited.",
+    "seoTitle": "PLC & HMI Programming Services in Lakeland, Florida",
+    "seoDescription": "PLC programming, HMI screens, VFD and servo setup, legacy PLC migration and controls commissioning for industrial plants in Polk County, Tampa Bay and Orlando.",
+    "keywords": ["PLC", "PLC programming", "HMI", "ladder logic", "structured text", "function block", "VFD", "variable frequency drive", "servo", "motion control", "controls", "legacy migration", "SCADA", "commissioning", "I/O list"],
+    "intro": [
+      "Good control logic is boring to operate: it starts the same way every time, says exactly why it stopped, and can be read by the next person. That is the standard we program to.",
+      "We write and repair PLC programs, build HMI screens operators can act on, and configure drives and motion. Tell us what you run and we will say plainly whether we are the right fit for that platform."
+    ],
+    "scope": [
+      "PLC programming in ladder, function block and structured text",
+      "HMI screens that show the cause of a stop, not only the alarm",
+      "VFD and servo configuration, tuning and fault diagnosis",
+      "Migration from obsolete PLCs, HMIs and drives",
+      "I/O lists, tag databases and control narratives",
+      "Factory and site acceptance testing with a written checklist"
+    ],
+    "outcomes": ["Commented source code and a current backup", "Alarms that name the device and the action to take", "A test record you can show a customer or an auditor"],
+    "faqs": [
+      { "q": "The original builder is gone and we have no source code. Can you still help?", "a": "Usually. We record how the machine behaves from the running system, recover what can be recovered and rebuild or migrate the rest in a planned shutdown." },
+      { "q": "Can you make changes without stopping production?", "a": "We prepare and test offline, then cut over in a window you choose, with a rollback copy ready." },
+      { "q": "Do you install the wiring as well?", "a": "Programming and commissioning are ours. Wiring and installation are done with licensed electrical contractors on the same schedule." }
+    ],
+    "related": ["machine-troubleshooting", "industrial-networks-data", "conveyors-material-handling"]
+  },
+  {
+    "slug": "conveyors-material-handling",
+    "title": "Conveyor & Material Handling Controls",
+    "label": "Material handling",
+    "icon": "conveyor-line",
+    "photo": "conveyor",
+    "short": "Belt, roller and sortation lines that keep product moving, with controls that find a jam before it becomes a pile-up.",
+    "seoTitle": "Conveyor Controls & Material Handling Automation in Florida",
+    "seoDescription": "Conveyor belt systems, sortation logic, accumulation, scanning and line integration for packaging plants and distribution centers in Lakeland, Polk County and Central Florida.",
+    "keywords": ["conveyor", "conveyor belt", "belt", "roller conveyor", "sortation", "accumulation", "material handling", "merge", "divert", "packaging line", "palletizer", "barcode scanner", "photo eye", "distribution center", "warehouse"],
+    "intro": [
+      "Most conveyor problems are control problems: gaps that are too tight, a merge that starves one lane, a restart that needs three people. We fix the logic and the sensing, and we build new lines the same way.",
+      "Work ranges from a single transfer between two machines to accumulation and sortation across a packaging hall or a warehouse."
+    ],
+    "scope": [
+      "Controls for belt, roller and modular plastic conveyors",
+      "Merge, divert, accumulation and sortation logic",
+      "Photo-eye, encoder and barcode or label scanning integration",
+      "Speed matching and soft starts with variable frequency drives",
+      "Jam detection, safe restart and zone e-stop design",
+      "Integration with scales, labelers, wrappers and palletizers"
+    ],
+    "outcomes": ["Fewer manual clears per shift", "A line one person can restart", "Throughput numbers you can read from the HMI"],
+    "faqs": [
+      { "q": "Do you supply the conveyor itself?", "a": "We specify and source conveyor with fabrication and equipment partners when a project needs it, and we always own the controls, sensing and commissioning." },
+      { "q": "Can you add a scanner or a divert to an existing line?", "a": "Yes. Adding tracking, a scan point or a reject to a running line is common retrofit work and is planned around your downtime." },
+      { "q": "Our line stops and nobody knows why. Where do you start?", "a": "With the stop history. We log every stop with its cause for a few shifts, then fix the top three before touching anything else." }
+    ],
+    "related": ["plc-hmi-programming", "robot-integration", "machine-troubleshooting"]
+  },
+  {
+    "slug": "machine-vision",
+    "title": "Machine Vision & AI Inspection",
+    "label": "Vision",
+    "icon": "vision-ai",
+    "photo": "assembly-line",
+    "short": "Cameras that check, measure, read and guide, using classic vision tools first and deep learning where rules run out.",
+    "seoTitle": "Machine Vision & AI Inspection Systems in Florida",
+    "seoDescription": "Machine vision inspection, barcode and date-code verification, vision-guided robots and deep-learning defect detection for manufacturers in Central Florida.",
+    "keywords": ["machine vision", "vision", "camera", "inspection", "AI", "deep learning", "defect detection", "OCR", "barcode", "date code", "label verification", "vision guided robot", "pose estimation", "quality control", "measurement"],
+    "intro": [
+      "Vision projects succeed or fail on lighting, optics and part presentation long before any algorithm matters. We start there, prove the image, and only then choose the tool.",
+      "Simple presence and measurement checks use fast rule-based tools. Variable defects, natural products and bin picking are where learned models earn their place."
+    ],
+    "scope": [
+      "Presence, orientation, count and dimensional checks",
+      "Barcode, label and date-code reading and verification",
+      "Vision-guided robot picking and placement",
+      "Deep-learning defect detection for variable surfaces and products",
+      "Lighting, lens and camera selection with sample-part trials",
+      "Pass and fail image logging with links to lot or serial numbers"
+    ],
+    "outcomes": ["A measured false-reject and false-accept rate before sign-off", "Stored images for every reject", "A setup your technicians can re-teach"],
+    "faqs": [
+      { "q": "Do we need AI for inspection?", "a": "Often not. If the defect can be described by a rule, a rule is faster, cheaper and easier to validate. We use learned models where the product or defect varies too much for that." },
+      { "q": "Can you test on our parts before we commit?", "a": "Yes. A feasibility trial on good and bad sample parts comes first, with the images and results in the report." },
+      { "q": "Will it slow the line down?", "a": "Inspection is sized to your rate at the start. If the cycle time cannot be met we say so before you buy hardware." }
+    ],
+    "related": ["robot-integration", "custom-machines", "industrial-networks-data"]
+  },
+  {
+    "slug": "custom-machines",
+    "title": "Custom Machines & Assembly Automation",
+    "label": "Machinery",
+    "icon": "cnc-machine",
+    "photo": "custom-machine",
+    "short": "Assembly stations, fixtures and test stands built around one job and the floor space you actually have.",
+    "seoTitle": "Custom Machine Building & Assembly Line Automation in Florida",
+    "seoDescription": "Custom automation machines, assembly stations, pick-and-place systems, fixtures and test stands for manufacturers in Lakeland, Tampa Bay and Orlando.",
+    "keywords": ["custom machine", "custom machinery", "assembly line", "assembly automation", "pick and place", "fixture", "jig", "test stand", "pneumatics", "servo", "special purpose machine", "error proofing", "poka-yoke", "workcell"],
+    "intro": [
+      "When no catalog machine does the job, the answer is usually smaller than a full line: one station that removes the worst manual step, proves itself, and is then repeated.",
+      "We take a custom machine from concept to commissioning with fabrication partners, and we own the controls, motion, safety logic and testing."
+    ],
+    "scope": [
+      "Semi-automatic and automatic assembly stations",
+      "Pick-and-place, pressing, fastening and dispensing motions",
+      "Fixtures, nests and part presentation",
+      "Test and inspection stands with data capture",
+      "Error-proofing so the wrong part cannot be built",
+      "Guarding and safety functions with a documented risk assessment"
+    ],
+    "outcomes": ["A machine sized to the job and the space", "Drawings, programs and a spare-parts list at handover", "A documented acceptance test at your rate"],
+    "faqs": [
+      { "q": "How do you price a machine that does not exist yet?", "a": "In two steps. A short paid concept phase fixes the layout, cycle time and risks. The build is then quoted as a fixed price against that concept." },
+      { "q": "Who owns the design?", "a": "You receive the drawings, programs and documentation for your machine at handover so you are never locked out of your own equipment." },
+      { "q": "Can you automate only part of a manual process?", "a": "Yes, and it is often the right first step. We look for the single operation with the most rework or strain and start there." }
+    ],
+    "related": ["robot-integration", "machine-vision", "plc-hmi-programming"]
+  },
+  {
+    "slug": "machine-troubleshooting",
+    "title": "Machine Troubleshooting & Retrofits",
+    "label": "Service",
+    "icon": "teach-pendant",
+    "photo": "troubleshooting",
+    "short": "Find the fault, fix the cause and replace what is obsolete before it stops the line again.",
+    "seoTitle": "Industrial Machine Troubleshooting & Controls Retrofits in Polk County, FL",
+    "seoDescription": "On-site and remote machine troubleshooting, PLC and drive fault finding, obsolete controls replacement and program recovery for plants in Lakeland, Polk County and Tampa Bay.",
+    "keywords": ["troubleshooting", "repair", "machine down", "downtime", "fault", "retrofit", "upgrade", "obsolete", "legacy", "drive fault", "intermittent", "maintenance", "service call", "program backup", "emergency"],
+    "intro": [
+      "Intermittent stops are the expensive ones. We work from evidence: fault logs, trends and what changed, instead of swapping parts until it runs.",
+      "When the root cause is an obsolete controller, HMI or drive, we plan the replacement so it happens in a scheduled window instead of during a breakdown."
+    ],
+    "scope": [
+      "On-site and remote fault finding on PLC-controlled equipment",
+      "Intermittent stops, communication dropouts and drive faults",
+      "Replacement of obsolete PLCs, HMIs and drives",
+      "Program backups and recovery of missing documentation",
+      "Sensor, actuator and safety-device replacement planning",
+      "Health checks that list what will fail next and what to stock"
+    ],
+    "outcomes": ["A written cause, not only a restart", "Current backups of every program on the machine", "A ranked list of obsolescence risks"],
+    "faqs": [
+      { "q": "What should we send you when a machine is down?", "a": "The exact fault text, the controller and drive models, a photo of the panel and what changed recently. That is usually enough to start remotely." },
+      { "q": "Do you offer a support agreement?", "a": "Yes. Plants that want a known response time and periodic backups can set up a monthly support plan after a first visit." },
+      { "q": "Is it worth retrofitting an old machine?", "a": "If the mechanics are sound, new controls usually cost a fraction of a new machine and remove the parts you can no longer buy. We give you both numbers." }
+    ],
+    "related": ["plc-hmi-programming", "industrial-networks-data", "training"]
+  },
+  {
+    "slug": "industrial-networks-data",
+    "title": "Industrial Networks, Data & Remote Monitoring",
+    "label": "Data",
+    "icon": "data-dashboard",
+    "photo": "network",
+    "short": "Machines that talk to each other and report to you: reliable networks, secure remote access and dashboards worth opening.",
+    "seoTitle": "Industrial Networking, Machine Data & OEE Dashboards in Florida",
+    "seoDescription": "EtherNet/IP, Modbus and OPC UA integration, secure remote access, machine data collection and OEE dashboards for manufacturers in Central Florida.",
+    "keywords": ["industrial network", "networking", "EtherNet/IP", "Modbus", "OPC UA", "PROFINET", "IIoT", "remote monitoring", "remote access", "VPN", "dashboard", "OEE", "data collection", "historian", "alarm notification", "OT"],
+    "intro": [
+      "You cannot improve a line you cannot see. We connect controllers that were never meant to talk, collect the few signals that matter and put them where supervisors will look.",
+      "Remote access is set up so a supplier can help in minutes without leaving a permanent door open into the plant network."
+    ],
+    "scope": [
+      "EtherNet/IP, Modbus TCP and RTU, and OPC UA communications",
+      "Network layout, managed switches and segmentation of machine networks",
+      "Secure, logged remote access for support",
+      "Machine data collection, downtime reasons and OEE dashboards",
+      "Alarm notification by text and email",
+      "Links to historians, databases and business systems"
+    ],
+    "outcomes": ["One view of uptime, rate and stops per line", "Remote help without an open port", "A network drawing that matches reality"],
+    "faqs": [
+      { "q": "Our machines are from different builders. Can they share data?", "a": "Usually. Most controllers can be read over a standard protocol or through a small gateway without changing the machine program." },
+      { "q": "Is remote access a security risk?", "a": "It is if it is always on and shared. We set it up per user, logged and off by default, and we keep machine networks separate from office networks." },
+      { "q": "Do we need a large software platform to start?", "a": "No. A useful first step is one line, five signals and a screen on the wall. It can grow once people trust the numbers." }
+    ],
+    "related": ["plc-hmi-programming", "machine-troubleshooting", "machine-vision"]
+  },
+  {
+    "slug": "training",
+    "title": "Robotics & Controls Training",
+    "label": "Training",
+    "icon": "teach-pendant",
+    "photo": "team",
+    "short": "Hands-on training for operators and maintenance teams, on your own machines and at your team's level.",
+    "seoTitle": "Robotics & PLC Training for Maintenance Teams in Florida",
+    "seoDescription": "On-site and virtual robotics, PLC and HMI training for operators and maintenance technicians in Lakeland, Polk County, Tampa and Orlando.",
+    "keywords": ["training", "robot training", "PLC training", "maintenance training", "operator training", "ladder logic", "HMI", "ROS", "kinematics", "safety", "on-site training", "virtual training"],
+    "intro": [
+      "The cheapest downtime to prevent is the stop your own team could have cleared. Training is built around the equipment on your floor and the faults you actually see.",
+      "Sessions run on site or online, in short blocks that fit around shifts."
+    ],
+    "scope": [
+      "Robot operation, jogging, recovery and basic program edits",
+      "PLC fundamentals and reading ladder logic to find a fault",
+      "HMI use, alarm handling and recipe changes",
+      "Drive and sensor basics for maintenance",
+      "Machine safety awareness and lockout practice",
+      "Quick-reference guides written for your machines"
+    ],
+    "outcomes": ["Fewer service calls for routine faults", "Shift-to-shift consistency", "Guides that live at the machine"],
+    "faqs": [
+      { "q": "Do you train on our equipment or in a classroom?", "a": "On your equipment whenever possible. People remember the machine they will be standing at." },
+      { "q": "Can you cover different skill levels in one visit?", "a": "Yes. Operators and maintenance staff get separate sessions with different goals." },
+      { "q": "Is virtual training effective?", "a": "For theory, software and program reading, yes. Anything that needs hands on the robot is done on site." }
+    ],
+    "related": ["robot-integration", "plc-hmi-programming", "machine-troubleshooting"]
+  }
+]

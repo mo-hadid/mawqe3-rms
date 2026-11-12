@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" fill="none" stroke-linecap="round" stroke-linejoin="round">
+
+<!-- Conveyor with packages and photo-eye sensor -->
+<rect x="16" y="108" width="208" height="16" rx="8" fill="#16293A"/>
+<circle cx="34" cy="116" r="9" fill="#E8EEF2" stroke="#16293A" stroke-width="5"/>
+<circle cx="86" cy="116" r="9" fill="#E8EEF2" stroke="#16293A" stroke-width="5"/>
+<circle cx="138" cy="116" r="9" fill="#E8EEF2" stroke="#16293A" stroke-width="5"/>
+<circle cx="190" cy="116" r="9" fill="#E8EEF2" stroke="#16293A" stroke-width="5"/>
+<rect x="30" y="124" width="8" height="36" fill="#9FB2C0"/>
+<rect x="186" y="124" width="8" height="36" fill="#9FB2C0"/>
+<rect x="44" y="74" width="36" height="32" rx="3" fill="#E8EEF2" stroke="#16293A" stroke-width="6"/>
+<line x1="62" y1="74" x2="62" y2="106" stroke="#9FB2C0" stroke-width="4"/>
+<rect x="116" y="66" width="44" height="40" rx="3" fill="#E8EEF2" stroke="#16293A" stroke-width="6"/>
+<line x1="138" y1="66" x2="138" y2="106" stroke="#9FB2C0" stroke-width="4"/>
+<rect x="196" y="34" width="14" height="26" rx="3" fill="#16293A"/>
+<circle cx="203" cy="44" r="4" fill="#00B4D8"/>
+<line x1="196" y1="46" x2="166" y2="46" stroke="#00B4D8" stroke-width="4" stroke-dasharray="6 6"/>
+<path d="M96 88 h12 m-4 -5 l5 5 -5 5" stroke="#00B4D8" stroke-width="5"/>
+</svg>

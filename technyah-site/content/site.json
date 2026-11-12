@@ -1,0 +1,34 @@
+{
+  "name": "TECHNYAH",
+  "legalName": "Technyah LLC",
+  "tagline": "Automation · Robotics · Controls",
+  "url": "https://technyah.com",
+  "locality": "Lakeland",
+  "region": "FL",
+  "regionName": "Florida",
+  "country": "US",
+  "email": "info@technyah.com",
+  "hrEmail": "hr@technyah.com",
+  "responseTime": "one business day",
+  "linkedin": "",
+  "turnstileSiteKey": "",
+  "description": "Industrial automation, robot integration, PLC and HMI programming, conveyor controls and machine troubleshooting for manufacturers in Lakeland, Polk County and across Florida.",
+  "areaServed": ["Lakeland", "Polk County", "Winter Haven", "Bartow", "Auburndale", "Plant City", "Tampa", "Orlando", "Florida"],
+  "nav": [
+    { "label": "Services", "href": "/services/" },
+    { "label": "Industries", "href": "/industries/" },
+    { "label": "Products", "href": "/products/" },
+    { "label": "About", "href": "/about/" },
+    { "label": "Careers", "href": "/careers/" },
+    { "label": "Contact", "href": "/contact/" }
+  ],
+  "scopeNote": "TECHNYAH programs, integrates and commissions. Electrical installation is carried out with licensed electrical contractors, listed control panels are built by certified panel shops, and sealed designs come from licensed professional engineers.",
+  "notOffered": "We do not take municipal water or wastewater work. Our focus is manufacturing, material handling and industrial machinery.",
+  "homeFaqs": [
+    { "q": "What does TECHNYAH do?", "a": "We automate and repair production equipment: robot cells, PLC and HMI programming, conveyor controls, machine vision, custom machines and data collection. Most work is for manufacturers, packagers and distribution centers in Central Florida." },
+    { "q": "Where do you work?", "a": "We are based in Lakeland and cover Polk County, Tampa Bay and Orlando as our home area. Projects elsewhere in Florida are scheduled by job." },
+    { "q": "Can you help when a machine is down right now?", "a": "Send the fault message, the controller model and a photo of the panel through the quote form or the assistant. We reply within one business day and can often start with a remote look." },
+    { "q": "Do you work on equipment someone else built?", "a": "Yes. Inherited machines with missing source code, drawings or passwords are a large share of troubleshooting and retrofit work. We document what is there before changing it." },
+    { "q": "Do you handle the electrical installation too?", "a": "We program, integrate and commission. Wiring and installation are done with licensed electrical contractors, and listed panels are built by certified panel shops, under one project schedule." }
+  ]
+}

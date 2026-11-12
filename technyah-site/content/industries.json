@@ -1,0 +1,74 @@
+[
+  {
+    "slug": "food-beverage",
+    "title": "Food & Beverage Processing",
+    "photo": "bottling",
+    "short": "Filling, packing and palletizing lines where washdown, changeover time and traceability set the rules.",
+    "seoTitle": "Food & Beverage Automation in Polk County & Central Florida",
+    "seoDescription": "Automation, conveyor controls, inspection and palletizing for food and beverage processors in Lakeland, Polk County, Tampa and Orlando.",
+    "keywords": ["food", "beverage", "bottling", "citrus", "juice", "bakery", "filling", "washdown", "sanitary", "date code", "case packing", "palletizing", "traceability"],
+    "intro": "Polk County is one of Florida's food and beverage centers, from citrus and juice to bakery and snacks. These lines run fast and change over often, so small stops add up quickly.",
+    "needs": ["Line stops and changeovers that take too long", "Date-code and label checks done by eye", "Manual case packing and palletizing", "No reliable count of what each line actually produced"],
+    "services": ["conveyors-material-handling", "machine-vision", "robot-integration", "industrial-networks-data"]
+  },
+  {
+    "slug": "packaging-consumer-goods",
+    "title": "Packaging & Consumer Goods",
+    "photo": "assembly-line",
+    "short": "Cartoners, labelers, wrappers and the conveyors between them, tuned to run as one line.",
+    "seoTitle": "Packaging Line Automation & Controls in Central Florida",
+    "seoDescription": "Packaging line integration, labeler and scanner controls, reject systems and line monitoring for consumer goods manufacturers in Central Florida.",
+    "keywords": ["packaging", "consumer goods", "cartoner", "labeler", "wrapper", "case packer", "reject", "print and apply", "line integration", "changeover"],
+    "intro": "A packaging line is a chain of machines from different builders. The gaps between them are where product backs up, labels are missed and operators end up babysitting.",
+    "needs": ["Machines that do not signal each other", "Rejects that are missed or over-rejected", "Changeovers that rely on one person's memory", "Unknown reasons for short stops"],
+    "services": ["conveyors-material-handling", "plc-hmi-programming", "machine-vision", "machine-troubleshooting"]
+  },
+  {
+    "slug": "logistics-distribution",
+    "title": "Logistics & Distribution Centers",
+    "photo": "conveyor",
+    "short": "Sortation, scanning and conveyor controls for warehouses along the I-4 corridor.",
+    "seoTitle": "Warehouse Conveyor & Sortation Controls on the I-4 Corridor",
+    "seoDescription": "Conveyor controls, sortation logic, scanning and monitoring for distribution centers and warehouses in Lakeland, Polk County, Tampa and Orlando.",
+    "keywords": ["logistics", "distribution center", "warehouse", "fulfillment", "sortation", "scanner", "I-4", "3PL", "parcel", "tote", "pallet"],
+    "intro": "Lakeland sits between Tampa and Orlando on I-4, which is why so many distribution centers are here. Peak season exposes every weak merge, scanner and restart procedure.",
+    "needs": ["Jams and recirculation at merges and sorters", "Scan rates below target", "Long recovery after an e-stop", "Aging controls with no local support"],
+    "services": ["conveyors-material-handling", "machine-troubleshooting", "industrial-networks-data", "plc-hmi-programming"]
+  },
+  {
+    "slug": "metal-fabrication-building-products",
+    "title": "Metal, Fabrication & Building Products",
+    "photo": "robot-cell",
+    "short": "Machine tending, welding cells, saws and presses where heavy parts and heat make automation worth it.",
+    "seoTitle": "Automation for Metal Fabrication & Building Products in Florida",
+    "seoDescription": "Machine tending, robot cells, press and saw controls and retrofits for metal fabricators and building-product manufacturers in Central Florida.",
+    "keywords": ["metal", "fabrication", "welding", "machine tending", "CNC", "press", "saw", "extrusion", "aluminum", "steel", "truss", "building products"],
+    "intro": "Fabricators and building-product plants handle heavy, hot and repetitive parts. Tending, stacking and transfer are usually the first jobs worth automating.",
+    "needs": ["Operators loading and unloading machines all shift", "Old press or saw controls with no spare parts", "Inconsistent cut or weld quality", "Heavy manual stacking"],
+    "services": ["robot-integration", "custom-machines", "machine-troubleshooting", "plc-hmi-programming"]
+  },
+  {
+    "slug": "medical-device-pharma",
+    "title": "Medical Device & Pharmaceutical Manufacturing",
+    "photo": "factory-floor",
+    "short": "Assembly, inspection and packaging steps that must be repeatable and recorded.",
+    "seoTitle": "Assembly & Inspection Automation for Medical Manufacturers in Florida",
+    "seoDescription": "Assembly stations, vision inspection, serialization checks and data capture for medical device and pharmaceutical manufacturers in Central Florida.",
+    "keywords": ["medical device", "pharmaceutical", "pharma", "cleanroom", "serialization", "validation", "inspection", "assembly", "data capture", "traceability"],
+    "intro": "In regulated production every unit needs proof that it was built and checked the same way. Automation here is as much about the record as the motion.",
+    "needs": ["Manual inspection with no stored evidence", "Operator-dependent assembly steps", "Label and code verification", "Paper batch records"],
+    "services": ["machine-vision", "custom-machines", "industrial-networks-data", "plc-hmi-programming"]
+  },
+  {
+    "slug": "agriculture-phosphate",
+    "title": "Agriculture, Citrus & Phosphate",
+    "photo": "troubleshooting",
+    "short": "Packing houses, grading lines and bulk handling equipment in hard environments.",
+    "seoTitle": "Automation & Controls for Agriculture and Phosphate Operations in Polk County",
+    "seoDescription": "Controls upgrades, grading and packing line automation, conveyor controls and monitoring for citrus, agriculture and phosphate operations in Polk County, Florida.",
+    "keywords": ["agriculture", "citrus", "packing house", "grading", "sorting", "phosphate", "fertilizer", "bulk handling", "bagging", "dust", "harsh environment"],
+    "intro": "Citrus, fertilizer and phosphate built Polk County's industrial base. Much of that equipment has run for decades and still has years of mechanical life left.",
+    "needs": ["Obsolete controls on sound machines", "Dust, moisture and vibration failures", "Seasonal labor for sorting and packing", "Remote sites with no visibility"],
+    "services": ["machine-troubleshooting", "conveyors-material-handling", "machine-vision", "industrial-networks-data"]
+  }
+]

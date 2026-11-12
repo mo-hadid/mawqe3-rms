@@ -1,0 +1,19 @@
+{
+  "name": "technyah-site",
+  "version": "5.0.0",
+  "private": true,
+  "description": "technyah.com: static site and contact API for Cloudflare Pages",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "dev": "node build.mjs && wrangler pages dev dist --d1 DB --kv FILES --binding ADMIN_TOKEN=local-test-token-123456",
+    "photos": "node tools/fetch-photos.mjs",
+    "logo": "node tools/logo.mjs"
+  },
+  "devDependencies": {
+    "@fontsource/barlow": "^5.3.0",
+    "@fontsource/barlow-condensed": "^5.3.0",
+    "opentype.js": "^2.0.0",
+    "wrangler": "^4.160.1"
+  }
+}

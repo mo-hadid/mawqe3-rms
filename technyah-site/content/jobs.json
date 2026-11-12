@@ -1,0 +1,74 @@
+[
+  {
+    "id": "controls-specialist",
+    "title": "Automation & Controls Specialist",
+    "type": "Full-time",
+    "location": "Lakeland, FL · On-site and field",
+    "summary": "Program PLC and HMI systems and integrate robots on automation projects from first test to site commissioning.",
+    "responsibilities": ["Write and test PLC and HMI programs", "Integrate and commission robots and motion systems", "Prepare I/O lists, test plans and handover documents", "Support site start-up, fault finding and customer training"],
+    "qualifications": ["Degree or equivalent experience in electrical, computer or mechatronics fields", "Hands-on PLC experience in ladder logic or structured text", "Working knowledge of industrial networks and electrical safety", "Clear written documentation"]
+  },
+  {
+    "id": "mechanical-design-intern",
+    "title": "Mechanical Design Intern",
+    "type": "Internship",
+    "location": "Lakeland, FL",
+    "summary": "Support CAD, prototyping and fixture design for custom automation equipment.",
+    "responsibilities": ["Build 3D models and 2D drawings", "Help with prototypes, fit checks and revisions", "Support bills of materials and component selection"],
+    "qualifications": ["Studying mechanical engineering or a related field", "SolidWorks, Fusion 360 or similar CAD", "Interest in machine design"]
+  },
+  {
+    "id": "project-coordinator",
+    "title": "Project Coordinator",
+    "type": "Full-time",
+    "location": "Lakeland, FL · Hybrid",
+    "summary": "Keep schedules, purchasing and vendors moving across automation projects.",
+    "responsibilities": ["Track schedules, milestones and deliverables", "Coordinate purchasing and vendor communication", "Maintain project records and status reports"],
+    "qualifications": ["Experience coordinating technical or construction projects", "Organized and clear in writing", "Comfortable with project tracking tools"]
+  },
+  {
+    "id": "vision-ai-intern",
+    "title": "Computer Vision & AI Intern",
+    "type": "Internship",
+    "location": "Lakeland, FL · Remote-friendly",
+    "summary": "Build and test vision pipelines for inspection and robot guidance.",
+    "responsibilities": ["Develop and test computer vision pipelines", "Work on detection, pose estimation and tracking", "Help deploy models on edge hardware"],
+    "qualifications": ["Studying computer science, electrical engineering or similar", "Python with PyTorch, TensorFlow or OpenCV", "Interest in applied robotics"]
+  },
+  {
+    "id": "software-web-intern",
+    "title": "Software & Web Developer Intern",
+    "type": "Internship",
+    "location": "Lakeland, FL · Remote-friendly",
+    "summary": "Build dashboards and internal tools that turn machine data into something people use.",
+    "responsibilities": ["Build and maintain web dashboards and tools", "Work across front end and back end", "Connect machine and sensor data to visual displays"],
+    "qualifications": ["Studying computer science or software engineering", "JavaScript plus one back-end language", "Interest in industrial data"]
+  },
+  {
+    "id": "mechanical-engineering-intern",
+    "title": "Mechanical Engineering Intern",
+    "type": "Internship",
+    "location": "Lakeland, FL",
+    "summary": "Design assemblies for robot cells, conveyors and enclosures.",
+    "responsibilities": ["Design mechanical assemblies in CAD", "Produce manufacturing drawings", "Support fabrication and assembly"],
+    "qualifications": ["Studying mechanical engineering", "CAD proficiency", "Basic knowledge of materials and fabrication"]
+  },
+  {
+    "id": "hr-legal-intern",
+    "title": "Human Resources & Legal Intern",
+    "type": "Internship",
+    "location": "Lakeland, FL · Hybrid",
+    "summary": "Support onboarding, compliance records and policy research.",
+    "responsibilities": ["Support onboarding and HR records", "Research compliance and policy questions", "Keep templates and files organized"],
+    "qualifications": ["Studying human resources, business or pre-law", "Careful writing", "Discretion with confidential information"]
+  },
+  {
+    "id": "accounting-intern",
+    "title": "Accounting Intern",
+    "type": "Internship",
+    "location": "Lakeland, FL · Hybrid",
+    "summary": "Support invoicing, reconciliation and project cost tracking.",
+    "responsibilities": ["Help reconcile invoices and bookkeeping entries", "Track project costs", "Prepare simple reports"],
+    "qualifications": ["Studying accounting or finance", "Attention to detail", "Comfortable with spreadsheets"]
+  }
+]

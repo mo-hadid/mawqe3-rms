@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>TECHNYAH inbox</title>
+<link rel="icon" type="image/svg+xml" href="/images/brand/mark.svg">
+<link rel="stylesheet" href="/css/styles.css">
+<style>
+body { background: var(--surface); }
+.ad-bar { background: var(--ink); color: #fff; border-bottom: 2px solid var(--accent); padding: 10px 20px; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.ad-bar img { height: 30px; width: auto; }
+.ad-bar h1 { color: #fff; font-size: 1.3rem; margin: 0; letter-spacing: 0.06em; text-transform: uppercase; flex: 1; }
+.ad-bar button { background: none; border: 1px solid rgba(255,255,255,0.35); color: #fff; border-radius: var(--radius); padding: 6px 12px; cursor: pointer; font: inherit; font-size: 0.9rem; }
+.ad-health { display: flex; gap: 6px; flex-wrap: wrap; }
+.ad-health span { font-size: 0.72rem; border-radius: 999px; padding: 2px 9px; border: 1px solid; text-transform: uppercase; letter-spacing: 0.08em; }
+.ad-health .on { color: #7BE0A6; border-color: #2E7D57; } .ad-health .off { color: #F4A9A0; border-color: #8C3B33; }
+.ad-login { max-width: 420px; margin: 12vh auto; }
+.ad-wrap { display: grid; grid-template-columns: minmax(320px, 440px) 1fr; gap: 0; height: calc(100vh - 54px); }
+.ad-list { border-right: 1px solid var(--line); background: var(--card); display: flex; flex-direction: column; min-height: 0; }
+.ad-filters { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 12px; border-bottom: 1px solid var(--line); }
+.ad-filters input, .ad-filters select { font: inherit; font-size: 0.9rem; padding: 8px 10px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); min-width: 0; }
+.ad-filters input { grid-column: 1 / -1; }
+.ad-items { overflow-y: auto; flex: 1; }
+.ad-item { display: block; width: 100%; text-align: left; background: none; border: 0; border-bottom: 1px solid var(--line); padding: 12px 14px; cursor: pointer; font: inherit; color: var(--body); }
+.ad-item:hover, .ad-item.sel { background: var(--surface); }
+.ad-item.sel { box-shadow: inset 3px 0 0 var(--accent); }
+.ad-item .top { display: flex; justify-content: space-between; gap: 8px; font-size: 0.78rem; color: var(--muted); }
+.ad-item strong { display: block; color: var(--ink); margin: 2px 0; }
+.ad-item p { margin: 0; font-size: 0.86rem; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.st { display: inline-block; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.1em; border-radius: 999px; padding: 1px 8px; border: 1px solid var(--line); }
+.st.new { background: #D6F3FA; border-color: var(--accent); color: var(--accent-dark); font-weight: 600; }
+.st.closed { color: var(--muted); }
+.ad-detail { overflow-y: auto; padding: 24px 28px 60px; }
+.ad-detail h2 { font-size: 1.5rem; margin-bottom: 2px; text-transform: none; letter-spacing: 0; }
+.ad-kv { display: grid; grid-template-columns: 130px 1fr; gap: 6px 14px; margin: 16px 0; font-size: 0.95rem; }
+.ad-kv dt { color: var(--muted); } .ad-kv dd { margin: 0; overflow-wrap: anywhere; }
+.ad-msg { white-space: pre-wrap; background: var(--card); border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: var(--radius); padding: 14px 16px; overflow-wrap: anywhere; }
+.ad-actions { display: flex; gap: 10px; flex-wrap: wrap; margin: 16px 0; align-items: center; }
+.ad-actions .cta-btn, .ad-actions .btn-plain { padding: 9px 16px; font-size: 0.95rem; }
+.btn-plain { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); cursor: pointer; font: inherit; color: var(--ink); text-decoration: none; }
+.btn-plain.danger { color: var(--err); }
+.ad-work { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; margin-top: 20px; display: grid; gap: 10px; }
+.ad-work select, .ad-work textarea { font: inherit; padding: 9px 10px; border: 1px solid var(--line); border-radius: var(--radius); width: 100%; background: var(--surface); }
+.ad-empty { color: var(--muted); padding: 40px; text-align: center; }
+[hidden] { display: none !important; }
+@media (max-width: 860px) { .ad-wrap { grid-template-columns: 1fr; height: auto; } .ad-list { border-right: 0; max-height: 46vh; } }
+</style>
+</head>
+<body>
+<div class="ad-bar">
+  <img src="/images/brand/mark-white.svg" alt="">
+  <h1>Inbox</h1>
+  <div class="ad-health" id="health"></div>
+  <button type="button" id="refresh" hidden>Refresh</button>
+  <button type="button" id="signout" hidden>Sign out</button>
+</div>
+
+<form class="form-shell ad-login" id="login">
+  <h2 style="font-size:1.4rem">Open the inbox</h2>
+  <p class="muted">Enter the access token you saved in Cloudflare as <code>ADMIN_TOKEN</code>.</p>
+  <div class="form-field"><label for="token">Access token</label><input type="password" id="token" autocomplete="current-password" required></div>
+  <button type="submit" class="form-submit">Open inbox</button>
+  <div class="form-status err" id="login-error" role="alert"></div>
+</form>
+
+<div class="ad-wrap" id="app" hidden>
+  <div class="ad-list">
+    <div class="ad-filters">
+      <input type="search" id="f-q" placeholder="Search name, company, reference, text" aria-label="Search">
+      <select id="f-type" aria-label="Type"><option value="">All types</option><option value="quote">Quote requests</option><option value="contact">Contact</option><option value="ticket">Support tickets</option><option value="application">Job applications</option></select>
+      <select id="f-status" aria-label="Status"><option value="">Any status</option><option>new</option><option>in progress</option><option>waiting</option><option>closed</option></select>
+    </div>
+    <div class="ad-items" id="items"></div>
+  </div>
+  <div class="ad-detail" id="detail"><p class="ad-empty">Choose a message on the left.</p></div>
+</div>
+<script src="/js/admin.js"></script>
+</body>
+</html>
